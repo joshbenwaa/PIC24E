@@ -35,11 +35,11 @@ void clear_channel()
 void display_matrix(void)
 {
    int row = 0, columns = 0;
-   for (row=0; row<8; row++)
+   for (row=0; row<3; row++)
    {
-    for(columns=0; columns<3; columns++)
+    for(columns=0; columns<8; columns++)
         {
-         printf("%u     ", channel[row][columns]);
+         printf("%d     ", channel[row][columns]);
         }
       printf("\n\r");
    }
@@ -48,7 +48,7 @@ void display_matrix(void)
 #INT_EXT1
 void DCLK_interrupt_handler()
 {        
-         while(rows <= 7){
+         while(rows <= 8){
          //shift bits left for next inputDMA0   DMA channel 0 transfer complete
             channel[rows][cols] <<= 1;
             rows++;
@@ -72,13 +72,12 @@ void DCLK_interrupt_handler()
             if(cols == 2){
                printf("Gets here \n\r" );
                cols = 0;
-             //  display_matrix();
+               display_matrix();
             }
-            else{
-            cols++;
-            }
-            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel, 24);
+            
+            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0][0]);
             bitCount = 0;
+            cols++;
             printf("Cols %u \n\r", cols);
          }
          
@@ -105,8 +104,7 @@ void DMA_interrupt_handler()
 {
    printf("DMA Transfer Complete \n\r");
    printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
-   clear_channel();
-  
+ //  clear_channel();
 }
 
 

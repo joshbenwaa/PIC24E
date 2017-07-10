@@ -10,12 +10,12 @@
 #pin_select U1RX = PIN_B12
 #use RS232(UART1, baud = 115200, stream = UART_PORT1)
 //#USE RS232(STREAM=UART1, BAUD = 115200, PARITY = N, BITS = 8, STOP = 1, TIMEOUT = 500, XMIT = PIN_B14, RCV = PIN_B15 ))
-#BANK_DMA  unsigned int8 channel[8][3];
+#BANK_DMA  int8 channel[8][3];
 #pin_select INT1 = PIN_B6
 //#define SPI_CS PIN_B6
 //unsigned int32 channel[8];  
 //int channel[8];
- unsigned int rows = 0, cols = 0, bitCount =  0;
+volatile unsigned int rows = 0, cols = 0, bitCount =  0;
 //int j = 0;
 //#DEFINE ENABLE_INTERRUPTS(PIN_B11);
 
@@ -35,11 +35,11 @@ void clear_channel()
 void display_matrix(void)
 {
    int row = 0, columns = 0;
-   for (row=0; row<8; row++)
+   for (row=0; row<3; row++)
    {
-    for(columns=0; columns<3; columns++)
+    for(columns=0; columns<8; columns++)
         {
-         printf("%u     ", channel[row][columns]);
+         printf("%d     ", channel[row][columns]);
         }
       printf("\n\r");
    }
@@ -48,7 +48,7 @@ void display_matrix(void)
 #INT_EXT1
 void DCLK_interrupt_handler()
 {        
-         while(rows <= 7){
+         while(rows <= 8){
          //shift bits left for next inputDMA0   DMA channel 0 transfer complete
             channel[rows][cols] <<= 1;
             rows++;
@@ -66,23 +66,21 @@ void DCLK_interrupt_handler()
          channel[7][cols] += input(PIN_B9); //B7 Used by interrupt
          //Possible take whole port at one time???
          //inputPortB = input_b();
-        // printf("Bitcount = %u \n\r", bitCount);         
+         printf("Bitcount = %u \n\r", bitCount);         
          printf("Data Reading \n\r");
          if (bitCount == 8){
-            if(cols == 2){
+             cols++;
+             printf("Cols %u \n\r", cols);
+            if(cols == 3){
                printf("Gets here \n\r" );
                cols = 0;
-             //  display_matrix();
+               display_matrix();
             }
-            else{
-            cols++;
-            }
-            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel, 24);
+            else{}
+            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0][0]);
             bitCount = 0;
-            printf("Cols %u \n\r", cols);
          }
-         
-         
+         else{}
          
 //!   else{
 //!      printf("24 bits\n\r");
@@ -105,8 +103,7 @@ void DMA_interrupt_handler()
 {
    printf("DMA Transfer Complete \n\r");
    printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
-   clear_channel();
-  
+ //  clear_channel();
 }
 
 

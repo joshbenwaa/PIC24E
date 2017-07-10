@@ -1,64 +1,63 @@
 
-ROM used:   2072/176108 (1%)
-            2072/176108 (1%) including unused fragments
+ROM used:   1772/176108 (1%)
+            1772/176108 (1%) including unused fragments
 
-            1.2 Average locations per line
-            10.8 Average locations per statement
+            1.1 Average locations per line
+            9.3 Average locations per statement
 
-RAM used:   170/32768 (1%) at main() level
-            184/32768 (1%) worst case
+RAM used:   162/32768 (0%) at main() level
+            168/32768 (1%) worst case
 
-Stack used: 74 worst case (18 in main + 56 for interrupts)
+Stack used: 70 worst case (18 in main + 52 for interrupts)
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  154    63  33  DataReading_Working_7_10.c
+  157    61  32  DataReading_Working_7_10.c
  1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
-  435   129  67  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+  435   129  68  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
 ----- -----
- 1672   192 Total
+ 1675   190 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     32   1    0             @delay_ms1
 0     52   1    4    197  4.0  clear_channel
-0    102   2    5    267  4.0  display_matrix
-0     20   0    1             @const902
-0    256   6    0             @PRINTFD16_115200_28827_28828
-0    274   7    1    973  7.2  DCLK_interrupt_handler
-0     28   1    0             @const908
-0     60   1    1     50  1.0  DRDY_interrupt_handler
-0     38   1    0             @const910
-0    114   3    1     63  1.8  DMA_interrupt_handler
-0     38   1    0             @const912
-0     36   1    0             @const913
-0    182   4    0             @PRINTFU16_115200_28827_28828
-0    262   6    7    483  3.4  MAIN
-0     22   1    0             @const922
-0     18   0    0             @const923
-0     26   1    0             @const925
- Inline         0             @cinit1
+0    104   3    4    267  4.0  display_matrix
+0     20   1    0    267  4.0  @const900
+0    182   5    0             @PRINTFU16_115200_28827_28828
+0    344  10    0   1028  7.7  DCLK_interrupt_handler
+0     28   1    0   1044  7.7  @const906
+0     26   1    0    431  3.2  @const907
+0     24   1    0    431  3.2  @const908
+0     60   2    0     50  1.0  DRDY_interrupt_handler
+0     38   1    0     50  1.0  @const910
+0     32   1    0      3  0.0  DMA_interrupt_handler
+0    252   7    2    431  3.2  MAIN
+0     22   1    0    431  3.2  @const915
+0     18   1    0    431  3.2  @const916
+0     26   1    0    431  3.2  @const918
+ Inline         0    431  3.2  @cinit1
 
 Program metrics:
-    Functions               6
-    Statements              192
-    Comments                354
-    Volume (V)              2842
-    Difficulty (D)          20.6
-    Effort to implement (E) 58518
-    Time to implement (T)   54 minutes
-    Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   4
-    Maintainability (MI)    52
+    Functions               15
+    Statements              190
+    Comments                357
+    Volume (V)              9667
+    Difficulty (D)          53.1
+    Effort to implement (E) 512856
+    Time to implement (T)   7 hours, 55 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   8
+    Maintainability (MI)    144
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0FFFE  1560  63464  
+00200-0FFFE  1260  63764  
 10000-1FFFE     0  65536  
 20000-2AFEA     0  45036  
 

@@ -1,24 +1,24 @@
-CCS PCD C Compiler, Version 5.071d, 1               10-Jul-17 15:02
+CCS PCD C Compiler, Version 5.071d, 1               10-Jul-17 17:31
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
                Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DataReading_Working_7_10\DataReading_Working_7_10.lst
 
-               ROM used:   2072 bytes (1%)
+               ROM used:   1772 bytes (1%)
                            Largest free fragment is 65536
-               RAM used:   170 (1%) at main() level
-                           184 (1%) worst case
-               Stack used: 74 locations (18 in main + 56 for interrupts)
+               RAM used:   162 (0%) at main() level
+                           168 (1%) worst case
+               Stack used: 70 locations (18 in main + 52 for interrupts)
                Stack size: 128
 
 *
-00000:  GOTO    712
+00000:  GOTO    5F0
 *
-00014:  DATA    5A,05,00
+00014:  DATA    D8,04,00
 *
-0001C:  DATA    4C,06,00
+0001C:  DATA    14,05,00
 *
-0003C:  DATA    48,04,00
+0003C:  DATA    80,03,00
 .................... #include <24EP256GP202.h> 
 .................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
 .................... /////////////////////////////////////////////////////////////////////////// 
@@ -38,7 +38,7 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 00206:  TBLRDL.B[W0],W0L
 00208:  CLR.B   1
 0020A:  RETURN  
-0020C:  DATA    25,64,00
+0020C:  DATA    25,75,00
 0020E:  DATA    20,20,00
 00210:  DATA    20,20,00
 00212:  DATA    20,00,00
@@ -62,301 +62,164 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 00236:  TBLRDL.B[W0],W0L
 00238:  CLR.B   1
 0023A:  RETURN  
-0023C:  DATA    57,61,00
-0023E:  DATA    69,74,00
-00240:  DATA    69,6E,00
-00242:  DATA    67,20,00
-00244:  DATA    66,6F,00
-00246:  DATA    72,20,00
-00248:  DATA    44,61,00
-0024A:  DATA    74,61,00
-0024C:  DATA    20,43,00
-0024E:  DATA    6C,6F,00
-00250:  DATA    63,6B,00
-00252:  DATA    20,0A,00
-00254:  DATA    0D,00,00
-00256:  CLR     54
-00258:  MOV     #262,W3
-0025A:  ADD     W3,W0,W0
-0025C:  TBLRDL.B[W0],W0L
-0025E:  CLR.B   1
-00260:  RETURN  
-00262:  DATA    44,4D,00
-00264:  DATA    41,20,00
-00266:  DATA    54,72,00
-00268:  DATA    61,6E,00
-0026A:  DATA    73,66,00
-0026C:  DATA    65,72,00
-0026E:  DATA    20,43,00
-00270:  DATA    6F,6D,00
-00272:  DATA    70,6C,00
-00274:  DATA    65,74,00
-00276:  DATA    65,20,00
-00278:  DATA    0A,0D,00
-0027A:  DATA    00,00,00
-0027C:  CLR     54
-0027E:  MOV     #288,W3
-00280:  ADD     W3,W0,W0
-00282:  TBLRDL.B[W0],W0L
-00284:  CLR.B   1
-00286:  RETURN  
-00288:  DATA    43,68,00
-0028A:  DATA    61,6E,00
-0028C:  DATA    6E,65,00
-0028E:  DATA    6C,5B,00
-00290:  DATA    30,5D,00
-00292:  DATA    5B,30,00
-00294:  DATA    5D,20,00
-00296:  DATA    69,73,00
-00298:  DATA    3A,20,00
-0029A:  DATA    25,75,00
-0029C:  DATA    20,0A,00
-0029E:  DATA    0D,00,00
-002A0:  CLR     54
-002A2:  MOV     #2AC,W3
-002A4:  ADD     W3,W0,W0
-002A6:  TBLRDL.B[W0],W0L
-002A8:  CLR.B   1
-002AA:  RETURN  
-002AC:  DATA    54,65,00
-002AE:  DATA    73,74,00
-002B0:  DATA    31,20,00
-002B2:  DATA    0A,0D,00
-002B4:  DATA    00,00,00
-002B6:  CLR     54
-002B8:  MOV     #2C2,W3
-002BA:  ADD     W3,W0,W0
-002BC:  TBLRDL.B[W0],W0L
-002BE:  CLR.B   1
-002C0:  RETURN  
-002C2:  DATA    4E,6F,00
-002C4:  DATA    20,0A,00
-002C6:  DATA    0D,00,00
-002C8:  CLR     54
-002CA:  MOV     #2D4,W3
-002CC:  ADD     W3,W0,W0
-002CE:  TBLRDL.B[W0],W0L
-002D0:  CLR.B   1
-002D2:  RETURN  
-002D4:  DATA    44,4D,00
-002D6:  DATA    41,20,00
-002D8:  DATA    56,61,00
-002DA:  DATA    6C,69,00
-002DC:  DATA    64,3A,00
-002DE:  DATA    20,25,00
-002E0:  DATA    75,00,00
-002E2:  MOV     W5,[W15++]
-002E4:  MOV     #C,W5
-002E6:  REPEAT  #3
-002E8:  MOV     [W5++],[W15++]
-002EA:  BTSS    W0.F
-002EC:  BRA     306
-002EE:  NEG     W0,W0
-002F0:  BSET    W4.8
-002F2:  BTSS    W4.F
-002F4:  BRA     306
-002F6:  MOV     W0,[W15++]
-002F8:  MOV     #2D,W0
-002FA:  BTSC.B  223.1
-002FC:  BRA     2FA
-002FE:  MOV     W0,224
-00300:  MOV     [--W15],W0
-00302:  BCLR    W4.8
-00304:  DEC.B   0008
-00306:  CLR     W5
-00308:  MOV     W0,W7
-0030A:  MOV     W4,W9
-0030C:  BCLR    W4.F
-0030E:  CP0.B   W4L
-00310:  BRA     NZ,31E
-00312:  BTSC    W9.F
-00314:  BRA     31A
-00316:  MOV     #0,W5
-00318:  BRA     342
-0031A:  MOV     #0,W5
-0031C:  BRA     342
-0031E:  BTSS    W9.8
-00320:  SUB.B   W4L,#6,W5L
-00322:  BTSC    W9.8
-00324:  SUB.B   W4L,#7,W5L
-00326:  BRA     NC,340
-00328:  MOV     #30,W0
-0032A:  BTSS    W9.F
-0032C:  MOV     #20,W0
-0032E:  MOV     W0,[W15++]
-00330:  BTSC.B  223.1
-00332:  BRA     330
-00334:  MOV     W0,224
-00336:  MOV     [--W15],W0
-00338:  DEC     W5,W5
-0033A:  BRA     NN,32E
-0033C:  MOV     #5,W5
-0033E:  BRA     342
-00340:  MOV     W4,W5
-00342:  MOV     #6,W4
-00344:  BTSC    W5.8
-00346:  INC     W4,W4
-00348:  BSET    W5.E
-0034A:  BTSC    W9.F
-0034C:  BSET    W5.F
-0034E:  MOV     #2710,W8
-00350:  REPEAT  #11
-00352:  DIV.U   W7,W8
-00354:  CALL    398
-00358:  MOV     W1,W7
-0035A:  MOV     #3E8,W8
-0035C:  REPEAT  #11
-0035E:  DIV.U   W7,W8
-00360:  CALL    398
-00364:  MOV     W1,W7
-00366:  MOV     #64,W8
-00368:  REPEAT  #11
-0036A:  DIV.U   W7,W8
-0036C:  CALL    398
-00370:  MOV     W1,W7
-00372:  MOV     #A,W8
-00374:  REPEAT  #11
-00376:  DIV.U   W7,W8
-00378:  CALL    398
-0037C:  BTSS    W9.8
-0037E:  BRA     38A
-00380:  MOV     #2D,W0
-00382:  BTSC.B  223.1
-00384:  BRA     382
-00386:  MOV     W0,224
-00388:  BCLR    W9.8
-0038A:  MOV     #30,W0
-0038C:  ADD.B   W1L,W0L,W0L
-0038E:  MOV     W0,2A
-00390:  BTSC.B  223.1
-00392:  BRA     390
-00394:  MOV     W0,224
-00396:  BRA     3D8
-00398:  MOV     #30,W6
-0039A:  CP0     W0
-0039C:  BRA     NZ,3BA
-0039E:  BTSS    W5.E
-003A0:  BRA     3CE
-003A2:  DEC     W4,W4
-003A4:  CP.B    W4L,W5L
-003A6:  BRA     Z,3AC
-003A8:  BTSC.B  42.0
-003AA:  RETURN  
-003AC:  CP0     W0
-003AE:  BRA     NZ,3BA
-003B0:  BTSS    W5.E
-003B2:  BRA     3CE
-003B4:  BTSS    W5.F
-003B6:  MOV     #20,W6
-003B8:  BRA     3CE
-003BA:  BCLR    W5.E
-003BC:  BTSS    W9.8
-003BE:  BRA     3CE
-003C0:  MOV     W0,W10
-003C2:  MOV     #2D,W0
-003C4:  BTSC.B  223.1
-003C6:  BRA     3C4
-003C8:  MOV     W0,224
-003CA:  BCLR    W9.8
-003CC:  MOV     W10,W0
-003CE:  ADD.B   W6L,W0L,W0L
-003D0:  BTSC.B  223.1
-003D2:  BRA     3D0
-003D4:  MOV     W0,224
-003D6:  RETURN  
-003D8:  MOV     #12,W5
-003DA:  REPEAT  #3
-003DC:  MOV     [--W15],[W5--]
-003DE:  MOV     [--W15],W5
-003E0:  RETURN  
-*
-00596:  MOV     W5,[W15++]
-00598:  MOV     #C,W5
-0059A:  REPEAT  #3
-0059C:  MOV     [W5++],[W15++]
-0059E:  MOV     W0,W7
-005A0:  MOV     W4,W9
-005A2:  BCLR    W4.F
-005A4:  CP0     W4
-005A6:  BRA     NZ,5B4
-005A8:  BTSC    W9.F
-005AA:  BRA     5B0
-005AC:  MOV     #0,W5
-005AE:  BRA     5D2
-005B0:  MOV     #0,W5
-005B2:  BRA     5D2
-005B4:  SUB.B   W4L,#6,W5L
-005B6:  BRA     NC,5D0
-005B8:  MOV     #30,W0
-005BA:  BTSS    W9.F
-005BC:  MOV     #20,W0
-005BE:  MOV     W0,[W15++]
-005C0:  BTSC.B  223.1
-005C2:  BRA     5C0
-005C4:  MOV     W0,224
-005C6:  MOV     [--W15],W0
-005C8:  DEC     W5,W5
-005CA:  BRA     NN,5BE
-005CC:  MOV     #5,W5
-005CE:  BRA     5D2
-005D0:  MOV     W4,W5
-005D2:  MOV     #6,W4
-005D4:  BSET    W5.E
-005D6:  BTSC    W9.F
-005D8:  BSET    W5.F
-005DA:  MOV     #2710,W8
-005DC:  REPEAT  #11
-005DE:  DIV.U   W7,W8
-005E0:  CALL    614
-005E4:  MOV     W1,W7
-005E6:  MOV     #3E8,W8
-005E8:  REPEAT  #11
-005EA:  DIV.U   W7,W8
-005EC:  CALL    614
-005F0:  MOV     W1,W7
-005F2:  MOV     #64,W8
-005F4:  REPEAT  #11
-005F6:  DIV.U   W7,W8
-005F8:  CALL    614
-005FC:  MOV     W1,W7
-005FE:  MOV     #A,W8
-00600:  REPEAT  #11
-00602:  DIV.U   W7,W8
-00604:  CALL    614
-00608:  MOV     #30,W0
-0060A:  ADD.B   W1L,W0L,W0L
-0060C:  BTSC.B  223.1
-0060E:  BRA     60C
-00610:  MOV     W0,224
-00612:  BRA     642
-00614:  MOV     #30,W6
-00616:  CP0     W0
-00618:  BRA     NZ,636
-0061A:  BTSS    W5.E
-0061C:  BRA     638
-0061E:  DEC     W4,W4
-00620:  CP.B    W4L,W5L
-00622:  BRA     Z,628
-00624:  BTSC.B  42.0
-00626:  RETURN  
-00628:  CP0     W0
-0062A:  BRA     NZ,636
-0062C:  BTSS    W5.E
-0062E:  BRA     638
-00630:  BTSS    W5.F
-00632:  MOV     #20,W6
-00634:  BRA     638
-00636:  BCLR    W5.E
-00638:  ADD.B   W6L,W0L,W0L
-0063A:  BTSC.B  223.1
-0063C:  BRA     63A
-0063E:  MOV     W0,224
-00640:  RETURN  
-00642:  MOV     #12,W5
-00644:  REPEAT  #3
-00646:  MOV     [--W15],[W5--]
-00648:  MOV     [--W15],W5
-0064A:  RETURN  
+0023C:  DATA    47,65,00
+0023E:  DATA    74,73,00
+00240:  DATA    20,68,00
+00242:  DATA    65,72,00
+00244:  DATA    65,20,00
+00246:  DATA    0A,0D,00
+00248:  DATA    00,00,00
+0024A:  CLR     54
+0024C:  MOV     #256,W3
+0024E:  ADD     W3,W0,W0
+00250:  TBLRDL.B[W0],W0L
+00252:  CLR.B   1
+00254:  RETURN  
+00256:  DATA    43,6F,00
+00258:  DATA    6C,73,00
+0025A:  DATA    20,25,00
+0025C:  DATA    75,20,00
+0025E:  DATA    0A,0D,00
+00260:  DATA    00,00,00
+00262:  CLR     54
+00264:  MOV     #26E,W3
+00266:  ADD     W3,W0,W0
+00268:  TBLRDL.B[W0],W0L
+0026A:  CLR.B   1
+0026C:  RETURN  
+0026E:  DATA    57,61,00
+00270:  DATA    69,74,00
+00272:  DATA    69,6E,00
+00274:  DATA    67,20,00
+00276:  DATA    66,6F,00
+00278:  DATA    72,20,00
+0027A:  DATA    44,61,00
+0027C:  DATA    74,61,00
+0027E:  DATA    20,43,00
+00280:  DATA    6C,6F,00
+00282:  DATA    63,6B,00
+00284:  DATA    20,0A,00
+00286:  DATA    0D,00,00
+00288:  CLR     54
+0028A:  MOV     #294,W3
+0028C:  ADD     W3,W0,W0
+0028E:  TBLRDL.B[W0],W0L
+00290:  CLR.B   1
+00292:  RETURN  
+00294:  DATA    54,65,00
+00296:  DATA    73,74,00
+00298:  DATA    31,20,00
+0029A:  DATA    0A,0D,00
+0029C:  DATA    00,00,00
+0029E:  CLR     54
+002A0:  MOV     #2AA,W3
+002A2:  ADD     W3,W0,W0
+002A4:  TBLRDL.B[W0],W0L
+002A6:  CLR.B   1
+002A8:  RETURN  
+002AA:  DATA    4E,6F,00
+002AC:  DATA    20,0A,00
+002AE:  DATA    0D,00,00
+002B0:  CLR     54
+002B2:  MOV     #2BC,W3
+002B4:  ADD     W3,W0,W0
+002B6:  TBLRDL.B[W0],W0L
+002B8:  CLR.B   1
+002BA:  RETURN  
+002BC:  DATA    44,4D,00
+002BE:  DATA    41,20,00
+002C0:  DATA    56,61,00
+002C2:  DATA    6C,69,00
+002C4:  DATA    64,3A,00
+002C6:  DATA    20,25,00
+002C8:  DATA    75,00,00
+002CA:  MOV     W5,[W15++]
+002CC:  MOV     #C,W5
+002CE:  REPEAT  #3
+002D0:  MOV     [W5++],[W15++]
+002D2:  MOV     W0,W7
+002D4:  MOV     W4,W9
+002D6:  BCLR    W4.F
+002D8:  CP0     W4
+002DA:  BRA     NZ,2E8
+002DC:  BTSC    W9.F
+002DE:  BRA     2E4
+002E0:  MOV     #0,W5
+002E2:  BRA     306
+002E4:  MOV     #0,W5
+002E6:  BRA     306
+002E8:  SUB.B   W4L,#6,W5L
+002EA:  BRA     NC,304
+002EC:  MOV     #30,W0
+002EE:  BTSS    W9.F
+002F0:  MOV     #20,W0
+002F2:  MOV     W0,[W15++]
+002F4:  BTSC.B  223.1
+002F6:  BRA     2F4
+002F8:  MOV     W0,224
+002FA:  MOV     [--W15],W0
+002FC:  DEC     W5,W5
+002FE:  BRA     NN,2F2
+00300:  MOV     #5,W5
+00302:  BRA     306
+00304:  MOV     W4,W5
+00306:  MOV     #6,W4
+00308:  BSET    W5.E
+0030A:  BTSC    W9.F
+0030C:  BSET    W5.F
+0030E:  MOV     #2710,W8
+00310:  REPEAT  #11
+00312:  DIV.U   W7,W8
+00314:  CALL    348
+00318:  MOV     W1,W7
+0031A:  MOV     #3E8,W8
+0031C:  REPEAT  #11
+0031E:  DIV.U   W7,W8
+00320:  CALL    348
+00324:  MOV     W1,W7
+00326:  MOV     #64,W8
+00328:  REPEAT  #11
+0032A:  DIV.U   W7,W8
+0032C:  CALL    348
+00330:  MOV     W1,W7
+00332:  MOV     #A,W8
+00334:  REPEAT  #11
+00336:  DIV.U   W7,W8
+00338:  CALL    348
+0033C:  MOV     #30,W0
+0033E:  ADD.B   W1L,W0L,W0L
+00340:  BTSC.B  223.1
+00342:  BRA     340
+00344:  MOV     W0,224
+00346:  BRA     376
+00348:  MOV     #30,W6
+0034A:  CP0     W0
+0034C:  BRA     NZ,36A
+0034E:  BTSS    W5.E
+00350:  BRA     36C
+00352:  DEC     W4,W4
+00354:  CP.B    W4L,W5L
+00356:  BRA     Z,35C
+00358:  BTSC.B  42.0
+0035A:  RETURN  
+0035C:  CP0     W0
+0035E:  BRA     NZ,36A
+00360:  BTSS    W5.E
+00362:  BRA     36C
+00364:  BTSS    W5.F
+00366:  MOV     #20,W6
+00368:  BRA     36C
+0036A:  BCLR    W5.E
+0036C:  ADD.B   W6L,W0L,W0L
+0036E:  BTSC.B  223.1
+00370:  BRA     36E
+00372:  MOV     W0,224
+00374:  RETURN  
+00376:  MOV     #12,W5
+00378:  REPEAT  #3
+0037A:  MOV     [--W15],[W5--]
+0037C:  MOV     [--W15],W5
+0037E:  RETURN  
 ....................  
 .................... #list 
 ....................  
@@ -862,293 +725,330 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................  
 .................... #use delay(xtal = 10MHZ, clock = 140MHz) 
 *
-006BE:  CP0     W0
-006C0:  BTSC.B  42.1
-006C2:  BRA     6DC
-006C4:  REPEAT  #116B
-006C6:  NOP     
-006C8:  REPEAT  #3FFE
-006CA:  NOP     
-006CC:  REPEAT  #3FFE
-006CE:  NOP     
-006D0:  REPEAT  #3FFE
-006D2:  NOP     
-006D4:  REPEAT  #3FFE
-006D6:  NOP     
-006D8:  DEC     W0,W0
-006DA:  BRA     NZ,6C4
-006DC:  RETURN  
+00534:  CP0     W0
+00536:  BTSC.B  42.1
+00538:  BRA     552
+0053A:  REPEAT  #116B
+0053C:  NOP     
+0053E:  REPEAT  #3FFE
+00540:  NOP     
+00542:  REPEAT  #3FFE
+00544:  NOP     
+00546:  REPEAT  #3FFE
+00548:  NOP     
+0054A:  REPEAT  #3FFE
+0054C:  NOP     
+0054E:  DEC     W0,W0
+00550:  BRA     NZ,53A
+00552:  RETURN  
 ....................  
 .................... #pin_select U1TX = PIN_B11 
 .................... #pin_select U1RX = PIN_B12 
 .................... #use RS232(UART1, baud = 115200, stream = UART_PORT1) 
 .................... //#USE RS232(STREAM=UART1, BAUD = 115200, PARITY = N, BITS = 8, STOP = 1, TIMEOUT = 500, XMIT = PIN_B14, RCV = PIN_B15 )) 
-.................... #BANK_DMA  int8 channel[8][3]; 
-.................... int count, bitCount = 0; 
+.................... #BANK_DMA  unsigned int8 channel[8][3]; 
 .................... #pin_select INT1 = PIN_B6 
 .................... //#define SPI_CS PIN_B6 
 .................... //unsigned int32 channel[8];   
 .................... //int channel[8]; 
-.................... int rows = 0, cols = 0 ; 
-.................... int1 flag = 0; 
+....................  unsigned int rows = 0, cols = 0, bitCount =  0; 
 .................... //int j = 0; 
 .................... //#DEFINE ENABLE_INTERRUPTS(PIN_B11); 
 ....................  
 .................... void clear_channel() 
-006DE:  MOV     W5,[W15++]
-006E0:  CLR     102A
-006E2:  CLR     102C
+00554:  MOV     W5,[W15++]
+00556:  CLR     1022
+00558:  CLR     1024
 .................... { 
 ....................    int i = 0, k = 0; 
 ....................    while(i < 8){ 
-006E4:  MOV     102A,W4
-006E6:  CP      W4,#8
-006E8:  BRA     GE,70E
+0055A:  MOV     1022,W4
+0055C:  CP      W4,#8
+0055E:  BRA     GE,584
 ....................       while(k < 3){ 
-006EA:  MOV     102C,W4
-006EC:  CP      W4,#3
-006EE:  BRA     GE,706
+00560:  MOV     1024,W4
+00562:  CP      W4,#3
+00564:  BRA     GE,57C
 ....................          channel[i][k] = 0; 
-006F0:  MOV     102A,W4
-006F2:  MUL.UU  W4,#3,W0
-006F4:  MOV     W0,W5
-006F6:  MOV     W5,W0
-006F8:  ADD     102C,W0
-006FA:  MOV     #1002,W4
-006FC:  ADD     W0,W4,W5
-006FE:  CLR.B   [W5]
+00566:  MOV     1022,W4
+00568:  MUL.UU  W4,#3,W0
+0056A:  MOV     W0,W5
+0056C:  MOV     W5,W0
+0056E:  ADD     1024,W0
+00570:  MOV     #1002,W4
+00572:  ADD     W0,W4,W5
+00574:  CLR.B   [W5]
 ....................          k++; 
-00700:  INC     102C
-00702:  GOTO    6EA
+00576:  INC     1024
+00578:  GOTO    560
 ....................       } 
 ....................       k = 0; 
-00706:  CLR     102C
+0057C:  CLR     1024
 ....................       i++; 
-00708:  INC     102A
-0070A:  GOTO    6E4
+0057E:  INC     1022
+00580:  GOTO    55A
 ....................    } 
-0070E:  MOV     [--W15],W5
-00710:  RETURN  
+00584:  MOV     [--W15],W5
+00586:  RETURN  
 .................... } 
 ....................  
 .................... void display_matrix(void) 
-*
-003E2:  MOV     W5,[W15++]
-003E4:  CLR     1030
-003E6:  CLR     1032
+00588:  MOV     W5,[W15++]
+0058A:  CLR     1022
+0058C:  CLR     1024
 .................... { 
 ....................    int row = 0, columns = 0; 
-....................    for (row=0; row<3; row++) 
-003E8:  CLR     1030
-003EA:  MOV     1030,W4
-003EC:  CP      W4,#3
-003EE:  BRA     GE,444
+....................    for (row=0; row<8; row++) 
+0058E:  CLR     1022
+00590:  MOV     1022,W4
+00592:  CP      W4,#8
+00594:  BRA     GE,5EC
 ....................    { 
-....................     for(columns=0; columns<8; columns++) 
-003F0:  CLR     1032
-003F2:  MOV     1032,W4
-003F4:  CP      W4,#8
-003F6:  BRA     GE,42E
+....................     for(columns=0; columns<3; columns++) 
+00596:  CLR     1024
+00598:  MOV     1024,W4
+0059A:  CP      W4,#3
+0059C:  BRA     GE,5D6
 ....................         { 
-....................          printf("%d     ", channel[row][columns]); 
-003F8:  MOV     1030,W4
-003FA:  MUL.UU  W4,#3,W0
-003FC:  MOV     W0,W5
-003FE:  MOV     W5,W0
-00400:  ADD     1032,W0
-00402:  MOV     #1002,W4
-00404:  ADD     W0,W4,W0
-00406:  MOV.B   [W0],W5L
-00408:  SE      W5,W0
-0040A:  MOV     #0,W4
-0040C:  CALL    2E2
-00410:  MOV     #2,W1
-00412:  MOV     W1,W0
-00414:  CLR.B   1
-00416:  CALL    200
-0041A:  INC     W1,W1
-0041C:  BTSC.B  223.1
-0041E:  BRA     41C
-00420:  MOV     W0,224
-00422:  MOV     #6,W0
-00424:  CPSGT   W1,W0
-00426:  BRA     412
-00428:  INC     1032
-0042A:  GOTO    3F2
+....................          printf("%u     ", channel[row][columns]); 
+0059E:  MOV     1022,W4
+005A0:  MUL.UU  W4,#3,W0
+005A2:  MOV     W0,W5
+005A4:  MOV     W5,W0
+005A6:  ADD     1024,W0
+005A8:  MOV     #1002,W4
+005AA:  ADD     W0,W4,W0
+005AC:  MOV.B   [W0],W5L
+005AE:  MOV.B   W5L,W0L
+005B0:  CLR.B   1
+005B2:  MOV     #0,W4
+005B4:  CALL    2CA
+005B8:  MOV     #2,W1
+005BA:  MOV     W1,W0
+005BC:  CLR.B   1
+005BE:  CALL    200
+005C2:  INC     W1,W1
+005C4:  BTSC.B  223.1
+005C6:  BRA     5C4
+005C8:  MOV     W0,224
+005CA:  MOV     #6,W0
+005CC:  CPSGT   W1,W0
+005CE:  BRA     5BA
+005D0:  INC     1024
+005D2:  GOTO    598
 ....................         } 
 ....................       printf("\n\r"); 
-0042E:  BTSC.B  223.1
-00430:  BRA     42E
-00432:  MOV     #A,W4
-00434:  MOV     W4,224
-00436:  BTSC.B  223.1
-00438:  BRA     436
-0043A:  MOV     #D,W4
-0043C:  MOV     W4,224
-0043E:  INC     1030
-00440:  GOTO    3EA
+005D6:  BTSC.B  223.1
+005D8:  BRA     5D6
+005DA:  MOV     #A,W4
+005DC:  MOV     W4,224
+005DE:  BTSC.B  223.1
+005E0:  BRA     5DE
+005E2:  MOV     #D,W4
+005E4:  MOV     W4,224
+005E6:  INC     1022
+005E8:  GOTO    590
 ....................    } 
-00444:  MOV     [--W15],W5
-00446:  RETURN  
+005EC:  MOV     [--W15],W5
+005EE:  RETURN  
 .................... } 
 ....................  
 .................... #INT_EXT1 
 .................... void DCLK_interrupt_handler() 
-00448:  PUSH    42
-0044A:  PUSH    36
-0044C:  PUSH    54
-0044E:  MOV     W0,[W15++]
-00450:  MOV     #2,W0
-00452:  REPEAT  #C
-00454:  MOV     [W0++],[W15++]
+*
+00380:  PUSH    42
+00382:  PUSH    36
+00384:  PUSH    54
+00386:  MOV     W0,[W15++]
+00388:  MOV     #2,W0
+0038A:  REPEAT  #C
+0038C:  MOV     [W0++],[W15++]
 .................... {         
-....................          while(rows <= 8){ 
-00456:  MOV     101E,W4
-00458:  CP      W4,#8
-0045A:  BRA     GT,478
+....................          while(rows <= 7){ 
+0038E:  MOV     101A,W4
+00390:  CP      W4,#7
+00392:  BRA     GTU,3B0
 ....................          //shift bits left for next inputDMA0   DMA channel 0 transfer complete 
 ....................             channel[rows][cols] <<= 1; 
-0045C:  MOV     101E,W4
-0045E:  MUL.UU  W4,#3,W0
-00460:  MOV     W0,W5
-00462:  MOV     W5,W0
-00464:  ADD     1020,W0
-00466:  MOV     #1002,W4
-00468:  ADD     W0,W4,W5
-0046A:  MOV.B   [W5],W0L
-0046C:  CLR.B   1
-0046E:  SL      W0,#1,W0
-00470:  MOV.B   W0L,[W5]
+00394:  MOV     101A,W4
+00396:  MUL.UU  W4,#3,W0
+00398:  MOV     W0,W5
+0039A:  MOV     W5,W0
+0039C:  ADD     101C,W0
+0039E:  MOV     #1002,W4
+003A0:  ADD     W0,W4,W5
+003A2:  MOV.B   [W5],W0L
+003A4:  CLR.B   1
+003A6:  SL      W0,#1,W0
+003A8:  MOV.B   W0L,[W5]
 ....................             rows++; 
-00472:  INC     101E
-00474:  GOTO    456
+003AA:  INC     101A
+003AC:  GOTO    38E
 ....................          } 
-....................         // cols = 0; 
+....................           rows = 0; 
+003B0:  CLR     101A
+....................           bitCount++; 
+003B2:  INC     101E
 ....................          //Accept inputs 1 bit at a time 
 ....................          channel[0][cols] += input(PIN_B0); 
-00478:  MOV     #1002,W4
-0047A:  MOV     1020,W3
-0047C:  ADD     W3,W4,W5
-0047E:  BSET.B  E10.0
-00480:  CLR     W0
-00482:  BTSC.B  E12.0
-00484:  INC     W0,W0
-00486:  ADD.B   W0L,[W5],[W5]
+003B4:  MOV     #1002,W4
+003B6:  MOV     101C,W3
+003B8:  ADD     W3,W4,W5
+003BA:  BSET.B  E10.0
+003BC:  CLR     W0
+003BE:  BTSC.B  E12.0
+003C0:  INC     W0,W0
+003C2:  ADD.B   W0L,[W5],[W5]
 ....................          channel[1][cols] += input(PIN_B1); 
-00488:  MOV     #1005,W0
-0048A:  ADD     1020,W0
-0048C:  MOV     W0,W5
-0048E:  BSET.B  E10.1
-00490:  CLR     W0
-00492:  BTSC.B  E12.1
-00494:  INC     W0,W0
-00496:  ADD.B   W0L,[W5],[W5]
+003C4:  MOV     #1005,W0
+003C6:  ADD     101C,W0
+003C8:  MOV     W0,W5
+003CA:  BSET.B  E10.1
+003CC:  CLR     W0
+003CE:  BTSC.B  E12.1
+003D0:  INC     W0,W0
+003D2:  ADD.B   W0L,[W5],[W5]
 ....................          channel[2][cols] += input(PIN_B2); 
-00498:  MOV     #1008,W0
-0049A:  ADD     1020,W0
-0049C:  MOV     W0,W5
-0049E:  BSET.B  E10.2
-004A0:  CLR     W0
-004A2:  BTSC.B  E12.2
-004A4:  INC     W0,W0
-004A6:  ADD.B   W0L,[W5],[W5]
+003D4:  MOV     #1008,W0
+003D6:  ADD     101C,W0
+003D8:  MOV     W0,W5
+003DA:  BSET.B  E10.2
+003DC:  CLR     W0
+003DE:  BTSC.B  E12.2
+003E0:  INC     W0,W0
+003E2:  ADD.B   W0L,[W5],[W5]
 ....................          channel[3][cols] += input(PIN_B3); 
-004A8:  MOV     #100B,W0
-004AA:  ADD     1020,W0
-004AC:  MOV     W0,W5
-004AE:  BSET.B  E10.3
-004B0:  CLR     W0
-004B2:  BTSC.B  E12.3
-004B4:  INC     W0,W0
-004B6:  ADD.B   W0L,[W5],[W5]
+003E4:  MOV     #100B,W0
+003E6:  ADD     101C,W0
+003E8:  MOV     W0,W5
+003EA:  BSET.B  E10.3
+003EC:  CLR     W0
+003EE:  BTSC.B  E12.3
+003F0:  INC     W0,W0
+003F2:  ADD.B   W0L,[W5],[W5]
 ....................          channel[4][cols] += input(PIN_B4); 
-004B8:  MOV     #100E,W0
-004BA:  ADD     1020,W0
-004BC:  MOV     W0,W5
-004BE:  BSET.B  E10.4
-004C0:  CLR     W0
-004C2:  BTSC.B  E12.4
-004C4:  INC     W0,W0
-004C6:  ADD.B   W0L,[W5],[W5]
+003F4:  MOV     #100E,W0
+003F6:  ADD     101C,W0
+003F8:  MOV     W0,W5
+003FA:  BSET.B  E10.4
+003FC:  CLR     W0
+003FE:  BTSC.B  E12.4
+00400:  INC     W0,W0
+00402:  ADD.B   W0L,[W5],[W5]
 ....................          channel[5][cols] += input(PIN_B5); 
-004C8:  MOV     #1011,W0
-004CA:  ADD     1020,W0
-004CC:  MOV     W0,W5
-004CE:  BSET.B  E10.5
-004D0:  CLR     W0
-004D2:  BTSC.B  E12.5
-004D4:  INC     W0,W0
-004D6:  ADD.B   W0L,[W5],[W5]
+00404:  MOV     #1011,W0
+00406:  ADD     101C,W0
+00408:  MOV     W0,W5
+0040A:  BSET.B  E10.5
+0040C:  CLR     W0
+0040E:  BTSC.B  E12.5
+00410:  INC     W0,W0
+00412:  ADD.B   W0L,[W5],[W5]
 ....................          channel[6][cols] += input(PIN_B8); //B6 Used by interrupt 
-004D8:  MOV     #1014,W0
-004DA:  ADD     1020,W0
-004DC:  MOV     W0,W5
-004DE:  BSET.B  E11.0
-004E0:  CLR     W0
-004E2:  BTSC.B  E13.0
-004E4:  INC     W0,W0
-004E6:  ADD.B   W0L,[W5],[W5]
+00414:  MOV     #1014,W0
+00416:  ADD     101C,W0
+00418:  MOV     W0,W5
+0041A:  BSET.B  E11.0
+0041C:  CLR     W0
+0041E:  BTSC.B  E13.0
+00420:  INC     W0,W0
+00422:  ADD.B   W0L,[W5],[W5]
 ....................          channel[7][cols] += input(PIN_B9); //B7 Used by interrupt 
-004E8:  MOV     #1017,W0
-004EA:  ADD     1020,W0
-004EC:  MOV     W0,W5
-004EE:  BSET.B  E11.1
-004F0:  CLR     W0
-004F2:  BTSC.B  E13.1
-004F4:  INC     W0,W0
-004F6:  ADD.B   W0L,[W5],[W5]
+00424:  MOV     #1017,W0
+00426:  ADD     101C,W0
+00428:  MOV     W0,W5
+0042A:  BSET.B  E11.1
+0042C:  CLR     W0
+0042E:  BTSC.B  E13.1
+00430:  INC     W0,W0
+00432:  ADD.B   W0L,[W5],[W5]
 ....................          //Possible take whole port at one time??? 
 ....................          //inputPortB = input_b(); 
-....................          bitCount++; 
-004F8:  INC     101C
-....................          rows = 0; 
-004FA:  CLR     101E
+....................         // printf("Bitcount = %u \n\r", bitCount);          
 ....................          printf("Data Reading \n\r"); 
-004FC:  MOV     #0,W1
-004FE:  MOV     W1,W0
-00500:  CLR.B   1
-00502:  CALL    214
-00506:  INC     W1,W1
-00508:  BTSC.B  223.1
-0050A:  BRA     508
-0050C:  MOV     W0,224
-0050E:  MOV     #E,W0
-00510:  CPSGT   W1,W0
-00512:  BRA     4FE
+00434:  MOV     #0,W1
+00436:  MOV     W1,W0
+00438:  CLR.B   1
+0043A:  CALL    214
+0043E:  INC     W1,W1
+00440:  BTSC.B  223.1
+00442:  BRA     440
+00444:  MOV     W0,224
+00446:  MOV     #E,W0
+00448:  CPSGT   W1,W0
+0044A:  BRA     436
 ....................          if (bitCount == 8){ 
-00514:  MOV     101C,W4
-00516:  CP      W4,#8
-00518:  BRA     NZ,548
-....................              cols++; 
-0051A:  INC     1020
-....................             if(cols == 3){ 
-0051C:  MOV     1020,W4
-0051E:  CP      W4,#3
-00520:  BRA     NZ,528
+0044C:  MOV     101E,W4
+0044E:  CP      W4,#8
+00450:  BRA     NZ,4C6
+....................             if(cols == 2){ 
+00452:  MOV     101C,W4
+00454:  CP      W4,#2
+00456:  BRA     NZ,476
+....................                printf("Gets here \n\r" ); 
+00458:  MOV     #0,W1
+0045A:  MOV     W1,W0
+0045C:  CLR.B   1
+0045E:  CALL    230
+00462:  INC     W1,W1
+00464:  BTSC.B  223.1
+00466:  BRA     464
+00468:  MOV     W0,224
+0046A:  MOV     #B,W0
+0046C:  CPSGT   W1,W0
+0046E:  BRA     45A
 ....................                cols = 0; 
-00522:  CLR     1020
-....................                display_matrix(); 
-00524:  CALL    3E2
+00470:  CLR     101C
+....................              //  display_matrix(); 
 ....................             } 
-....................             dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0][0]); 
-00528:  BCLR.B  B01.7
-0052A:  MOV.B   #1,W0L
-0052C:  MOV.B   W0L,B00
-0052E:  MOV     #1002,W4
-00530:  MOV     W4,B04
-00532:  CLR     B06
-00534:  BTSS.B  B01.6
-00536:  BRA     53E
-00538:  MOV     #17,W4
-0053A:  MOV     W4,B0E
-0053C:  BRA     542
-0053E:  MOV     #B,W4
-00540:  MOV     W4,B0E
-00542:  BSET.B  B01.7
-00544:  BSET.B  B03.7
+00472:  GOTO    478
+....................             else{ 
+....................             cols++; 
+00476:  INC     101C
+....................             } 
+....................             dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel, 24); 
+00478:  BCLR.B  B01.7
+0047A:  MOV.B   #1,W0L
+0047C:  MOV.B   W0L,B00
+0047E:  MOV     #1002,W4
+00480:  MOV     W4,B04
+00482:  CLR     B06
+00484:  MOV     #18,W4
+00486:  MOV     W4,B0E
+00488:  BSET.B  B01.7
+0048A:  BSET.B  B03.7
 ....................             bitCount = 0; 
-00546:  CLR     101C
+0048C:  CLR     101E
+....................             printf("Cols %u \n\r", cols); 
+0048E:  MOV     #0,W1
+00490:  MOV     W1,W0
+00492:  CLR.B   1
+00494:  CALL    24A
+00498:  INC     W1,W1
+0049A:  BTSC.B  223.1
+0049C:  BRA     49A
+0049E:  MOV     W0,224
+004A0:  MOV     #4,W0
+004A2:  CPSGT   W1,W0
+004A4:  BRA     490
+004A6:  MOV     101C,W0
+004A8:  MOV     #0,W4
+004AA:  CALL    2CA
+004AE:  BTSC.B  223.1
+004B0:  BRA     4AE
+004B2:  MOV     #20,W4
+004B4:  MOV     W4,224
+004B6:  BTSC.B  223.1
+004B8:  BRA     4B6
+004BA:  MOV     #A,W4
+004BC:  MOV     W4,224
+004BE:  BTSC.B  223.1
+004C0:  BRA     4BE
+004C2:  MOV     #D,W4
+004C4:  MOV     W4,224
 ....................          } 
+....................           
+....................           
 ....................           
 .................... //!   else{ 
 .................... //!      printf("24 bits\n\r"); 
@@ -1158,224 +1058,182 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... } 
 ....................  
 ....................  
-00548:  BCLR.B  802.4
-0054A:  MOV     #1A,W0
-0054C:  REPEAT  #C
-0054E:  MOV     [--W15],[W0--]
-00550:  MOV     [--W15],W0
-00552:  POP     54
-00554:  POP     36
-00556:  POP     42
-00558:  RETFIE  
+004C6:  BCLR.B  802.4
+004C8:  MOV     #1A,W0
+004CA:  REPEAT  #C
+004CC:  MOV     [--W15],[W0--]
+004CE:  MOV     [--W15],W0
+004D0:  POP     54
+004D2:  POP     36
+004D4:  POP     42
+004D6:  RETFIE  
 .................... #INT_EXT0 
 .................... void DRDY_interrupt_handler() 
-0055A:  PUSH    42
-0055C:  PUSH    36
-0055E:  PUSH    54
-00560:  MOV     W0,[W15++]
-00562:  MOV     #2,W0
-00564:  REPEAT  #C
-00566:  MOV     [W0++],[W15++]
+004D8:  PUSH    42
+004DA:  PUSH    36
+004DC:  PUSH    54
+004DE:  MOV     W0,[W15++]
+004E0:  MOV     #2,W0
+004E2:  REPEAT  #C
+004E4:  MOV     [W0++],[W15++]
 .................... { 
 ....................    CLEAR_INTERRUPT(INT_EXT1); 
-00568:  BCLR.B  802.4
+004E6:  BCLR.B  802.4
 ....................    ENABLE_INTERRUPTS(INT_EXT1); 
-0056A:  BSET.B  822.4
+004E8:  BSET.B  822.4
 ....................    printf("Waiting for Data Clock \n\r"); 
-0056C:  MOV     #0,W1
-0056E:  MOV     W1,W0
-00570:  CLR.B   1
-00572:  CALL    230
-00576:  INC     W1,W1
-00578:  BTSC.B  223.1
-0057A:  BRA     578
-0057C:  MOV     W0,224
-0057E:  MOV     #18,W0
-00580:  CPSGT   W1,W0
-00582:  BRA     56E
+004EA:  MOV     #0,W1
+004EC:  MOV     W1,W0
+004EE:  CLR.B   1
+004F0:  CALL    262
+004F4:  INC     W1,W1
+004F6:  BTSC.B  223.1
+004F8:  BRA     4F6
+004FA:  MOV     W0,224
+004FC:  MOV     #18,W0
+004FE:  CPSGT   W1,W0
+00500:  BRA     4EC
 .................... } 
 ....................  
-00584:  BCLR.B  800.0
-00586:  MOV     #1A,W0
-00588:  REPEAT  #C
-0058A:  MOV     [--W15],[W0--]
-0058C:  MOV     [--W15],W0
-0058E:  POP     54
-00590:  POP     36
-00592:  POP     42
-00594:  RETFIE  
+00502:  BCLR.B  800.0
+00504:  MOV     #1A,W0
+00506:  REPEAT  #C
+00508:  MOV     [--W15],[W0--]
+0050A:  MOV     [--W15],W0
+0050C:  POP     54
+0050E:  POP     36
+00510:  POP     42
+00512:  RETFIE  
 .................... #INT_DMA0 
 .................... void DMA_interrupt_handler() 
-*
-0064C:  PUSH    42
-0064E:  PUSH    36
-00650:  PUSH    54
-00652:  MOV     W0,[W15++]
-00654:  MOV     #2,W0
-00656:  REPEAT  #C
-00658:  MOV     [W0++],[W15++]
+00514:  PUSH    42
+00516:  PUSH    36
+00518:  PUSH    54
+0051A:  MOV     W0,[W15++]
+0051C:  MOV     #2,W0
+0051E:  REPEAT  #C
+00520:  MOV     [W0++],[W15++]
 .................... { 
-....................    printf("DMA Transfer Complete \n\r"); 
-0065A:  MOV     #0,W1
-0065C:  MOV     W1,W0
-0065E:  CLR.B   1
-00660:  CALL    256
-00664:  INC     W1,W1
-00666:  BTSC.B  223.1
-00668:  BRA     666
-0066A:  MOV     W0,224
-0066C:  MOV     #17,W0
-0066E:  CPSGT   W1,W0
-00670:  BRA     65C
-....................    printf("Channel[0][0] is: %u \n\r", channel[0][0]);  
-00672:  MOV     #0,W1
-00674:  MOV     W1,W0
-00676:  CLR.B   1
-00678:  CALL    27C
-0067C:  INC     W1,W1
-0067E:  BTSC.B  223.1
-00680:  BRA     67E
-00682:  MOV     W0,224
-00684:  MOV     #11,W0
-00686:  CPSGT   W1,W0
-00688:  BRA     674
-0068A:  MOV.B   1002,W0L
-0068C:  CLR.B   1
-0068E:  MOV     #0,W4
-00690:  CALL    596
-00694:  BTSC.B  223.1
-00696:  BRA     694
-00698:  MOV     #20,W4
-0069A:  MOV     W4,224
-0069C:  BTSC.B  223.1
-0069E:  BRA     69C
-006A0:  MOV     #A,W4
-006A2:  MOV     W4,224
-006A4:  BTSC.B  223.1
-006A6:  BRA     6A4
-006A8:  MOV     #D,W4
-006AA:  MOV     W4,224
+....................  //  printf("DMA Transfer Complete \n\r"); 
+....................   // printf("Channel[0][0] is: %u \n\r", channel[0][0]);  
 ....................  //  clear_channel(); 
-006AC:  BCLR.B  800.4
-006AE:  MOV     #1A,W0
-006B0:  REPEAT  #C
-006B2:  MOV     [--W15],[W0--]
-006B4:  MOV     [--W15],W0
-006B6:  POP     54
-006B8:  POP     36
-006BA:  POP     42
-006BC:  RETFIE  
+....................    
+00522:  BCLR.B  800.4
+00524:  MOV     #1A,W0
+00526:  REPEAT  #C
+00528:  MOV     [--W15],[W0--]
+0052A:  MOV     [--W15],W0
+0052C:  POP     54
+0052E:  POP     36
+00530:  POP     42
+00532:  RETFIE  
 .................... } 
 ....................  
 ....................  
 .................... void main(){ 
 *
-00712:  MOV     #7F80,W15
-00714:  MOV     #7FFF,W0
-00716:  MOV     W0,20
-00718:  NOP     
-0071A:  BSET.B  8C1.7
-0071C:  DISI    #6
-0071E:  MOV     #742,W1
-00720:  MOV     #46,W2
-00722:  MOV     #57,W3
-00724:  MOV.B   W2L,[W1]
-00726:  MOV.B   W3L,[W1]
-00728:  BCLR.B  742.6
-0072A:  MOV     #2600,W0
-0072C:  MOV     W0,6A0
-0072E:  MOV     #2C,W0
-00730:  MOV     W0,6C4
-00732:  MOV     #100,W0
-00734:  MOV     W0,688
-00736:  DISI    #6
-00738:  MOV     #742,W1
-0073A:  MOV     #46,W2
-0073C:  MOV     #57,W3
-0073E:  MOV.B   W2L,[W1]
-00740:  MOV.B   W3L,[W1]
-00742:  BSET.B  742.6
-00744:  CLR     744
-00746:  MOV     #36,W4
-00748:  MOV     W4,746
-0074A:  DISI    #E
-0074C:  MOV     #103,W0
-0074E:  MOV     #743,W1
-00750:  MOV     #78,W2
-00752:  MOV     #9A,W3
-00754:  MOV.B   W2L,[W1]
-00756:  MOV.B   W3L,[W1]
-00758:  MOV.B   W0L,743
-0075A:  LSR     W0,#8,W0
-0075C:  MOV     #742,W1
-0075E:  MOV     #46,W2
-00760:  MOV     #57,W3
-00762:  MOV.B   W2L,[W1]
-00764:  MOV.B   W3L,[W1]
-00766:  MOV.B   W0L,[W1]
-00768:  MOV     #8000,W4
-0076A:  MOV     W4,220
-0076C:  MOV     #400,W4
-0076E:  MOV     W4,222
-00770:  BCLR.B  220.3
-00772:  MOV     #25,W4
-00774:  MOV     W4,228
-00776:  CLR     101C
-00778:  CLR     101E
-0077A:  CLR     1020
-0077C:  BCLR.B  1022.0
-0077E:  CLR     E0E
-00780:  CLR     E1E
-00782:  CLR     1000
+005F0:  MOV     #7F80,W15
+005F2:  MOV     #7FFF,W0
+005F4:  MOV     W0,20
+005F6:  NOP     
+005F8:  BSET.B  8C1.7
+005FA:  DISI    #6
+005FC:  MOV     #742,W1
+005FE:  MOV     #46,W2
+00600:  MOV     #57,W3
+00602:  MOV.B   W2L,[W1]
+00604:  MOV.B   W3L,[W1]
+00606:  BCLR.B  742.6
+00608:  MOV     #2600,W0
+0060A:  MOV     W0,6A0
+0060C:  MOV     #2C,W0
+0060E:  MOV     W0,6C4
+00610:  MOV     #100,W0
+00612:  MOV     W0,688
+00614:  DISI    #6
+00616:  MOV     #742,W1
+00618:  MOV     #46,W2
+0061A:  MOV     #57,W3
+0061C:  MOV.B   W2L,[W1]
+0061E:  MOV.B   W3L,[W1]
+00620:  BSET.B  742.6
+00622:  CLR     744
+00624:  MOV     #36,W4
+00626:  MOV     W4,746
+00628:  DISI    #E
+0062A:  MOV     #103,W0
+0062C:  MOV     #743,W1
+0062E:  MOV     #78,W2
+00630:  MOV     #9A,W3
+00632:  MOV.B   W2L,[W1]
+00634:  MOV.B   W3L,[W1]
+00636:  MOV.B   W0L,743
+00638:  LSR     W0,#8,W0
+0063A:  MOV     #742,W1
+0063C:  MOV     #46,W2
+0063E:  MOV     #57,W3
+00640:  MOV.B   W2L,[W1]
+00642:  MOV.B   W3L,[W1]
+00644:  MOV.B   W0L,[W1]
+00646:  MOV     #8000,W4
+00648:  MOV     W4,220
+0064A:  MOV     #400,W4
+0064C:  MOV     W4,222
+0064E:  BCLR.B  220.3
+00650:  MOV     #25,W4
+00652:  MOV     W4,228
+00654:  CLR     101A
+00656:  CLR     101C
+00658:  CLR     101E
+0065A:  CLR     E0E
+0065C:  CLR     E1E
+0065E:  CLR     1000
 .................... //#BIT INT0EP = 0x08C2.0; 
 ....................    delay_ms(500); 
-00784:  MOV     #1F4,W0
-00786:  CALL    6BE
+00660:  MOV     #1F4,W0
+00662:  CALL    534
 ....................    EXT_INT_EDGE(L_TO_H); 
-0078A:  BCLR.B  8C2.0
-....................    int Value; 
+00666:  BCLR.B  8C2.0
 ....................     
 .................... //   INT0EP = 1; // negative edge 
 ....................     
 ....................    CLEAR_INTERRUPT(INT_EXT0); 
-0078C:  BCLR.B  800.0
+00668:  BCLR.B  800.0
 ....................    ENABLE_INTERRUPTS(INT_EXT0); 
-0078E:  BSET.B  820.0
+0066A:  BSET.B  820.0
 ....................    CLEAR_INTERRUPT(INT_DMA0); 
-00790:  BCLR.B  800.4
+0066C:  BCLR.B  800.4
 ....................    ENABLE_INTERRUPTS(INT_DMA0); 
-00792:  BSET.B  820.4
+0066E:  BSET.B  820.4
 ....................  
 ....................   // ENABLE_INTERRUPTS(INTR_NORMAL); 
 ....................    ENABLE_INTERRUPTS(INTR_GLOBAL); 
-00794:  BSET.B  8C3.7
+00670:  BSET.B  8C3.7
 ....................     
 ....................    setup_dma(0,DMA_OUT_UART1,DMA_BYTE);    
-00796:  MOV.B   #60,W0L
-00798:  MOV.B   W0L,B01
-0079A:  MOV.B   #C,W0L
-0079C:  MOV.B   W0L,B02
-0079E:  MOV     #224,W4
-007A0:  MOV     W4,B0C
+00672:  MOV.B   #60,W0L
+00674:  MOV.B   W0L,B01
+00676:  MOV.B   #C,W0L
+00678:  MOV.B   W0L,B02
+0067A:  MOV     #224,W4
+0067C:  MOV     W4,B0C
 ....................    //dma_start(1,DMA_ONE_SHOT , 0x4000,0); 
-....................    int i = 0; 
-007A2:  CLR     1026
 ....................    //initialize the array 
 ....................    clear_channel(); 
-007A4:  CALL    6DE
+0067E:  CALL    554
 ....................     
 ....................    printf("Test1 \n\r"); 
-007A8:  MOV     #0,W1
-007AA:  MOV     W1,W0
-007AC:  CLR.B   1
-007AE:  CALL    2A0
-007B2:  INC     W1,W1
-007B4:  BTSC.B  223.1
-007B6:  BRA     7B4
-007B8:  MOV     W0,224
-007BA:  MOV     #7,W0
-007BC:  CPSGT   W1,W0
-007BE:  BRA     7AA
+00682:  MOV     #0,W1
+00684:  MOV     W1,W0
+00686:  CLR.B   1
+00688:  CALL    288
+0068C:  INC     W1,W1
+0068E:  BTSC.B  223.1
+00690:  BRA     68E
+00692:  MOV     W0,224
+00694:  MOV     #7,W0
+00696:  CPSGT   W1,W0
+00698:  BRA     684
 .................... //!  while(count != 5){ 
 .................... //!   output_high(PIN_A0); 
 .................... //!   delay_ms(100); 
@@ -1385,31 +1243,28 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... //!   count++; 
 .................... //!   } 
 ....................    delay_ms(200); 
-007C0:  MOV     #C8,W0
-007C2:  CALL    6BE
-007C6:  PUSH    8C2
-007C8:  BCLR.B  8C3.7
+0069A:  MOV     #C8,W0
+0069C:  CALL    534
 ....................    display_matrix(); 
-007CA:  CALL    3E2
-007CE:  POP     8C2
+006A0:  CALL    588
 ....................    while(1) 
 ....................    { 
 ....................       delay_ms(2000); 
-007D0:  MOV     #7D0,W0
-007D2:  CALL    6BE
+006A4:  MOV     #7D0,W0
+006A6:  CALL    534
 ....................       printf("No \n\r"); 
-007D6:  MOV     #0,W1
-007D8:  MOV     W1,W0
-007DA:  CLR.B   1
-007DC:  CALL    2B6
-007E0:  INC     W1,W1
-007E2:  BTSC.B  223.1
-007E4:  BRA     7E2
-007E6:  MOV     W0,224
-007E8:  MOV     #4,W0
-007EA:  CPSGT   W1,W0
-007EC:  BRA     7D8
-007EE:  GOTO    7D0
+006AA:  MOV     #0,W1
+006AC:  MOV     W1,W0
+006AE:  CLR.B   1
+006B0:  CALL    29E
+006B4:  INC     W1,W1
+006B6:  BTSC.B  223.1
+006B8:  BRA     6B6
+006BA:  MOV     W0,224
+006BC:  MOV     #4,W0
+006BE:  CPSGT   W1,W0
+006C0:  BRA     6AC
+006C2:  GOTO    6A4
 ....................       //Value = dma_status(0); 
 ....................       //printf("DMA status: %u \n\r", Value); 
 ....................      // dma_start(1,DMA_ONE_SHOT , 0x4000,0); 
@@ -1417,26 +1272,26 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................    } 
 ....................    //printf("ch0 is:%u \n\r",ch0); 
 ....................    int support = getenv("DMA"); 
-007F2:  MOV     #1,W4
-007F4:  MOV     W4,1028
+006C6:  MOV     #1,W4
+006C8:  MOV     W4,1020
 ....................    printf("DMA Valid: %u", support); 
-007F6:  MOV     #0,W1
-007F8:  MOV     W1,W0
-007FA:  CLR.B   1
-007FC:  CALL    2C8
-00800:  INC     W1,W1
-00802:  BTSC.B  223.1
-00804:  BRA     802
-00806:  MOV     W0,224
-00808:  MOV     #A,W0
-0080A:  CPSGT   W1,W0
-0080C:  BRA     7F8
-0080E:  MOV     1028,W0
-00810:  MOV     #0,W4
-00812:  CALL    596
+006CA:  MOV     #0,W1
+006CC:  MOV     W1,W0
+006CE:  CLR.B   1
+006D0:  CALL    2B0
+006D4:  INC     W1,W1
+006D6:  BTSC.B  223.1
+006D8:  BRA     6D6
+006DA:  MOV     W0,224
+006DC:  MOV     #A,W0
+006DE:  CPSGT   W1,W0
+006E0:  BRA     6CC
+006E2:  MOV     1020,W0
+006E4:  MOV     #0,W4
+006E6:  CALL    2CA
 .................... } 
 *
-00816:  PWRSAV  #0
+006EA:  PWRSAV  #0
 
 Configuration Fuses:
    Word  3L: FFCF   ICSP1 NOJTAG NODEBUG

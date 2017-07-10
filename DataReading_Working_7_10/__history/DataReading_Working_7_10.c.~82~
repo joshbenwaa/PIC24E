@@ -103,9 +103,9 @@ void DRDY_interrupt_handler()
 #INT_DMA0
 void DMA_interrupt_handler()
 {
-   printf("DMA Transfer Complete \n\r");
-   printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
-   clear_channel();
+ //  printf("DMA Transfer Complete \n\r");
+  // printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
+ //  clear_channel();
   
 }
 
