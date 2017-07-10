@@ -1,0 +1,34 @@
+[PROJECT]
+Target=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DMA_Part2\main_DMA_2.hex
+Processor_Text=PIC24EP256GP202
+CCSVerions=5.071d
+Compiler=PCD
+[Target Data]
+FileList=main_DMA_2.c
+[Directories]
+Include=
+[C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DMA_Part2\main_DMA_2]
+Type=4
+[mru-list]
+1=main_DMA_2.c
+[Units]
+Count=1
+1=main_DMA_2 (main)
+
+[ProjectLog]
+Days=2
+D1=06-07-2017
+D1_L=2
+D1_L1=[74150]Project Opened.
+D1_L2=[74524]Project Closed.
+D2=07-07-2017
+D2_L=2
+D2_L1=[35559]Project Opened.
+D2_L2=[35625]Project Closed.
+
+[Opened Files]
+1=main_DMA_2.c
+t1=1
+2=main_DMA_2.h
+t2=1
+Count=2

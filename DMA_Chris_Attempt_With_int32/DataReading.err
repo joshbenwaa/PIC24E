@@ -1,0 +1,9 @@
+>>> Warning 203 "DataReading.c" Line 116(1,1): Condition always TRUE
+>>> Warning 216 "DataReading.c" Line 129(1,2): Interrupts disabled during call to prevent re-entrancy:  (clear_channel)
+>>> Warning 202 "DataReading.c" Line 14(5,10): Variable never used:   count
+>>> Warning 202 "DataReading.c" Line 20(6,10): Variable never used:   flag
+>>> Warning 202 "DataReading.c" Line 89(8,13): Variable never used:   value
+>>> Warning 202 "DataReading.c" Line 103(8,9): Variable never used:   i
+      Memory usage:   ROM=1%      RAM=0% - 0%
+      0 Errors,  6 Warnings.
+Build Successful.

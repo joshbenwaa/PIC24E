@@ -1,0 +1,702 @@
+CCS PCD C Compiler, Version 5.071d, 1               07-Jul-17 14:05
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   E:\BoardTest_Chris - Working\DataReading.lst
+
+               ROM used:   1600 bytes (1%)
+                           Largest free fragment is 65536
+               RAM used:   149 (0%) at main() level
+                           149 (0%) worst case
+               Stack used: 66 locations (14 in main + 52 for interrupts)
+               Stack size: 128
+
+*
+00000:  GOTO    53E
+*
+00014:  DATA    70,04,00
+*
+0001C:  DATA    E6,04,00
+*
+0003C:  DATA    CC,02,00
+.................... #include <24EP256GP202.h> 
+.................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24EP256GP202 
+*
+00200:  CLR     54
+00202:  MOV     #20C,W3
+00204:  ADD     W3,W0,W0
+00206:  TBLRDL.B[W0],W0L
+00208:  CLR.B   1
+0020A:  RETURN  
+0020C:  DATA    44,61,00
+0020E:  DATA    74,61,00
+00210:  DATA    20,52,00
+00212:  DATA    65,61,00
+00214:  DATA    64,69,00
+00216:  DATA    6E,67,00
+00218:  DATA    20,0A,00
+0021A:  DATA    0D,00,00
+0021C:  CLR     54
+0021E:  MOV     #228,W3
+00220:  ADD     W3,W0,W0
+00222:  TBLRDL.B[W0],W0L
+00224:  CLR.B   1
+00226:  RETURN  
+00228:  DATA    57,61,00
+0022A:  DATA    69,74,00
+0022C:  DATA    69,6E,00
+0022E:  DATA    67,20,00
+00230:  DATA    66,6F,00
+00232:  DATA    72,20,00
+00234:  DATA    44,61,00
+00236:  DATA    74,61,00
+00238:  DATA    20,43,00
+0023A:  DATA    6C,6F,00
+0023C:  DATA    63,6B,00
+0023E:  DATA    20,0A,00
+00240:  DATA    0D,00,00
+00242:  CLR     54
+00244:  MOV     #24E,W3
+00246:  ADD     W3,W0,W0
+00248:  TBLRDL.B[W0],W0L
+0024A:  CLR.B   1
+0024C:  RETURN  
+0024E:  DATA    43,68,00
+00250:  DATA    61,6E,00
+00252:  DATA    6E,65,00
+00254:  DATA    6C,5B,00
+00256:  DATA    30,5D,00
+00258:  DATA    20,69,00
+0025A:  DATA    73,3A,00
+0025C:  DATA    20,25,00
+0025E:  DATA    75,20,00
+00260:  DATA    0A,0D,00
+00262:  DATA    00,00,00
+00264:  CLR     54
+00266:  MOV     #270,W3
+00268:  ADD     W3,W0,W0
+0026A:  TBLRDL.B[W0],W0L
+0026C:  CLR.B   1
+0026E:  RETURN  
+00270:  DATA    44,4D,00
+00272:  DATA    41,20,00
+00274:  DATA    54,72,00
+00276:  DATA    61,6E,00
+00278:  DATA    73,66,00
+0027A:  DATA    65,72,00
+0027C:  DATA    20,43,00
+0027E:  DATA    6F,6D,00
+00280:  DATA    70,6C,00
+00282:  DATA    65,74,00
+00284:  DATA    65,20,00
+00286:  DATA    0A,0D,00
+00288:  DATA    00,00,00
+0028A:  CLR     54
+0028C:  MOV     #296,W3
+0028E:  ADD     W3,W0,W0
+00290:  TBLRDL.B[W0],W0L
+00292:  CLR.B   1
+00294:  RETURN  
+00296:  DATA    54,65,00
+00298:  DATA    73,74,00
+0029A:  DATA    31,20,00
+0029C:  DATA    0A,0D,00
+0029E:  DATA    00,00,00
+002A0:  CLR     54
+002A2:  MOV     #2AC,W3
+002A4:  ADD     W3,W0,W0
+002A6:  TBLRDL.B[W0],W0L
+002A8:  CLR.B   1
+002AA:  RETURN  
+002AC:  DATA    4E,6F,00
+002AE:  DATA    20,0A,00
+002B0:  DATA    0D,00,00
+002B2:  CLR     54
+002B4:  MOV     #2BE,W3
+002B6:  ADD     W3,W0,W0
+002B8:  TBLRDL.B[W0],W0L
+002BA:  CLR.B   1
+002BC:  RETURN  
+002BE:  DATA    44,4D,00
+002C0:  DATA    41,20,00
+002C2:  DATA    56,61,00
+002C4:  DATA    6C,69,00
+002C6:  DATA    64,3A,00
+002C8:  DATA    20,25,00
+002CA:  DATA    75,00,00
+*
+003BA:  MOV     W5,[W15++]
+003BC:  MOV     #C,W5
+003BE:  REPEAT  #3
+003C0:  MOV     [W5++],[W15++]
+003C2:  MOV     W0,W7
+003C4:  MOV     W4,W9
+003C6:  BCLR    W4.F
+003C8:  CP0     W4
+003CA:  BRA     NZ,3D8
+003CC:  BTSC    W9.F
+003CE:  BRA     3D4
+003D0:  MOV     #0,W5
+003D2:  BRA     3F6
+003D4:  MOV     #0,W5
+003D6:  BRA     3F6
+003D8:  SUB.B   W4L,#6,W5L
+003DA:  BRA     NC,3F4
+003DC:  MOV     #30,W0
+003DE:  BTSS    W9.F
+003E0:  MOV     #20,W0
+003E2:  MOV     W0,[W15++]
+003E4:  BTSC.B  223.1
+003E6:  BRA     3E4
+003E8:  MOV     W0,224
+003EA:  MOV     [--W15],W0
+003EC:  DEC     W5,W5
+003EE:  BRA     NN,3E2
+003F0:  MOV     #5,W5
+003F2:  BRA     3F6
+003F4:  MOV     W4,W5
+003F6:  MOV     #6,W4
+003F8:  BSET    W5.E
+003FA:  BTSC    W9.F
+003FC:  BSET    W5.F
+003FE:  MOV     #2710,W8
+00400:  REPEAT  #11
+00402:  DIV.U   W7,W8
+00404:  CALL    438
+00408:  MOV     W1,W7
+0040A:  MOV     #3E8,W8
+0040C:  REPEAT  #11
+0040E:  DIV.U   W7,W8
+00410:  CALL    438
+00414:  MOV     W1,W7
+00416:  MOV     #64,W8
+00418:  REPEAT  #11
+0041A:  DIV.U   W7,W8
+0041C:  CALL    438
+00420:  MOV     W1,W7
+00422:  MOV     #A,W8
+00424:  REPEAT  #11
+00426:  DIV.U   W7,W8
+00428:  CALL    438
+0042C:  MOV     #30,W0
+0042E:  ADD.B   W1L,W0L,W0L
+00430:  BTSC.B  223.1
+00432:  BRA     430
+00434:  MOV     W0,224
+00436:  BRA     466
+00438:  MOV     #30,W6
+0043A:  CP0     W0
+0043C:  BRA     NZ,45A
+0043E:  BTSS    W5.E
+00440:  BRA     45C
+00442:  DEC     W4,W4
+00444:  CP.B    W4L,W5L
+00446:  BRA     Z,44C
+00448:  BTSC.B  42.0
+0044A:  RETURN  
+0044C:  CP0     W0
+0044E:  BRA     NZ,45A
+00450:  BTSS    W5.E
+00452:  BRA     45C
+00454:  BTSS    W5.F
+00456:  MOV     #20,W6
+00458:  BRA     45C
+0045A:  BCLR    W5.E
+0045C:  ADD.B   W6L,W0L,W0L
+0045E:  BTSC.B  223.1
+00460:  BRA     45E
+00462:  MOV     W0,224
+00464:  RETURN  
+00466:  MOV     #12,W5
+00468:  REPEAT  #3
+0046A:  MOV     [--W15],[W5--]
+0046C:  MOV     [--W15],W5
+0046E:  RETURN  
+....................  
+.................... #list 
+....................  
+.................... //#device icd=true 
+.................... //#FUSES FRC_PLL 
+.................... #FUSES HS,PR_PLL 
+....................  
+.................... #use delay(xtal = 10MHZ, clock = 140MHz) 
+*
+0051E:  CP0     W0
+00520:  BTSC.B  42.1
+00522:  BRA     53C
+00524:  REPEAT  #116B
+00526:  NOP     
+00528:  REPEAT  #3FFE
+0052A:  NOP     
+0052C:  REPEAT  #3FFE
+0052E:  NOP     
+00530:  REPEAT  #3FFE
+00532:  NOP     
+00534:  REPEAT  #3FFE
+00536:  NOP     
+00538:  DEC     W0,W0
+0053A:  BRA     NZ,524
+0053C:  RETURN  
+....................  
+.................... #pin_select U1TX = PIN_B11 
+.................... #pin_select U1RX = PIN_B12 
+.................... #use RS232(UART1, baud = 9600, stream = UART_PORT1) 
+.................... //#USE RS232(STREAM=UART1, BAUD = 115200, PARITY = N, BITS = 8, STOP = 1, TIMEOUT = 500, XMIT = PIN_B14, RCV = PIN_B15 )) 
+.................... #BANK_DMA  char channel[8]; 
+.................... int count, bitCount = 0; 
+.................... #pin_select INT1 = PIN_B6 
+.................... //#define SPI_CS PIN_B6 
+.................... //unsigned int32 channel[8];   
+.................... //int channel[8]; 
+....................  
+.................... int1 flag = 0; 
+.................... int j = 0; 
+.................... //#DEFINE ENABLE_INTERRUPTS(PIN_B11); 
+....................  
+.................... #INT_EXT1 
+.................... void DCLK_interrupt_handler() 
+*
+002CC:  PUSH    42
+002CE:  PUSH    36
+002D0:  PUSH    54
+002D2:  MOV     W0,[W15++]
+002D4:  MOV     #2,W0
+002D6:  REPEAT  #C
+002D8:  MOV     [W0++],[W15++]
+.................... {   
+....................       if(bitCount != 24){ //while the whole 24 bit data is not recieved 
+002DA:  MOV     100A,W4
+002DC:  CP      W4,#18
+002DE:  BRA     Z,388
+....................          while(j <= 8){ 
+002E0:  MOV     100E,W4
+002E2:  CP      W4,#8
+002E4:  BRA     GT,2FA
+....................          //shift bits left for next inputDMA0   DMA channel 0 transfer complete 
+....................             channel[j] <<= 1; 
+002E6:  MOV     #1000,W4
+002E8:  MOV     100E,W3
+002EA:  ADD     W3,W4,W5
+002EC:  MOV.B   [W5],W0L
+002EE:  CLR.B   1
+002F0:  SL      W0,#1,W0
+002F2:  MOV.B   W0L,[W5]
+....................             j++; 
+002F4:  INC     100E
+002F6:  GOTO    2E0
+....................          } 
+....................          j = 0; 
+002FA:  CLR     100E
+....................          //Accept inputs 1 bit at a time 
+....................          channel[0] += input(PIN_B0); 
+002FC:  BSET.B  E10.0
+002FE:  CLR     W0
+00300:  BTSC.B  E12.0
+00302:  INC     W0,W0
+00304:  ADD.B   1000
+....................          channel[1] += input(PIN_B1); 
+00306:  BSET.B  E10.1
+00308:  CLR     W0
+0030A:  BTSC.B  E12.1
+0030C:  INC     W0,W0
+0030E:  ADD.B   1001
+....................          channel[2] += input(PIN_B2); 
+00310:  BSET.B  E10.2
+00312:  CLR     W0
+00314:  BTSC.B  E12.2
+00316:  INC     W0,W0
+00318:  ADD.B   1002
+....................          channel[3] += input(PIN_B3); 
+0031A:  BSET.B  E10.3
+0031C:  CLR     W0
+0031E:  BTSC.B  E12.3
+00320:  INC     W0,W0
+00322:  ADD.B   1003
+....................          channel[4] += input(PIN_B4); 
+00324:  BSET.B  E10.4
+00326:  CLR     W0
+00328:  BTSC.B  E12.4
+0032A:  INC     W0,W0
+0032C:  ADD.B   1004
+....................          channel[5] += input(PIN_B5); 
+0032E:  BSET.B  E10.5
+00330:  CLR     W0
+00332:  BTSC.B  E12.5
+00334:  INC     W0,W0
+00336:  ADD.B   1005
+....................          channel[6] += input(PIN_B6); 
+00338:  BSET.B  E10.6
+0033A:  CLR     W0
+0033C:  BTSC.B  E12.6
+0033E:  INC     W0,W0
+00340:  ADD.B   1006
+....................          channel[7] += input(PIN_B7); 
+00342:  BSET.B  E10.7
+00344:  CLR     W0
+00346:  BTSC.B  E12.7
+00348:  INC     W0,W0
+0034A:  ADD.B   1007
+....................          //Possible take whole port at one time??? 
+....................          //inputPortB = input_b(); 
+....................          bitCount++; 
+0034C:  INC     100A
+....................          printf("Data Reading \n\r"); 
+0034E:  MOV     #0,W1
+00350:  MOV     W1,W0
+00352:  CLR.B   1
+00354:  CALL    200
+00358:  INC     W1,W1
+0035A:  BTSC.B  223.1
+0035C:  BRA     35A
+0035E:  MOV     W0,224
+00360:  MOV     #E,W0
+00362:  CPSGT   W1,W0
+00364:  BRA     350
+....................          if (bitCount == 8 || 16){ 
+....................             dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0]); 
+00366:  BCLR.B  B01.7
+00368:  MOV.B   #1,W0L
+0036A:  MOV.B   W0L,B00
+0036C:  MOV     #1000,W4
+0036E:  MOV     W4,B04
+00370:  CLR     B06
+00372:  BTSS.B  B01.6
+00374:  BRA     37C
+00376:  MOV     #7,W4
+00378:  MOV     W4,B0E
+0037A:  BRA     380
+0037C:  MOV     #3,W4
+0037E:  MOV     W4,B0E
+00380:  BSET.B  B01.7
+00382:  BSET.B  B03.7
+....................          } 
+....................    } 
+00384:  GOTO    3A8
+....................    else{ 
+....................       bitCount = 0; 
+00388:  CLR     100A
+....................       dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0]); 
+0038A:  BCLR.B  B01.7
+0038C:  MOV.B   #1,W0L
+0038E:  MOV.B   W0L,B00
+00390:  MOV     #1000,W4
+00392:  MOV     W4,B04
+00394:  CLR     B06
+00396:  BTSS.B  B01.6
+00398:  BRA     3A0
+0039A:  MOV     #7,W4
+0039C:  MOV     W4,B0E
+0039E:  BRA     3A4
+003A0:  MOV     #3,W4
+003A2:  MOV     W4,B0E
+003A4:  BSET.B  B01.7
+003A6:  BSET.B  B03.7
+....................    } 
+.................... } 
+....................  
+....................  
+003A8:  BCLR.B  802.4
+003AA:  MOV     #1A,W0
+003AC:  REPEAT  #C
+003AE:  MOV     [--W15],[W0--]
+003B0:  MOV     [--W15],W0
+003B2:  POP     54
+003B4:  POP     36
+003B6:  POP     42
+003B8:  RETFIE  
+.................... #INT_EXT0 
+.................... void DRDY_interrupt_handler() 
+*
+00470:  PUSH    42
+00472:  PUSH    36
+00474:  PUSH    54
+00476:  MOV     W0,[W15++]
+00478:  MOV     #2,W0
+0047A:  REPEAT  #C
+0047C:  MOV     [W0++],[W15++]
+.................... { 
+....................    CLEAR_INTERRUPT(INT_EXT1); 
+0047E:  BCLR.B  802.4
+....................    ENABLE_INTERRUPTS(INT_EXT1); 
+00480:  BSET.B  822.4
+....................    printf("Waiting for Data Clock \n\r"); 
+00482:  MOV     #0,W1
+00484:  MOV     W1,W0
+00486:  CLR.B   1
+00488:  CALL    21C
+0048C:  INC     W1,W1
+0048E:  BTSC.B  223.1
+00490:  BRA     48E
+00492:  MOV     W0,224
+00494:  MOV     #18,W0
+00496:  CPSGT   W1,W0
+00498:  BRA     484
+....................    printf("Channel[0] is: %u \n\r", channel[0]);  
+0049A:  MOV     #0,W1
+0049C:  MOV     W1,W0
+0049E:  CLR.B   1
+004A0:  CALL    242
+004A4:  INC     W1,W1
+004A6:  BTSC.B  223.1
+004A8:  BRA     4A6
+004AA:  MOV     W0,224
+004AC:  MOV     #E,W0
+004AE:  CPSGT   W1,W0
+004B0:  BRA     49C
+004B2:  MOV.B   1000,W0L
+004B4:  CLR.B   1
+004B6:  MOV     #0,W4
+004B8:  CALL    3BA
+004BC:  BTSC.B  223.1
+004BE:  BRA     4BC
+004C0:  MOV     #20,W4
+004C2:  MOV     W4,224
+004C4:  BTSC.B  223.1
+004C6:  BRA     4C4
+004C8:  MOV     #A,W4
+004CA:  MOV     W4,224
+004CC:  BTSC.B  223.1
+004CE:  BRA     4CC
+004D0:  MOV     #D,W4
+004D2:  MOV     W4,224
+.................... } 
+004D4:  BCLR.B  800.0
+004D6:  MOV     #1A,W0
+004D8:  REPEAT  #C
+004DA:  MOV     [--W15],[W0--]
+004DC:  MOV     [--W15],W0
+004DE:  POP     54
+004E0:  POP     36
+004E2:  POP     42
+004E4:  RETFIE  
+.................... #INT_DMA0 
+.................... void DMA_interrupt_handler() 
+004E6:  PUSH    42
+004E8:  PUSH    36
+004EA:  PUSH    54
+004EC:  MOV     W0,[W15++]
+004EE:  MOV     #2,W0
+004F0:  REPEAT  #C
+004F2:  MOV     [W0++],[W15++]
+.................... { 
+....................    printf("DMA Transfer Complete \n\r"); 
+004F4:  MOV     #0,W1
+004F6:  MOV     W1,W0
+004F8:  CLR.B   1
+004FA:  CALL    264
+004FE:  INC     W1,W1
+00500:  BTSC.B  223.1
+00502:  BRA     500
+00504:  MOV     W0,224
+00506:  MOV     #17,W0
+00508:  CPSGT   W1,W0
+0050A:  BRA     4F6
+0050C:  BCLR.B  800.4
+0050E:  MOV     #1A,W0
+00510:  REPEAT  #C
+00512:  MOV     [--W15],[W0--]
+00514:  MOV     [--W15],W0
+00516:  POP     54
+00518:  POP     36
+0051A:  POP     42
+0051C:  RETFIE  
+.................... } 
+.................... void main(){ 
+*
+0053E:  MOV     #7F80,W15
+00540:  MOV     #7FFF,W0
+00542:  MOV     W0,20
+00544:  NOP     
+00546:  BSET.B  8C1.7
+00548:  DISI    #6
+0054A:  MOV     #742,W1
+0054C:  MOV     #46,W2
+0054E:  MOV     #57,W3
+00550:  MOV.B   W2L,[W1]
+00552:  MOV.B   W3L,[W1]
+00554:  BCLR.B  742.6
+00556:  MOV     #2600,W0
+00558:  MOV     W0,6A0
+0055A:  MOV     #2C,W0
+0055C:  MOV     W0,6C4
+0055E:  MOV     #100,W0
+00560:  MOV     W0,688
+00562:  DISI    #6
+00564:  MOV     #742,W1
+00566:  MOV     #46,W2
+00568:  MOV     #57,W3
+0056A:  MOV.B   W2L,[W1]
+0056C:  MOV.B   W3L,[W1]
+0056E:  BSET.B  742.6
+00570:  CLR     744
+00572:  MOV     #36,W4
+00574:  MOV     W4,746
+00576:  DISI    #E
+00578:  MOV     #103,W0
+0057A:  MOV     #743,W1
+0057C:  MOV     #78,W2
+0057E:  MOV     #9A,W3
+00580:  MOV.B   W2L,[W1]
+00582:  MOV.B   W3L,[W1]
+00584:  MOV.B   W0L,743
+00586:  LSR     W0,#8,W0
+00588:  MOV     #742,W1
+0058A:  MOV     #46,W2
+0058C:  MOV     #57,W3
+0058E:  MOV.B   W2L,[W1]
+00590:  MOV.B   W3L,[W1]
+00592:  MOV.B   W0L,[W1]
+00594:  MOV     #8000,W4
+00596:  MOV     W4,220
+00598:  MOV     #400,W4
+0059A:  MOV     W4,222
+0059C:  BSET.B  220.3
+0059E:  MOV     #71E,W4
+005A0:  MOV     W4,228
+005A2:  CLR     100A
+005A4:  BCLR.B  100C.0
+005A6:  CLR     100E
+005A8:  CLR     E0E
+005AA:  CLR     E1E
+.................... //#BIT INT0EP = 0x08C2.0; 
+....................    delay_ms(50); 
+005AC:  MOV     #32,W0
+005AE:  CALL    51E
+....................    EXT_INT_EDGE(L_TO_H); 
+005B2:  BCLR.B  8C2.0
+....................    int Value; 
+....................     
+.................... //   INT0EP = 1; // negative edge 
+....................     
+....................    CLEAR_INTERRUPT(INT_EXT0); 
+005B4:  BCLR.B  800.0
+....................    ENABLE_INTERRUPTS(INT_EXT0); 
+005B6:  BSET.B  820.0
+....................    CLEAR_INTERRUPT(INT_DMA0); 
+005B8:  BCLR.B  800.4
+....................    ENABLE_INTERRUPTS(INT_DMA0); 
+005BA:  BSET.B  820.4
+....................  
+....................   // ENABLE_INTERRUPTS(INTR_NORMAL); 
+....................    ENABLE_INTERRUPTS(INTR_GLOBAL); 
+005BC:  BSET.B  8C3.7
+....................     
+....................    setup_dma(0,DMA_OUT_UART1,DMA_HALF_INT);    
+005BE:  MOV.B   #30,W0L
+005C0:  MOV.B   W0L,B01
+005C2:  MOV.B   #C,W0L
+005C4:  MOV.B   W0L,B02
+005C6:  MOV     #224,W4
+005C8:  MOV     W4,B0C
+....................    //dma_start(1,DMA_ONE_SHOT , 0x4000,0); 
+....................    int i = 0; 
+005CA:  CLR     1012
+....................    //initialize the array 
+....................    while(i < 8){ 
+005CC:  MOV     1012,W4
+005CE:  CP      W4,#8
+005D0:  BRA     GE,5E0
+....................       channel[i] = 0; 
+005D2:  MOV     #1000,W4
+005D4:  MOV     1012,W3
+005D6:  ADD     W3,W4,W5
+005D8:  CLR.B   [W5]
+....................       i++; 
+005DA:  INC     1012
+005DC:  GOTO    5CC
+....................    } 
+....................     
+....................    printf("Test1 \n\r"); 
+005E0:  MOV     #0,W1
+005E2:  MOV     W1,W0
+005E4:  CLR.B   1
+005E6:  CALL    28A
+005EA:  INC     W1,W1
+005EC:  BTSC.B  223.1
+005EE:  BRA     5EC
+005F0:  MOV     W0,224
+005F2:  MOV     #7,W0
+005F4:  CPSGT   W1,W0
+005F6:  BRA     5E2
+.................... //!  while(count != 5){ 
+.................... //!   output_high(PIN_A0); 
+.................... //!   delay_ms(100); 
+.................... //!   output_low(PIN_A0); 
+.................... //!   delay_ms(100); 
+.................... //!   printf("Hello, World! \n\r"); 
+.................... //!   count++; 
+.................... //!   } 
+....................    while(1) 
+....................    { 
+....................       delay_ms(2000); 
+005F8:  MOV     #7D0,W0
+005FA:  CALL    51E
+....................       printf("No \n\r"); 
+005FE:  MOV     #0,W1
+00600:  MOV     W1,W0
+00602:  CLR.B   1
+00604:  CALL    2A0
+00608:  INC     W1,W1
+0060A:  BTSC.B  223.1
+0060C:  BRA     60A
+0060E:  MOV     W0,224
+00610:  MOV     #4,W0
+00612:  CPSGT   W1,W0
+00614:  BRA     600
+00616:  GOTO    5F8
+....................       //Value = dma_status(0); 
+....................       //printf("DMA status: %u \n\r", Value); 
+....................      // dma_start(1,DMA_ONE_SHOT , 0x4000,0); 
+....................       
+....................    } 
+....................    //printf("ch0 is:%u \n\r",ch0); 
+....................    int support = getenv("DMA"); 
+0061A:  MOV     #1,W4
+0061C:  MOV     W4,1014
+....................    printf("DMA Valid: %u", support); 
+0061E:  MOV     #0,W1
+00620:  MOV     W1,W0
+00622:  CLR.B   1
+00624:  CALL    2B2
+00628:  INC     W1,W1
+0062A:  BTSC.B  223.1
+0062C:  BRA     62A
+0062E:  MOV     W0,224
+00630:  MOV     #A,W0
+00632:  CPSGT   W1,W0
+00634:  BRA     620
+00636:  MOV     1014,W0
+00638:  MOV     #0,W4
+0063A:  CALL    3BA
+....................  
+.................... } 
+*
+0063E:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  3L: FFCF   ICSP1 NOJTAG NODEBUG
+          H: 0000  
+   Word  4L: FFFF   NOALTI2C1 NOALTI2C2 WDTWIN_25%
+          H: 0000  
+   Word  5L: FF7F   WPOSTS16 WPRES128 PLLWAIT WINDIS NOWDT
+          H: 0000  
+   Word  6L: FF7A   HS OSCIO IOL1WAY CKSNOFSM
+          H: 0000  
+   Word  7L: FFF8   FRC IESO
+          H: 0000  
+   Word  8L: FFFF   NOWRT NOPROTECT
+          H: 0000  
+   Word  9L: FFFF  
+          H: 0000  
+   Word 10L: FFFF  
+          H: 0000  

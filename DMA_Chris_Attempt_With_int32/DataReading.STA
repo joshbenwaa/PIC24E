@@ -1,0 +1,63 @@
+
+ROM used:   1590/176108 (1%)
+            1590/176108 (1%) including unused fragments
+
+            1.0 Average locations per line
+            9.0 Average locations per statement
+
+RAM used:   151/32768 (0%) at main() level
+            155/32768 (0%) worst case
+
+Stack used: 66 worst case (14 in main + 52 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  130    47  27  DataReading.c
+ 1023     0   0  C:\Program Files (x86)\PICC\Devices\24EP256GP202.h
+  435   129  73  C:\Program Files (x86)\PICC\Drivers\string.h
+   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
+   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+----- -----
+ 1648   176 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     32   1    0             @delay_ms1
+0     28   1    2     93  3.3  clear_channel
+0    204   6    0    707  7.1  DCLK_interrupt_handler
+0     28   1    0     50  1.0  @const897
+0     60   2    0     50  1.0  DRDY_interrupt_handler
+0     38   1    0     50  1.0  @const899
+0    118   4    0     66  1.8  DMA_interrupt_handler
+0     38   1    0     66  1.8  @const901
+0     34   1    0     66  1.8  @const902
+0    182   6    0    524  4.9  @PRINTFU16_115200_28827_28828
+0    250   8    6    436  3.4  MAIN
+0     22   1    0    436  3.4  @const911
+0     18   1    0    436  3.4  @const912
+0     26   1    0             @const914
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               12
+    Statements              176
+    Comments                349
+    Volume (V)              4752
+    Difficulty (D)          34.9
+    Effort to implement (E) 166015
+    Time to implement (T)   2 hours, 34 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   1
+    Maintainability (MI)    140
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0FFFE  1078  63946  
+10000-1FFFE     0  65536  
+20000-2AFEA     0  45036  
+
+
+

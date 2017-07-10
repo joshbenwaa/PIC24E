@@ -1,0 +1,98 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0      @delay_ms1.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0 -W1  @DIV3232B.P3
+W0      @PRINTFU16_9600_28822_28823.P4
+W0 -W1  @PRINTFU32_9600_28822_28823.P5
+W0      @delay_us1.P6
+W1      @SCRATCH
+W1      @READ_PACKED_MEMORY.P1
+W1      @WRITE_PACKED_MEMORY.P2
+W2      @READ_ROM_MEMORY.P1
+W2      @WRITE_PACKED_MEMORY.P2
+W2 -W3  @DIV3232B.P3
+W2      @READ_PACKED_MEMORY.P4
+W3      @READ_PACKED_MEMORY.P1
+W3      @READ_ROM_MEMORY.P2
+W3      @WRITE_PACKED_MEMORY.P3
+W4      @PRINTFU32_9600_28822_28823.P1
+W4      @PRINTFU16_9600_28822_28823.P2
+A85.0   C1OUT
+A85.1   C1ENV
+A8D.0   C2OUT
+A8D.1   C2ENV
+A95.0   C3OUT
+A95.1   C3ENV
+A9D.0   C4OUT
+A9D.1   C4ENV
+1000-101F channel
+1020-1021 count
+1022-1023 bitCount
+1024.0  flag
+1026-1027 j
+1028-1029 MAIN.value
+102A-102B MAIN.i
+102C-102D MAIN.support
+7F80-7FFF Stack
+
+ROM Allocation:
+000200  @const800.call
+00021C  @const802.call
+000242  @const803.call
+000264  @const808.call
+00028A  @const814.call
+0002A0  @const815.call
+0002BE  @const816.call
+0002D0  @const817.call
+0002EE  @const821.call
+00030C  @const823.call
+000326  DCLK_interrupt_handler
+00046C  @DIV3232B
+0004B0  @PRINTFU32_9600_28822_28823
+00057C  DRDY_interrupt_handler
+0005F2  DMA_interrupt_handler
+00062A  @delay_ms1
+00064A  @PRINTFU16_9600_28822_28823
+000700  MAIN
+000700  @cinit1
+000774  @cinit2
+
+Project Directory:
+    E:\BoardTest_Chris\
+
+Project Files:
+    DataReading.c                                           [07-Jul-17 10:28  CRC=8BDC290A]
+    C:\Program Files (x86)\PICC\Devices\24EP256GP202.h      [01-Mar-17 12:48  CRC=74F80766]
+
+Source signature=75CC37D6
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=B024
+
+Units:
+    DataReading (main)
+
+Compiler Settings:
+    Processor:      PIC24EP256GP202
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   DataReading.xsym
+    Errors:      DataReading.err
+    Ext Symbols: DataReading.esym
+    INHX8:       DataReading.hex
+    Symbols:     DataReading.sym
+    List:        DataReading.lst
+    Debug/COFF:  DataReading.cof
+    Project:     DataReading.ccspjt
+    Call Tree:   DataReading.tre
+    Statistics:  DataReading.STA

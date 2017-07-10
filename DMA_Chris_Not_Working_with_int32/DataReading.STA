@@ -1,0 +1,59 @@
+
+ROM used:   1600/176108 (1%)
+            1600/176108 (1%) including unused fragments
+
+            1.4 Average locations per line
+            32.7 Average locations per statement
+
+RAM used:   149/32768 (0%) at main() level
+            149/32768 (0%) worst case
+
+Stack used: 66 worst case (14 in main + 52 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  118    49 100  DataReading.c
+ 1023     0   0  C:\Program Files (x86)\PICC\Devices\24EP256GP202.h
+----- -----
+ 1141    49 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     32   1    0             @delay_ms1
+0    238   7    0    880  8.6  DCLK_interrupt_handler
+0     28   1    0             @const800
+0    118   4    0     92  1.9  DRDY_interrupt_handler
+0     38   1    0             @const802
+0     34   1    0             @const803
+0    182   6    0             @PRINTFU16_9600_28827_28828
+0     56   2    0     17  0.8  DMA_interrupt_handler
+0     38   1    0             @const808
+0    258   8    6    524  4.9  MAIN
+0     22   1    0             @const814
+0     18   1    0             @const815
+0     26   1    0             @const817
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               4
+    Statements              49
+    Comments                201
+    Volume (V)              1909
+    Difficulty (D)          15.5
+    Effort to implement (E) 29554
+    Time to implement (T)   27 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    48
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0FFFE  1088  63936  
+10000-1FFFE     0  65536  
+20000-2AFEA     0  45036  
+
+
+

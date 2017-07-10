@@ -1,0 +1,51 @@
+
+ROM used:   824/176108 (0%)
+            824/176108 (0%) including unused fragments
+
+            0.8 Average locations per line
+            103.0 Average locations per statement
+
+RAM used:   150/32768 (0%) at main() level
+            150/32768 (0%) worst case
+
+Stack used: 42 worst case (2 in main + 40 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   24     8 100  main_DMA.c
+   14     0   0  main_DMA.h
+ 1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+----- -----
+ 1061     8 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     32   2    1             @delay_ms1
+0     56   3    0     21  0.9  dma0_isr
+0     26   2    0             @const796
+0    198  12    1    202  3.6  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              8
+    Comments                173
+    Volume (V)              259
+    Difficulty (D)          4.1
+    Effort to implement (E) 1068
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    171
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0FFFE   312  64712  
+10000-1FFFE     0  65536  
+20000-2AFEA     0  45036  
+
+
+

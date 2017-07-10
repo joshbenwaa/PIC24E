@@ -1,0 +1,17 @@
+ÀÄDataReading
+   ÃÄMAIN  0/258  Ram=6
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@delay_ms1  0/32  Ram=0
+   ³  ÃÄ@const814  0/22  Ram=0
+   ³  ÃÄ@delay_ms1  0/32  Ram=0
+   ³  ÃÄ@const815  0/18  Ram=0
+   ³  ÃÄ@const817  0/26  Ram=0
+   ³  ÀÄ@PRINTFU16_9600_28827_28828  0/182  Ram=0
+   ÃÄDCLK_interrupt_handler  0/238  Ram=0
+   ³  ÀÄ@const800  0/28  Ram=0
+   ÃÄDRDY_interrupt_handler  0/118  Ram=0
+   ³  ÃÄ@const802  0/38  Ram=0
+   ³  ÃÄ@const803  0/34  Ram=0
+   ³  ÀÄ@PRINTFU16_9600_28827_28828  0/182  Ram=0
+   ÀÄDMA_interrupt_handler  0/56  Ram=0
+      ÀÄ@const808  0/38  Ram=0

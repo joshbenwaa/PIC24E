@@ -1,0 +1,29 @@
+#include <main_DMA.h>
+
+#INT_DMA0
+void  dma0_isr(void) 
+{
+   printf("TRANSFER\n\r");
+}
+
+
+
+void main()
+{
+   printf("running");
+   setup_dma(0,DMA_OUT_UART1,DMA_BYTE);
+   enable_interrupts(INT_DMA0);
+   enable_interrupts(INTR_GLOBAL);
+   dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &Data);
+   char status;
+   while(TRUE)
+   {
+     delay_ms(500);
+     dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &Data[0]);
+   //  printf("DMA Status ");
+    // status = dma_status(0);
+    // printf(status);
+   //  printf("\n\r");
+   }
+
+}

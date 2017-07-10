@@ -1,0 +1,97 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0      @delay_us1.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0 -W1  @DIV3232B.P3
+W0      @PRINTFU16_115200_28827_28828.P4
+W0      @delay_ms1.P5
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2      @READ_ROM_MEMORY.P1
+W2 -W3  @DIV3232B.P2
+W2      @WRITE_PACKED_MEMORY.P3
+W2      @READ_PACKED_MEMORY.P4
+W3      @READ_ROM_MEMORY.P1
+W3      @WRITE_PACKED_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
+W4      @PRINTFU16_115200_28827_28828.P1
+A85.0   C1OUT
+A85.1   C1ENV
+A8D.0   C2OUT
+A8D.1   C2ENV
+A95.0   C3OUT
+A95.1   C3ENV
+A9D.0   C4OUT
+A9D.1   C4ENV
+1000-1001 strtok.save
+1002-1009 channel
+100A-100B count
+100C-100D bitCount
+100E.0  flag
+1010-1011 j
+1012-1013 MAIN.value
+1014-1015 MAIN.i
+1016-1017 MAIN.support
+101A-101B clear_channel.i
+7F80-7FFF Stack
+
+ROM Allocation:
+000200  @const897.call
+00021C  @const899.call
+000242  @const901.call
+000268  @const902.call
+00028A  @const911.call
+0002A0  @const912.call
+0002B2  @const914.call
+0002CC  DCLK_interrupt_handler
+000398  DRDY_interrupt_handler
+0003D4  @PRINTFU16_115200_28827_28828
+00048A  clear_channel
+0004A6  DMA_interrupt_handler
+00051C  @delay_ms1
+00053C  MAIN
+00053C  @cinit1
+0005AA  @cinit2
+
+Project Directory:
+    E:\BoardTest_Chris - Attempt to work with int32\
+
+Project Files:
+    DataReading.c                                           [07-Jul-17 15:43  CRC=877B9315]
+    C:\Program Files (x86)\PICC\Devices\24EP256GP202.h      [01-Mar-17 12:48  CRC=74F80766]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [26-Mar-15 12:34  CRC=C4814297]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [05-Sep-14 11:47  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-Jan-08 14:55  CRC=2D1F019F]
+
+Source signature=A4AFCCBC
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=91B2
+
+Units:
+    DataReading (main)
+
+Compiler Settings:
+    Processor:      PIC24EP256GP202
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   DataReading.xsym
+    Errors:      DataReading.err
+    Ext Symbols: DataReading.esym
+    INHX8:       DataReading.hex
+    Symbols:     DataReading.sym
+    List:        DataReading.lst
+    Debug/COFF:  DataReading.cof
+    Project:     DataReading.ccspjt
+    Call Tree:   DataReading.tre
+    Statistics:  DataReading.STA

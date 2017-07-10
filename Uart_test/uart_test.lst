@@ -1,0 +1,206 @@
+CCS PCD C Compiler, Version 5.071d, 1               07-Jul-17 11:42
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\Uart_test\uart_test.lst
+
+               ROM used:   764 bytes (0%)
+                           Largest free fragment is 65536
+               RAM used:   129 (0%) at main() level
+                           129 (0%) worst case
+               Stack used: 2 locations
+               Stack size: 128
+
+*
+00000:  GOTO    24E
+.................... #include <uart_test.h> 
+.................... #include <24EP256GP202.h> 
+.................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24EP256GP202 
+*
+00200:  CLR     54
+00202:  MOV     #20C,W3
+00204:  ADD     W3,W0,W0
+00206:  TBLRDL.B[W0],W0L
+00208:  CLR.B   1
+0020A:  RETURN  
+0020C:  DATA    4C,65,00
+0020E:  DATA    64,20,00
+00210:  DATA    4C,6F,00
+00212:  DATA    77,0A,00
+00214:  DATA    0D,00,00
+00216:  CLR     54
+00218:  MOV     #222,W3
+0021A:  ADD     W3,W0,W0
+0021C:  TBLRDL.B[W0],W0L
+0021E:  CLR.B   1
+00220:  RETURN  
+00222:  DATA    4C,65,00
+00224:  DATA    64,20,00
+00226:  DATA    48,69,00
+00228:  DATA    67,68,00
+0022A:  DATA    0A,0D,00
+0022C:  DATA    00,00,00
+....................  
+.................... #list 
+....................  
+.................... #device ICSP=1 
+.................... #use delay(clock=140MHz,crystal=10MHz) 
+0022E:  CP0     W0
+00230:  BTSC.B  42.1
+00232:  BRA     24C
+00234:  REPEAT  #116B
+00236:  NOP     
+00238:  REPEAT  #3FFE
+0023A:  NOP     
+0023C:  REPEAT  #3FFE
+0023E:  NOP     
+00240:  REPEAT  #3FFE
+00242:  NOP     
+00244:  REPEAT  #3FFE
+00246:  NOP     
+00248:  DEC     W0,W0
+0024A:  BRA     NZ,234
+0024C:  RETURN  
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOJTAG                   //JTAG disabled 
+.................... #FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled 
+....................  
+.................... #pin_select U1TX=PIN_B11 
+.................... #pin_select U1RX=PIN_B12 
+.................... #use rs232(UART1, baud=9600, stream=UART_PORT1) 
+....................  
+.................... #define LED PIN_A0 
+.................... #define DELAY 1000 
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+0024E:  MOV     #7F80,W15
+00250:  MOV     #7FFF,W0
+00252:  MOV     W0,20
+00254:  NOP     
+00256:  BSET.B  8C1.7
+00258:  DISI    #6
+0025A:  MOV     #742,W1
+0025C:  MOV     #46,W2
+0025E:  MOV     #57,W3
+00260:  MOV.B   W2L,[W1]
+00262:  MOV.B   W3L,[W1]
+00264:  BCLR.B  742.6
+00266:  MOV     #2C,W0
+00268:  MOV     W0,6C4
+0026A:  MOV     #100,W0
+0026C:  MOV     W0,688
+0026E:  DISI    #6
+00270:  MOV     #742,W1
+00272:  MOV     #46,W2
+00274:  MOV     #57,W3
+00276:  MOV.B   W2L,[W1]
+00278:  MOV.B   W3L,[W1]
+0027A:  BSET.B  742.6
+0027C:  CLR     744
+0027E:  MOV     #36,W4
+00280:  MOV     W4,746
+00282:  DISI    #E
+00284:  MOV     #103,W0
+00286:  MOV     #743,W1
+00288:  MOV     #78,W2
+0028A:  MOV     #9A,W3
+0028C:  MOV.B   W2L,[W1]
+0028E:  MOV.B   W3L,[W1]
+00290:  MOV.B   W0L,743
+00292:  LSR     W0,#8,W0
+00294:  MOV     #742,W1
+00296:  MOV     #46,W2
+00298:  MOV     #57,W3
+0029A:  MOV.B   W2L,[W1]
+0029C:  MOV.B   W3L,[W1]
+0029E:  MOV.B   W0L,[W1]
+002A0:  MOV     #8000,W4
+002A2:  MOV     W4,220
+002A4:  MOV     #400,W4
+002A6:  MOV     W4,222
+002A8:  BSET.B  220.3
+002AA:  MOV     #71E,W4
+002AC:  MOV     W4,228
+002AE:  CLR     E0E
+002B0:  CLR     E1E
+.................... { 
+....................  
+....................    //setup_uart(9600,UART_PORT1); 
+....................  
+....................    //Example blinking LED program 
+....................    while(true) 
+....................    { 
+....................       output_low(LED); 
+002B2:  BCLR.B  E00.0
+002B4:  BCLR.B  E04.0
+....................       printf("Led Low\n\r"); 
+002B6:  MOV     #0,W1
+002B8:  MOV     W1,W0
+002BA:  CLR.B   1
+002BC:  CALL    200
+002C0:  INC     W1,W1
+002C2:  BTSC.B  223.1
+002C4:  BRA     2C2
+002C6:  MOV     W0,224
+002C8:  MOV     #8,W0
+002CA:  CPSGT   W1,W0
+002CC:  BRA     2B8
+....................       delay_ms(DELAY); 
+002CE:  MOV     #3E8,W0
+002D0:  CALL    22E
+....................       output_high(LED); 
+002D4:  BCLR.B  E00.0
+002D6:  BSET.B  E04.0
+....................       printf("Led High\n\r"); 
+002D8:  MOV     #0,W1
+002DA:  MOV     W1,W0
+002DC:  CLR.B   1
+002DE:  CALL    216
+002E2:  INC     W1,W1
+002E4:  BTSC.B  223.1
+002E6:  BRA     2E4
+002E8:  MOV     W0,224
+002EA:  MOV     #9,W0
+002EC:  CPSGT   W1,W0
+002EE:  BRA     2DA
+....................       delay_ms(DELAY); 
+002F0:  MOV     #3E8,W0
+002F2:  CALL    22E
+002F6:  GOTO    2B2
+....................    } 
+....................  
+.................... } 
+*
+002FA:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  3L: FFCF   ICSP1 NOJTAG NODEBUG
+          H: 0000  
+   Word  4L: FFFF   NOALTI2C1 NOALTI2C2 WDTWIN_25%
+          H: 0000  
+   Word  5L: FF7F   WPOSTS16 WPRES128 PLLWAIT WINDIS NOWDT
+          H: 0000  
+   Word  6L: FF3A   HS OSCIO IOL1WAY CKSFSM
+          H: 0000  
+   Word  7L: FFF8   FRC IESO
+          H: 0000  
+   Word  8L: FFFF   NOWRT NOPROTECT
+          H: 0000  
+   Word  9L: FFFF  
+          H: 0000  
+   Word 10L: FFFF  
+          H: 0000  
