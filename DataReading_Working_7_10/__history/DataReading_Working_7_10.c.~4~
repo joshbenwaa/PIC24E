@@ -16,7 +16,7 @@ int count, bitCount = 0;
 //#define SPI_CS PIN_B6
 //unsigned int32 channel[8];  
 //int channel[8];
-int rows = 0, cols = 0 ;
+
 int1 flag = 0;
 //int j = 0;
 //#DEFINE ENABLE_INTERRUPTS(PIN_B11);
@@ -37,46 +37,46 @@ void clear_channel()
 void display_matrix(void)
 {
    int row = 0, columns = 0;
-   for (row=0; row<3; row++)
+   for (row=0; row<8; row++)
    {
-    for(columns=0; columns<8; columns++)
+    for(columns=0; columns<3; columns++)
         {
          printf("%d     ", channel[row][columns]);
         }
-      printf("\n\r");
+      printf("\n");
    }
 }
 
 #INT_EXT1
 void DCLK_interrupt_handler()
 {        
-         while(rows <= 8){
+         int m = 0, n = 0 ;
+         while(m <= 8){
          //shift bits left for next inputDMA0   DMA channel 0 transfer complete
-            channel[rows][cols] <<= 1;
-            rows++;
+            channel[m][n] <<= 1;
+            m++;
          }
-        // cols = 0;
+         m = 0;
          //Accept inputs 1 bit at a time
-         channel[0][cols] += input(PIN_B0);
-         channel[1][cols] += input(PIN_B1);
-         channel[2][cols] += input(PIN_B2);
-         channel[3][cols] += input(PIN_B3);
-         channel[4][cols] += input(PIN_B4);
-         channel[5][cols] += input(PIN_B5);
-         channel[6][cols] += input(PIN_B6);
-         channel[7][cols] += input(PIN_B7);
+         channel[0][n] += input(PIN_B0);
+         channel[1][n] += input(PIN_B1);
+         channel[2][n] += input(PIN_B2);
+         channel[3][n] += input(PIN_B3);
+         channel[4][n] += input(PIN_B4);
+         channel[5][n] += input(PIN_B5);
+         channel[6][n] += input(PIN_B6);
+         channel[7][n] += input(PIN_B7);
          //Possible take whole port at one time???
          //inputPortB = input_b();
          bitCount++;
          printf("Data Reading \n\r");
          if (bitCount == 8){
-            if(cols == 3){
-               cols = 0;
+            if(n == 3){
+               n = 0;
                display_matrix();
             }
-            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0][0]);
-            bitCount = 0; 
-            cols++;
+            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0]);
+            bitCount = 0;            
          }
          
 //!   else{
@@ -99,14 +99,14 @@ void DRDY_interrupt_handler()
 void DMA_interrupt_handler()
 {
    printf("DMA Transfer Complete \n\r");
-   printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
+   printf("Channel[0] is: %u \n\r", channel[0]); 
    clear_channel();
 }
 
 
 void main(){
 //#BIT INT0EP = 0x08C2.0;
-   delay_ms(500);
+   delay_ms(50);
    EXT_INT_EDGE(L_TO_H);
    int Value;
    
@@ -135,7 +135,6 @@ void main(){
 //!   printf("Hello, World! \n\r");
 //!   count++;
 //!   }
-   delay_ms(200);
    display_matrix();
    while(1)
    {

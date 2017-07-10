@@ -1,0 +1,22 @@
+[PROJECT]
+Target=DataReading_Working_7_10.hex
+Processor_Text=PIC24EP256GP202
+CCSVersion=5.071d
+Compiler=PCD
+[Target Data]
+FileList=DataReading_Working_7_10.c
+[DataReading_Working_7_10.c]
+Type=4
+[mru-list]
+1=DataReading_Working_7_10.c
+[Units]
+Count=1
+1=DataReading_Working_7_10 (main)
+
+[defines]
+buildcount=1
+
+[Opened Files]
+1=DataReading_Working_7_10.c
+t1=9
+Count=1

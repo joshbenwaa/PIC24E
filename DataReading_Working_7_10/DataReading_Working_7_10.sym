@@ -1,0 +1,106 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0      @PRINTFU16_115200_28827_28828.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0      @delay_ms1.P3
+W0      @delay_us1.P4
+W0      @PRINTFD16_115200_28827_28828.P5
+W0 -W1  @DIV3232B.P6
+W1      @SCRATCH
+W1      @READ_PACKED_MEMORY.P1
+W1      @WRITE_PACKED_MEMORY.P2
+W2      @READ_PACKED_MEMORY.P1
+W2      @READ_ROM_MEMORY.P2
+W2      @WRITE_PACKED_MEMORY.P3
+W2 -W3  @DIV3232B.P4
+W3      @READ_PACKED_MEMORY.P1
+W3      @WRITE_PACKED_MEMORY.P2
+W3      @READ_ROM_MEMORY.P3
+W4      @PRINTFD16_115200_28827_28828.P1
+W4      @PRINTFU16_115200_28827_28828.P2
+A85.0   C1OUT
+A85.1   C1ENV
+A8D.0   C2OUT
+A8D.1   C2ENV
+A95.0   C3OUT
+A95.1   C3ENV
+A9D.0   C4OUT
+A9D.1   C4ENV
+1000-1001 strtok.save
+1002-1019 channel
+101A-101B count
+101C-101D bitCount
+101E-101F rows
+1020-1021 cols
+1022.0  flag
+1024-1025 MAIN.value
+1026-1027 MAIN.i
+1028-1029 MAIN.support
+1030-1031 clear_channel.i
+1030-1031 display_matrix.row
+1032-1033 display_matrix.columns
+1032-1033 clear_channel.k
+7F80-7FFF Stack
+
+ROM Allocation:
+000200  @const902.call
+000214  @const908.call
+000230  @const910.call
+000256  @const912.call
+00027C  @const913.call
+0002A0  @const922.call
+0002B6  @const923.call
+0002C8  @const925.call
+0002E2  @PRINTFD16_115200_28827_28828
+0003E2  display_matrix
+000448  DCLK_interrupt_handler
+000558  DRDY_interrupt_handler
+000594  @PRINTFU16_115200_28827_28828
+00064A  clear_channel
+00067E  DMA_interrupt_handler
+0006F4  @delay_ms1
+000714  MAIN
+000714  @cinit1
+000784  @cinit2
+
+Project Directory:
+    C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DataReading_Working_7_10\
+
+Project Files:
+    DataReading_Working_7_10.c                              [10-Jul-17 14:39  CRC=BFE3F029]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [26-Mar-15 12:34  CRC=C4814297]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [05-Sep-14 11:47  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Jan-08 14:55  CRC=2D1F019F]
+
+Source signature=DD1829D0
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=9906
+
+Units:
+    DataReading_Working_7_10 (main)
+
+Compiler Settings:
+    Processor:      PIC24EP256GP202
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   DataReading_Working_7_10.xsym
+    Errors:      DataReading_Working_7_10.err
+    Ext Symbols: DataReading_Working_7_10.esym
+    INHX8:       DataReading_Working_7_10.hex
+    Symbols:     DataReading_Working_7_10.sym
+    List:        DataReading_Working_7_10.lst
+    Debug/COFF:  DataReading_Working_7_10.cof
+    Project:     DataReading_Working_7_10.ccspjt
+    Call Tree:   DataReading_Working_7_10.tre
+    Statistics:  DataReading_Working_7_10.STA

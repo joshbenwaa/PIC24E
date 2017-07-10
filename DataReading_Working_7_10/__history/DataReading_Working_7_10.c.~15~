@@ -55,7 +55,7 @@ void DCLK_interrupt_handler()
             channel[rows][cols] <<= 1;
             rows++;
          }
-        // cols = 0;
+         cols = 0;
          //Accept inputs 1 bit at a time
          channel[0][cols] += input(PIN_B0);
          channel[1][cols] += input(PIN_B1);
@@ -106,7 +106,7 @@ void DMA_interrupt_handler()
 
 void main(){
 //#BIT INT0EP = 0x08C2.0;
-   delay_ms(500);
+   delay_ms(50);
    EXT_INT_EDGE(L_TO_H);
    int Value;
    
