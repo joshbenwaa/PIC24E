@@ -70,13 +70,13 @@ void DCLK_interrupt_handler()
          bitCount++;
          printf("Data Reading \n\r");
          if (bitCount == 8){
-             cols++;
             if(cols == 3){
                cols = 0;
                display_matrix();
             }
             dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0][0]);
             bitCount = 0; 
+            cols++;
          }
          
 //!   else{

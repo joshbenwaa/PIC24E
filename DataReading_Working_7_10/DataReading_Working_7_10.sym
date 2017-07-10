@@ -36,10 +36,10 @@ A9D.1   C4ENV
 1024-1025 MAIN.value
 1026-1027 MAIN.i
 1028-1029 MAIN.support
-1030-1031 clear_channel.i
+102A-102B clear_channel.i
+102C-102D clear_channel.k
 1030-1031 display_matrix.row
 1032-1033 display_matrix.columns
-1032-1033 clear_channel.k
 7F80-7FFF Stack
 
 ROM Allocation:
@@ -56,27 +56,27 @@ ROM Allocation:
 000448  DCLK_interrupt_handler
 000558  DRDY_interrupt_handler
 000594  @PRINTFU16_115200_28827_28828
-00064A  clear_channel
-00067E  DMA_interrupt_handler
-0006F4  @delay_ms1
-000714  MAIN
-000714  @cinit1
-000784  @cinit2
+00064A  DMA_interrupt_handler
+0006BC  @delay_ms1
+0006DC  clear_channel
+000710  MAIN
+000710  @cinit1
+000780  @cinit2
 
 Project Directory:
     C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DataReading_Working_7_10\
 
 Project Files:
-    DataReading_Working_7_10.c                              [10-Jul-17 14:39  CRC=BFE3F029]
+    DataReading_Working_7_10.c                              [10-Jul-17 14:53  CRC=495F4553]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [26-Mar-15 12:34  CRC=C4814297]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [05-Sep-14 11:47  CRC=897CEC6C]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Jan-08 14:55  CRC=2D1F019F]
 
-Source signature=DD1829D0
+Source signature=66937EFA
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=9906
+Hex file CRC=4B8D
 
 Units:
     DataReading_Working_7_10 (main)

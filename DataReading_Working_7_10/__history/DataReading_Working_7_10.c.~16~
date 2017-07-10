@@ -63,20 +63,20 @@ void DCLK_interrupt_handler()
          channel[3][cols] += input(PIN_B3);
          channel[4][cols] += input(PIN_B4);
          channel[5][cols] += input(PIN_B5);
-         channel[6][cols] += input(PIN_B8); //B6 Used by interrupt
-         channel[7][cols] += input(PIN_B9); //B7 Used by interrupt
+         channel[6][cols] += input(PIN_B6);
+         channel[7][cols] += input(PIN_B7);
          //Possible take whole port at one time???
          //inputPortB = input_b();
          bitCount++;
          printf("Data Reading \n\r");
          if (bitCount == 8){
-             cols++;
             if(cols == 3){
                cols = 0;
                display_matrix();
             }
             dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0][0]);
             bitCount = 0; 
+            cols++;
          }
          
 //!   else{
@@ -100,7 +100,7 @@ void DMA_interrupt_handler()
 {
    printf("DMA Transfer Complete \n\r");
    printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
- //  clear_channel();
+   clear_channel();
 }
 
 

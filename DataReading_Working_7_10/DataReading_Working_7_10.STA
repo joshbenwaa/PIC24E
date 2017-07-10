@@ -1,6 +1,6 @@
 
-ROM used:   2080/176108 (1%)
-            2080/176108 (1%) including unused fragments
+ROM used:   2070/176108 (1%)
+            2070/176108 (1%) including unused fragments
 
             1.2 Average locations per line
             10.8 Average locations per statement
@@ -13,13 +13,13 @@ Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  153    63  33  DataReading_Working_7_10.c
+  153    62  32  DataReading_Working_7_10.c
  1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
-  435   129  67  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+  435   129  68  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
 ----- -----
- 1671   192 Total
+ 1671   191 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -32,11 +32,11 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     28   1    0             @const908
 0     60   1    1     50  1.0  DRDY_interrupt_handler
 0     38   1    0             @const910
-0    118   3    1     76  1.8  DMA_interrupt_handler
+0    114   3    1     63  1.8  DMA_interrupt_handler
 0     38   1    0             @const912
 0     36   1    0             @const913
 0    182   4    0             @PRINTFU16_115200_28827_28828
-0    268   6    7    483  3.4  MAIN
+0    262   6    7    483  3.4  MAIN
 0     22   1    0             @const922
 0     18   0    0             @const923
 0     26   1    0             @const925
@@ -44,21 +44,21 @@ Page ROM  %  RAM    Vol Diff  Functions:
 
 Program metrics:
     Functions               6
-    Statements              192
-    Comments                351
-    Volume (V)              2832
+    Statements              191
+    Comments                354
+    Volume (V)              2806
     Difficulty (D)          20.6
-    Effort to implement (E) 58259
-    Time to implement (T)   54 minutes
-    Est Delivered Bugs (B)  1
+    Effort to implement (E) 57677
+    Time to implement (T)   53 minutes
+    Est Delivered Bugs (B)  0
     Cyclomatic Complexity   4
-    Maintainability (MI)    50
+    Maintainability (MI)    52
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0FFFE  1568  63456  
+00200-0FFFE  1558  63466  
 10000-1FFFE     0  65536  
 20000-2AFEA     0  45036  
 

@@ -1,5 +1,5 @@
 ÀÄOneDrive - St
-   ÃÄMAIN  0/268  Ram=7
+   ÃÄMAIN  0/262  Ram=7
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@delay_ms1  0/32  Ram=0
    ³  ÃÄclear_channel  0/52  Ram=4
@@ -18,8 +18,7 @@
    ³     ÀÄ*
    ÃÄDRDY_interrupt_handler  0/60  Ram=1
    ³  ÀÄ@const910  0/38  Ram=0
-   ÀÄDMA_interrupt_handler  0/118  Ram=1
+   ÀÄDMA_interrupt_handler  0/114  Ram=1
       ÃÄ@const912  0/38  Ram=0
       ÃÄ@const913  0/36  Ram=0
-      ÃÄ@PRINTFU16_115200_28827_28828  0/182  Ram=0
-      ÀÄclear_channel  0/52  Ram=4
+      ÀÄ@PRINTFU16_115200_28827_28828  0/182  Ram=0
