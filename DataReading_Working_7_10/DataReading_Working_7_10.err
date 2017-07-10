@@ -1,9 +1,9 @@
->>> Warning 203 "DataReading_Working_7_10.c" Line 140(1,1): Condition always TRUE
->>> Warning 216 "DataReading_Working_7_10.c" Line 152(1,2): Interrupts disabled during call to prevent re-entrancy:  (display_matrix)
+>>> Warning 203 "DataReading_Working_7_10.c" Line 141(1,1): Condition always TRUE
+>>> Warning 216 "DataReading_Working_7_10.c" Line 153(1,2): Interrupts disabled during call to prevent re-entrancy:  (display_matrix)
 >>> Warning 202 "DataReading_Working_7_10.c" Line 14(5,10): Variable never used:   count
 >>> Warning 202 "DataReading_Working_7_10.c" Line 20(6,10): Variable never used:   flag
->>> Warning 202 "DataReading_Working_7_10.c" Line 111(8,13): Variable never used:   value
->>> Warning 202 "DataReading_Working_7_10.c" Line 125(8,9): Variable never used:   i
+>>> Warning 202 "DataReading_Working_7_10.c" Line 112(8,13): Variable never used:   value
+>>> Warning 202 "DataReading_Working_7_10.c" Line 126(8,9): Variable never used:   i
       Memory usage:   ROM=1%      RAM=1% - 1%
       0 Errors,  6 Warnings.
 Build Successful.

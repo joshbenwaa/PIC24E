@@ -1,6 +1,6 @@
 
-ROM used:   2070/176108 (1%)
-            2070/176108 (1%) including unused fragments
+ROM used:   2072/176108 (1%)
+            2072/176108 (1%) including unused fragments
 
             1.2 Average locations per line
             10.8 Average locations per statement
@@ -13,13 +13,13 @@ Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  153    62  32  DataReading_Working_7_10.c
+  154    63  33  DataReading_Working_7_10.c
  1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
-  435   129  68  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+  435   129  67  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
 ----- -----
- 1671   191 Total
+ 1672   192 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -28,7 +28,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    102   2    5    267  4.0  display_matrix
 0     20   0    1             @const902
 0    256   6    0             @PRINTFD16_115200_28827_28828
-0    272   7    1    942  7.2  DCLK_interrupt_handler
+0    274   7    1    973  7.2  DCLK_interrupt_handler
 0     28   1    0             @const908
 0     60   1    1     50  1.0  DRDY_interrupt_handler
 0     38   1    0             @const910
@@ -44,13 +44,13 @@ Page ROM  %  RAM    Vol Diff  Functions:
 
 Program metrics:
     Functions               6
-    Statements              191
+    Statements              192
     Comments                354
-    Volume (V)              2806
+    Volume (V)              2842
     Difficulty (D)          20.6
-    Effort to implement (E) 57677
-    Time to implement (T)   53 minutes
-    Est Delivered Bugs (B)  0
+    Effort to implement (E) 58518
+    Time to implement (T)   54 minutes
+    Est Delivered Bugs (B)  1
     Cyclomatic Complexity   4
     Maintainability (MI)    52
 
@@ -58,7 +58,7 @@ Program metrics:
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0FFFE  1558  63466  
+00200-0FFFE  1560  63464  
 10000-1FFFE     0  65536  
 20000-2AFEA     0  45036  
 

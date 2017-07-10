@@ -12,7 +12,7 @@
    ³  ÃÄ@const923  0/18  Ram=0
    ³  ÃÄ@const925  0/26  Ram=0
    ³  ÀÄ@PRINTFU16_115200_28827_28828  0/182  Ram=0
-   ÃÄDCLK_interrupt_handler  0/272  Ram=1
+   ÃÄDCLK_interrupt_handler  0/274  Ram=1
    ³  ÃÄ@const908  0/28  Ram=0
    ³  ÀÄdisplay_matrix  0/102  Ram=5
    ³     ÀÄ*

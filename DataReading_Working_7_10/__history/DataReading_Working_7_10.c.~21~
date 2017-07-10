@@ -55,7 +55,7 @@ void DCLK_interrupt_handler()
             channel[rows][cols] <<= 1;
             rows++;
          }
-          rows = 0;
+        // cols = 0;
          //Accept inputs 1 bit at a time
          channel[0][cols] += input(PIN_B0);
          channel[1][cols] += input(PIN_B1);
@@ -68,6 +68,7 @@ void DCLK_interrupt_handler()
          //Possible take whole port at one time???
          //inputPortB = input_b();
          bitCount++;
+         rows = 0;
          printf("Data Reading \n\r");
          if (bitCount == 8){
              cols++;

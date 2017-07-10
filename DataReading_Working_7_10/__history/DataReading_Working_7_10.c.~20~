@@ -55,7 +55,7 @@ void DCLK_interrupt_handler()
             channel[rows][cols] <<= 1;
             rows++;
          }
-          rows = 0;
+        // cols = 0;
          //Accept inputs 1 bit at a time
          channel[0][cols] += input(PIN_B0);
          channel[1][cols] += input(PIN_B1);
@@ -77,6 +77,7 @@ void DCLK_interrupt_handler()
             }
             dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel[0][0]);
             bitCount = 0;
+            rows = 0;
          }
          
 //!   else{
