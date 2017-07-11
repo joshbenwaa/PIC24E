@@ -1,0 +1,63 @@
+
+ROM used:   1718/176108 (1%)
+            1718/176108 (1%) including unused fragments
+
+            1.0 Average locations per line
+            9.1 Average locations per statement
+
+RAM used:   186/32768 (1%) at main() level
+            201/32768 (1%) worst case
+
+Stack used: 74 worst case (18 in main + 56 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  160    60  32  DataReading_DMA_V2.0.c
+ 1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+  435   129  68  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+   28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+----- -----
+ 1678   189 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     32   1    0             @delay_ms1
+0     58   2    4    197  4.0  clear_channel
+0    104   3    4    267  4.0  display_matrix
+0     20   1    0             @const900
+0    182   5    1             @PRINTFU16_115200_28827_28828
+0    298   9    1    955  7.2  DCLK_interrupt_handler
+0     28   1    0             @const906
+0     64   2    1     63  1.1  DRDY_interrupt_handler
+0     38   1    0             @const908
+0     56   2    1     17  0.8  DMA_interrupt_handler
+0     38   1    0             @const910
+0    240   7    2    377  3.2  MAIN
+0     22   1    0             @const914
+0     26   1    0             @const916
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               6
+    Statements              189
+    Comments                361
+    Volume (V)              2605
+    Difficulty (D)          19.7
+    Effort to implement (E) 51248
+    Time to implement (T)   47 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   4
+    Maintainability (MI)    57
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0FFFE  1206  63818  
+10000-1FFFE     0  65536  
+20000-2AFEA     0  45036  
+
+
+
