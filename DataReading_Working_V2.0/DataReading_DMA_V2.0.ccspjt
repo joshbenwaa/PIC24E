@@ -1,0 +1,23 @@
+[PROJECT]
+Target=DataReading_DMA_V2.0.hex
+Processor_Text=PIC24EP256GP202
+CCSVersion=5.071d
+Compiler=PCD
+[Target Data]
+FileList=DataReading_DMA_V2.0.c
+[DataReading_DMA_V2.0.c]
+Type=4
+[mru-list]
+1=DataReading_DMA_V2.0.c
+[Units]
+Count=1
+1=DataReading_DMA_V2.0 (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=11-07-2017
+D1_L=1
+D1_L1=[54198]Project Closed.

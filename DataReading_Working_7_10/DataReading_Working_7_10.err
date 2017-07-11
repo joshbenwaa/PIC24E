@@ -1,5 +1,0 @@
->>> Warning 203 "DataReading_Working_7_10.c" Line 144(1,1): Condition always TRUE
->>> Warning 216 "DataReading_Working_7_10.c" Line 156(1,2): Interrupts disabled during call to prevent re-entrancy:  (display_matrix)
-      Memory usage:   ROM=1%      RAM=0% - 1%
-      0 Errors,  2 Warnings.
-Build Successful.

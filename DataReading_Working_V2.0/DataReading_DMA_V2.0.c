@@ -10,7 +10,7 @@
 #pin_select U1RX = PIN_B12
 #use RS232(UART1, baud = 115200, stream = UART_PORT1)
 //#USE RS232(STREAM=UART1, BAUD = 115200, PARITY = N, BITS = 8, STOP = 1, TIMEOUT = 500, XMIT = PIN_B14, RCV = PIN_B15 ))
-#BANK_DMA  unsigned int8 channel[8][3];
+#BANK_DMA  unsigned int channel[8][3];
 #pin_select INT1 = PIN_B6
 //#define SPI_CS PIN_B6
 //unsigned int32 channel[8];  
@@ -70,14 +70,15 @@ void DCLK_interrupt_handler()
          printf("Data Reading \n\r");
          if (bitCount == 8){
             if(cols == 2){
-               printf("Gets here \n\r" );
+               //printf("Gets here \n\r" );
                cols = 0;
-             //  display_matrix();
+               //dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel);
+               display_matrix();
             }
             else{
-            cols++;
+               cols++;
             }
-            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel, 7);
+            dma_start(0, DMA_ONE_SHOT, &channel,24);
             bitCount = 0;
            // printf("Cols %u \n\r", cols);
          }
@@ -95,17 +96,19 @@ void DCLK_interrupt_handler()
 #INT_EXT0
 void DRDY_interrupt_handler()
 {
+   clear_channel();
    CLEAR_INTERRUPT(INT_EXT1);
    ENABLE_INTERRUPTS(INT_EXT1);
    printf("Waiting for Data Clock \n\r");
+   //dma_start(0, DMA_ONE_SHOT, &channel,24);
 }
 
 #INT_DMA0
 void DMA_interrupt_handler()
 {
    printf("DMA Transfer Complete \n\r");
-   printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
-   clear_channel();
+   //printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
+   //clear_channel();
   
 }
 
@@ -125,7 +128,7 @@ void main(){
   // ENABLE_INTERRUPTS(INTR_NORMAL);
    ENABLE_INTERRUPTS(INTR_GLOBAL);
    
-   setup_dma(0,DMA_OUT_UART1,DMA_BYTE);   
+   setup_dma(0,DMA_OUT_UART1,DMA_WORD);   
    //dma_start(1,DMA_ONE_SHOT , 0x4000,0);
    //initialize the array
    clear_channel();
@@ -143,8 +146,8 @@ void main(){
    display_matrix();
    while(1)
    {
-      delay_ms(2000);
-      printf("No \n\r");
+      //delay_ms(5000);
+      //printf("No \n\r");
       //Value = dma_status(0);
       //printf("DMA status: %u \n\r", Value);
      // dma_start(1,DMA_ONE_SHOT , 0x4000,0);

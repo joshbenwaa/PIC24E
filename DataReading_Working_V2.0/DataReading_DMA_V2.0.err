@@ -1,0 +1,7 @@
+>>> Warning 203 "DataReading_DMA_V2.0.c" Line 147(1,1): Condition always TRUE
+>>> Warning 216 "DataReading_DMA_V2.0.c" Line 159(1,2): Interrupts disabled during call to prevent re-entrancy:  (clear_channel)
+>>> Warning 216 "DataReading_DMA_V2.0.c" Line 159(1,2): Interrupts disabled during call to prevent re-entrancy:  (display_matrix)
+>>> Warning 216 "DataReading_DMA_V2.0.c" Line 159(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PRINTFU16_115200_28827_28828)
+      Memory usage:   ROM=1%      RAM=1% - 1%
+      0 Errors,  4 Warnings.
+Build Successful.
