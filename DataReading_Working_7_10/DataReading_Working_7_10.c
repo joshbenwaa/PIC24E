@@ -72,14 +72,14 @@ void DCLK_interrupt_handler()
             if(cols == 2){
                printf("Gets here \n\r" );
                cols = 0;
-             //  display_matrix();
+               display_matrix();
             }
             else{
             cols++;
             }
-            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel, 24);
+            dma_start(0, DMA_ONE_SHOT | DMA_FORCE_NOW, &channel, 7);
             bitCount = 0;
-            printf("Cols %u \n\r", cols);
+           // printf("Cols %u \n\r", cols);
          }
          
          
@@ -105,7 +105,7 @@ void DMA_interrupt_handler()
 {
    printf("DMA Transfer Complete \n\r");
    printf("Channel[0][0] is: %u \n\r", channel[0][0]); 
-   clear_channel();
+   //clear_channel();
   
 }
 

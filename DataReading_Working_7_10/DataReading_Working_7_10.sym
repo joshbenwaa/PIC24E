@@ -30,46 +30,47 @@ A9D.1   C4ENV
 101C-101D cols
 101E-101F bitCount
 1020-1021 MAIN.support
-1022-1023 display_matrix.row
 1022-1023 clear_channel.i
 1024-1025 clear_channel.k
-1024-1025 display_matrix.columns
+1028-1029 display_matrix.row
+102A-102B display_matrix.columns
 7F80-7FFF Stack
 
 ROM Allocation:
 000200  @const900.call
 000214  @const906.call
 000230  @const907.call
-00024A  @const908.call
-000262  @const910.call
-000288  @const915.call
-00029E  @const916.call
-0002B0  @const918.call
-0002CA  @PRINTFU16_115200_28827_28828
-000380  DCLK_interrupt_handler
-0004D8  DRDY_interrupt_handler
-000514  DMA_interrupt_handler
-000534  @delay_ms1
-000554  clear_channel
-000588  display_matrix
-0005F0  @cinit1
-0005F0  MAIN
-00065E  @cinit2
+00024A  @const909.call
+000270  @const911.call
+000296  @const912.call
+0002BA  @const916.call
+0002D0  @const917.call
+0002E2  @const919.call
+0002FC  @PRINTFU16_115200_28827_28828
+0003B2  display_matrix
+00041A  DCLK_interrupt_handler
+00053E  DRDY_interrupt_handler
+00057A  DMA_interrupt_handler
+0005EC  @delay_ms1
+00060C  clear_channel
+000640  MAIN
+000640  @cinit1
+0006AE  @cinit2
 
 Project Directory:
     C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DataReading_Working_7_10\
 
 Project Files:
-    DataReading_Working_7_10.c                              [10-Jul-17 17:31  CRC=E5286D80]
+    DataReading_Working_7_10.c                              [11-Jul-17 10:11  CRC=679780B2]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [26-Mar-15 12:34  CRC=C4814297]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [05-Sep-14 11:47  CRC=897CEC6C]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Jan-08 14:55  CRC=2D1F019F]
 
-Source signature=025CA727
+Source signature=84CBBA59
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=081B
+Hex file CRC=4C81
 
 Units:
     DataReading_Working_7_10 (main)

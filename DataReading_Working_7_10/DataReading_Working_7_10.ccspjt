@@ -11,17 +11,17 @@ Type=4
 1=DataReading_Working_7_10.c
 
 [defines]
-buildcount=48
+buildcount=53
 
 [Opened Files]
 1=DataReading_Working_7_10.c
-t1=70
+t1=77
 Count=2
 2=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
 t2=679
 
 [ProjectLog]
-Days=1
+Days=2
 D1=10-07-2017
 D1_L=22
 D1_L1=[53085]Stopped Editing.
@@ -50,6 +50,11 @@ TotalDebug=0
 D1_E=128
 D1_D=0
 D1_L22=[63839]Project Closed.
+D2=11-07-2017
+D2_L=3
+D2_L1=[35983]Project Opened.
+D2_L2=[36359]Started Editing.
+D2_L3=[37006]Stopped Editing.
 [Units]
 Count=1
 1=DataReading_Working_7_10 (main)
