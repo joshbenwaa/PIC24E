@@ -1,0 +1,14 @@
+#include <PLL_TEST.h>
+
+
+void main()
+{
+setup_oscillator(OSC_CRYSTAL,14000000);
+
+
+   while(TRUE)
+   {
+      output_toggle(OUT);
+   }
+
+}

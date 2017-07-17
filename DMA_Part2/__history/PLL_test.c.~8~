@@ -1,0 +1,14 @@
+#include <PLL_test.h>
+
+
+void main()
+{
+   setup_oscillator(OSC_CRYSTAL,140000000,10000000);
+   while(true)
+   {
+   //Example blinking LED program
+      output_low(LED);
+      output_high(LED);
+   }
+
+}

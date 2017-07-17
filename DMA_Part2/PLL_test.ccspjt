@@ -1,0 +1,48 @@
+[PROJECT]
+Target=PLL_test.hex
+Processor_Text=PIC24EP256GP202
+CCSVerions=5.071d
+Compiler=PCD
+CCSVersion=5.071d
+[Target Data]
+FileList=PLL_test.c
+[Directories]
+Include=
+[C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DMA_Part2\PLL_test]
+Type=4
+[mru-list]
+1=PLL_test.c
+
+[ProjectLog]
+Days=1
+D1=13-07-2017
+D1_L=10
+D1_L1=[50794]Project Opened.
+D1_L2=[50829]Started Editing.
+D1_L3=[51153]Stopped Editing.
+D1_L4=[51427]Started Editing.
+D1_L5=[52152]Stopped Editing.
+D1_L6=[52287]Started Editing.
+D1_L7=[53712]Stopped Editing.
+D1_L8=[54313]Started Editing.
+D1_L9=[55027]Stopped Editing.
+TotalEdit=34
+TotalDebug=0
+D1_E=34
+D1_D=0
+D1_L10=[55195]Project Closed.
+
+[Opened Files]
+1=PLL_test.c
+t1=1
+2=PLL_test.h
+t2=1
+Count=2
+[PLL_test.c]
+Type=4
+
+[defines]
+buildcount=18
+[Units]
+Count=1
+1=PLL_test (main)

@@ -1,0 +1,95 @@
+CCS PCD C Compiler, Version 5.071d, 1               13-Jul-17 15:46
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\PLL\PLL_TEST.lst
+
+               ROM used:   548 bytes (0%)
+                           Largest free fragment is 65536
+               RAM used:   129 (0%) at main() level
+                           129 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 128
+
+*
+00000:  GOTO    200
+.................... #include <PLL_TEST.h> 
+.................... #include <24EP256GP202.h> 
+.................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24EP256GP202 
+....................  
+.................... #list 
+....................  
+.................... #device ICSP=1 
+.................... #use delay(internal=20MHz) 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOJTAG                   //JTAG disabled 
+.................... #FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled 
+....................  
+.................... #use FIXED_IO( A_outputs=PIN_A0 ) 
+....................  
+.................... #define OUT   PIN_A0 
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+*
+00200:  MOV     #7F80,W15
+00202:  MOV     #7FFF,W0
+00204:  MOV     W0,20
+00206:  NOP     
+00208:  BSET.B  8C1.7
+0020A:  MOV     #C1,W4
+0020C:  MOV     W4,744
+0020E:  MOV     #3F,W4
+00210:  MOV     W4,746
+00212:  CLR     748
+00214:  CLR     E0E
+00216:  CLR     E1E
+.................... { 
+.................... //setup_oscillator(OSC_CRYSTAL,140000000,10000000); 
+....................  
+....................  
+....................    while(TRUE) 
+....................    { 
+....................       output_toggle(OUT); 
+00218:  MOV     #FFFE,W4
+0021A:  MOV     W4,E00
+0021C:  BTG.B   E04.0
+0021E:  GOTO    218
+....................    } 
+....................  
+.................... } 
+*
+00222:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  3L: FFCF   ICSP1 NOJTAG NODEBUG
+          H: 0000  
+   Word  4L: FFFF   NOALTI2C1 NOALTI2C2 WDTWIN_25%
+          H: 0000  
+   Word  5L: FF7F   WPOSTS16 WPRES128 PLLWAIT WINDIS NOWDT
+          H: 0000  
+   Word  6L: FF3B   NOPR OSCIO IOL1WAY CKSFSM
+          H: 0000  
+   Word  7L: FFF9   FRC_PLL IESO
+          H: 0000  
+   Word  8L: FFFF   NOWRT NOPROTECT
+          H: 0000  
+   Word  9L: FFFF  
+          H: 0000  
+   Word 10L: FFFF  
+          H: 0000  
