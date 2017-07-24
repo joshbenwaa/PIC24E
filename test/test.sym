@@ -22,26 +22,25 @@ A95.0   C3OUT
 A95.1   C3ENV
 A9D.0   C4OUT
 A9D.1   C4ENV
-7FA0-7FFF Stack
+7FB0-7FFF Stack
 
 ROM Allocation:
-000200  @delay_ms1
-000220  @cinit1
-000220  main
-000252  @cinit2
+000200  main
+000200  @cinit1
+00022E  @cinit2
 
 Project Directory:
     C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\test\
 
 Project Files:
-    test.c                                                  [06-Jul-17 13:20  CRC=D872A938]
-    test.h                                                  [06-Jul-17 15:01  CRC=FD4BAA53]
+    test.c                                                  [18-Jul-17 13:24  CRC=D872A938]
+    test.h                                                  [18-Jul-17 13:24  CRC=FD4BAA53]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
 
 Source signature=BFAE6257
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=3B1B
+Hex file CRC=FD65
 
 Units:
     test (main)

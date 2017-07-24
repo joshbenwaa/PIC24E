@@ -1,0 +1,15 @@
+#include <FRC.h>
+
+
+void main()
+{
+   setup_oscillator(OSC_RC,50000000);
+
+
+   //Example blinking LED program
+   while(true)
+   {
+     output_toggle(LED);
+   }
+
+}

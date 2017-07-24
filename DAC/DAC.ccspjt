@@ -1,0 +1,124 @@
+[PROJECT]
+Target=DAC.hex
+Processor_Text=PIC24EP256GP202
+CCSVerions=5.071d
+Compiler=PCD
+CCSVersion=5.071d
+[Target Data]
+FileList=DAC.c
+[Directories]
+Include=
+[C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC]
+Type=4
+[mru-list]
+1=DAC.c
+
+[ProjectLog]
+Days=4
+D1=19-07-2017
+D1_L=2
+D1_L1=[43965]Project Opened.
+D1_L2=[57596]Project Closed.
+D2=20-07-2017
+D2_L=25
+D2_L1=[40675]Project Opened.
+D2_L2=[40864]Project Closed.
+D2_L3=[40864]Project Opened.
+D2_L4=[48002]Started Editing.
+D2_L5=[48399]Project Opened.
+D2_L6=[48520]Project Opened.
+D2_L7=[48530]Started Editing.
+D2_L8=[49148]Stopped Editing.
+D2_L9=[49283]Started Editing.
+D2_L10=[49587]Stopped Editing.
+TotalEdit=109
+TotalDebug=0
+D2_E=43
+D2_D=0
+D2_L11=[49591]Project Closed.
+D2_L12=[49591]Project Opened.
+D2_L13=[49609]Started Editing.
+D2_L14=[50434]Stopped Editing.
+D2_L15=[50767]Started Editing.
+D2_L16=[51335]Stopped Editing.
+D2_L17=[53571]Started Editing.
+D2_L18=[54225]Stopped Editing.
+D2_L19=[54509]Started Editing.
+D2_L20=[55291]Stopped Editing.
+D2_L21=[55828]Started Editing.
+D2_L22=[56180]Stopped Editing.
+D2_L23=[56248]Started Editing.
+D2_L24=[56734]Stopped Editing.
+D2_L25=[57054]Project Closed.
+D3=21-07-2017
+D3_L=18
+D3_L1=[38093]Project Opened.
+D3_L2=[38130]Started Editing.
+D3_L3=[39350]Stopped Editing.
+D3_L4=[39493]Started Editing.
+D3_L5=[40087]Stopped Editing.
+D3_L6=[40941]Started Editing.
+D3_L7=[42544]Stopped Editing.
+D3_E=62
+D3_D=0
+D3_L8=[43285]Project Closed.
+D3_L9=[46934]Project Opened.
+D3_L10=[47033]Started Editing.
+D3_L11=[47333]Stopped Editing.
+D3_L12=[47437]Started Editing.
+D3_L13=[47738]Stopped Editing.
+D3_L14=[48866]Started Editing.
+D3_L15=[49514]Stopped Editing.
+D3_L16=[49542]Started Editing.
+D3_L17=[50691]Stopped Editing.
+D3_L18=[50765]Project Closed.
+D4=24-07-2017
+D4_L=22
+D4_L1=[36009]Project Opened.
+D4_L2=[37222]Started Editing.
+D4_L3=[37523]Stopped Editing.
+D4_L4=[37564]Started Editing.
+D4_L5=[37889]Stopped Editing.
+D4_L6=[37963]Started Editing.
+D4_L7=[38390]Stopped Editing.
+D4_L8=[38410]Started Editing.
+D4_L9=[39150]Stopped Editing.
+D4_L10=[39732]Started Editing.
+D4_L11=[40421]Stopped Editing.
+D4_L12=[41194]Started Editing.
+D4_L13=[42668]Stopped Editing.
+D4_L14=[46965]Project Opened.
+D4_L15=[48953]Started Editing.
+D4_L16=[49007]Project Closed.
+D4_L17=[49013]Project Opened.
+D4_L18=[49190]Started Editing.
+D4_L19=[49620]Stopped Editing.
+D4_L20=[49980]Started Editing.
+D4_L21=[50051]Stopped Editing.
+D4_E=4
+D4_D=0
+D4_L22=[50196]Project Closed.
+
+[Documentation]
+1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC Notes.txt
+1T=DAC Notes.txt
+1E=
+1W=0
+Count=1
+
+[Opened Files]
+1=DAC.c
+t1=20
+2=DAC.h
+t2=1
+Count=2
+3=DAC.sta
+t3=-1
+[DAC.c]
+Type=4
+
+[defines]
+buildcount=56
+[Units]
+Count=1
+1=DAC (main)

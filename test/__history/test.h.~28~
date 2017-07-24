@@ -1,0 +1,13 @@
+#include <24EP256GP202.h>
+#device icd = true
+#device icsp = 1
+#FUSES NOWDT, PR                   //No Watch Dog Timer
+#USE DELAY(xtal = 10000000)
+#FUSES none
+//!#FUSES NOJTAG                   //JTAG disabled
+//!#FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled
+//!
+#PIN_SELECT REFCLK = PIN_B6
+//!#define LED PIN_A0
+//!#define DELAY 1
+

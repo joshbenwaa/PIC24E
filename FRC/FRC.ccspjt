@@ -1,0 +1,58 @@
+[PROJECT]
+Target=FRC.hex
+Processor_Text=PIC24EP256GP202
+CCSVerions=5.071d
+Compiler=PCD
+CCSVersion=5.071d
+[Target Data]
+FileList=FRC.c
+[Directories]
+Include=
+[C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\FRC\FRC]
+Type=4
+[mru-list]
+1=FRC.c
+
+[ProjectLog]
+Days=2
+D1=18-07-2017
+D1_L=14
+D1_L1=[48524]Project Opened.
+D1_L2=[48540]Started Editing.
+D1_L3=[48850]Stopped Editing.
+D1_L4=[48920]Started Editing.
+D1_L5=[49302]Stopped Editing.
+D1_L6=[49545]Started Editing.
+D1_L7=[50788]Stopped Editing.
+D1_L8=[51566]Started Editing.
+D1_L9=[52233]Stopped Editing.
+TotalEdit=33
+TotalDebug=0
+D1_E=33
+D1_D=0
+D1_L10=[52233]Project Closed.
+D1_L11=[52615]Project Opened.
+D1_L12=[56338]Started Editing.
+D1_L13=[56865]Stopped Editing.
+D1_L14=[57814]Project Closed.
+D2=19-07-2017
+D2_L=2
+D2_L1=[39725]Project Opened.
+D2_L2=[43965]Project Closed.
+
+[Opened Files]
+1=FRC.c
+t1=1
+2=FRC.h
+t2=1
+Count=3
+3=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+t3=181
+[FRC.c]
+Type=4
+
+[defines]
+buildcount=13
+[Units]
+Count=1
+1=FRC (main)

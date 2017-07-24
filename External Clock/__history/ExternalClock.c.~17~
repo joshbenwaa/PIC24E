@@ -1,0 +1,47 @@
+#include <ExternalClock.h>
+#include <24ep256gp202_registers.h>
+#INT_OSCFAIL
+void  oscfail_isr(void) 
+{
+   printf("OSC FAILED \n\r");
+}
+
+
+
+void main()
+{
+   delay_ms(500);
+   printf("BEGIN BEGIN BEGIN \n\r");
+   enable_interrupts(INTR_GLOBAL);
+   MCU_PLLPRE0 = 0;
+   MCU_PLLPRE1 = 0;
+   MCU_PLLPRE2 = 0;
+   MCU_PLLPRE3 = 0;
+   MCU_PLLPRE4 = 0;
+   MCU_PLLPOST0 = 0;
+   MCU_PLLPOST1 = 0;
+   MCU_PLLDIV0 = 1;
+   MCU_PLLDIV1 = 1;
+   MCU_PLLDIV2 = 1;
+   MCU_PLLDIV3 = 1;
+   MCU_PLLDIV4 = 1;
+   MCU_PLLDIV5 = 1;
+   MCU_PLLDIV6 = 1;
+   MCU_PLLDIV7 = 1;
+   MCU_PLLDIV8 = 1;
+   #asm
+   MOV #0x3, w0
+   MOV #0x742, w1
+   MOV #0x78, w2
+   MOV #0x9A, w3
+   MOV.B w2, [w1]
+   MOV.B w3, [w1]
+   MOV.B w0, [w1]
+   
+   #endasm
+   while(TRUE)
+   {
+      Output_toggle(PIN_A0);
+   }
+
+}

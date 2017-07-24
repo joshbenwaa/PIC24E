@@ -1,0 +1,23 @@
+#include <ExternalClock.h>
+
+#INT_OSCFAIL
+void  oscfail_isr(void) 
+{
+   printf("OSC FAILED \n\r");
+}
+
+
+
+void main()
+{
+   delay_ms(500);
+   printf("BEGIN BEGIN BEGIN \n\r");
+   enable_interrupts(INTR_GLOBAL);
+   
+   
+   while(TRUE)
+   {
+      Output_toggle(PIN_A0);
+   }
+
+}

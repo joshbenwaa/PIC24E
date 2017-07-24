@@ -1,0 +1,37 @@
+#include <FRC.h>
+
+
+void main()
+{
+
+
+   //Example blinking LED program
+
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+      while(true)
+   {
+   }
+
+}

@@ -1,0 +1,17 @@
+#include <24EP256GP202.h>
+#device ICSP=1
+#use delay(internal=20000000)
+
+#FUSES NOWDT                 	//No Watch Dog Timer
+#FUSES NOJTAG                	//JTAG disabled
+#FUSES CKSFSM                	//Clock Switching is enabled, fail Safe clock monitor is enabled
+
+
+#define SCK	PIN_B7
+#define SDO	PIN_B8
+#define SDI	PIN_B9
+
+
+#use spi(MASTER, SPI1, MODE=1, BITS=8, stream=SPI_PORT1)
+
+
