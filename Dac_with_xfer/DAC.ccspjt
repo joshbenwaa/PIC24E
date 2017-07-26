@@ -14,7 +14,7 @@ Type=4
 1=DAC.c
 
 [ProjectLog]
-Days=4
+Days=5
 D1=19-07-2017
 D1_L=2
 D1_L1=[43965]Project Opened.
@@ -98,6 +98,10 @@ D4_L21=[50051]Stopped Editing.
 D4_E=4
 D4_D=0
 D4_L22=[50204]Project Opened.
+D5=25-07-2017
+D5_L=2
+D5_L1=[35797]Project Opened.
+D5_L2=[35817]Project Closed.
 
 [Documentation]
 1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC Notes.txt

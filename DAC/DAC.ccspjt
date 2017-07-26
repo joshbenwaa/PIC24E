@@ -14,7 +14,7 @@ Type=4
 1=DAC.c
 
 [ProjectLog]
-Days=4
+Days=6
 D1=19-07-2017
 D1_L=2
 D1_L1=[43965]Project Opened.
@@ -31,8 +31,8 @@ D2_L7=[48530]Started Editing.
 D2_L8=[49148]Stopped Editing.
 D2_L9=[49283]Started Editing.
 D2_L10=[49587]Stopped Editing.
-TotalEdit=109
-TotalDebug=0
+TotalEdit=144
+TotalDebug=22
 D2_E=43
 D2_D=0
 D2_L11=[49591]Project Closed.
@@ -98,6 +98,52 @@ D4_L21=[50051]Stopped Editing.
 D4_E=4
 D4_D=0
 D4_L22=[50196]Project Closed.
+D5=25-07-2017
+D5_L=25
+D5_L1=[35833]Project Opened.
+D5_L2=[36004]Started Editing.
+D5_L3=[36562]Stopped Editing.
+D5_L4=[36681]Started Editing.
+D5_L5=[37441]Stopped Editing.
+D5_L6=[37665]Started Editing.
+D5_L7=[38058]Stopped Editing.
+D5_L8=[42210]Started Editing.
+D5_L9=[42722]Stopped Editing.
+D5_L10=[49685]Started Editing.
+D5_L11=[50119]Stopped Editing.
+D5_L12=[50234]Started Editing.
+D5_L13=[50565]Stopped Editing.
+D5_L14=[53453]Started Editing.
+D5_L15=[53753]Stopped Editing.
+D5_L16=[55224]Started Editing.
+D5_L17=[55526]Stopped Editing.
+D5_L18=[56326]Started Editing.
+D5_L19=[56626]Stopped Editing.
+D5_L20=[56630]Started Editing.
+D5_L21=[57037]Stopped Editing.
+D5_L22=[57156]Started Editing.
+D5_L23=[57908]Stopped Editing.
+D5_L24=[58240]Started Editing.
+D5_L25=[58645]Stopped Editing.
+D6=26-07-2017
+D6_L=15
+D6_L1=[36410]Started Editing.
+D6_L2=[36813]Stopped Editing.
+D6_L3=[39369]Started Debugging.
+D6_L4=[39652]Stopped Debugging.
+D6_L5=[39652]Started Editing.
+D6_L6=[39666]Stopped Editing.
+D6_L7=[39666]Started Debugging.
+D6_L8=[39917]Stopped Debugging.
+D6_L9=[39917]Started Editing.
+D6_L10=[39990]Stopped Editing.
+D6_L11=[39990]Started Debugging.
+D6_L12=[40723]Stopped Debugging.
+D6_E=35
+D6_D=22
+D6_L13=[40723]Project Closed.
+D6_L14=[40737]Project Opened.
+D6_L15=[40829]Project Closed.
 
 [Documentation]
 1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC Notes.txt
@@ -108,17 +154,33 @@ Count=1
 
 [Opened Files]
 1=DAC.c
-t1=20
+t1=9
 2=DAC.h
 t2=1
-Count=2
-3=DAC.sta
-t3=-1
+Count=3
+3=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+t3=817
 [DAC.c]
 Type=4
 
 [defines]
-buildcount=56
+buildcount=83
+
+[debugperif]
+selected=2 Phase PWM
+
+[debugbreak]
+count=1
+f1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC.c
+l1=26
+a.1=838
+
+[debugwatch]
+count=0
+
+[debugexpr]
+expr=
+sideeffects=1
 [Units]
 Count=1
 1=DAC (main)

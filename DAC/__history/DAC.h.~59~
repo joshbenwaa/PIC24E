@@ -11,7 +11,7 @@
 #define SDO   PIN_B8
 #define SDI   PIN_B9
 #define CS    PIN_B6
-#define TOGGLE PIN_A0
+#define TOGGLE PIN_AO
 #pin_select U1TX=PIN_B11
 #pin_select U1RX=PIN_B12
 #use rs232(UART1, baud=115200, stream=UART_PORT1)

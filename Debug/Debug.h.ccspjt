@@ -1,0 +1,25 @@
+[defines]
+buildcount=2
+
+[PROJECT]
+Processor_Text=PIC24EP256GP202
+
+[Opened Files]
+1=Debug.c
+t1=1
+2=Debug.h
+t2=1
+Count=2
+
+[ProjectLog]
+Days=1
+D1=26-07-2017
+D1_L=4
+D1_L1=[41100]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L2=[41100]Project Closed.
+D1_L3=[41106]Project Opened.
+D1_L4=[41202]Project Closed.

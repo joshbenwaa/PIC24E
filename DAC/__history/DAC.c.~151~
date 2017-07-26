@@ -23,21 +23,22 @@ void main()
 //!   enable_interrupts(INTR_GLOBAL);
    while(TRUE)
    {
-      printf("press any key to initiate SPI transfer\n\r");
-      getc();
-      output_low(CS);
-      SPI_Write(0x00);
-      SPI_Write(0x80);
-      SPI_Write(0xFF);
-      SPI_write(0xFF);
-      output_high(CS);
-      delay_us(1);
-      output_low(CS);
-      SPI_write(0x00);
-      SPI_Write(0x20);
-      SPI_Write(0xFF);
-      SPI_write(0xFF);
-      output_high(CS);
+        output_toggle(Toggle);
+//!      printf("press any key to initiate SPI transfer\n\r");
+//!      getc();
+//!      output_low(CS);
+//!      SPI_Write(0x00);
+//!      SPI_Write(0x80);
+//!      SPI_Write(0xFF);
+//!      SPI_write(0xFF);
+//!      output_high(CS);
+//!      delay_us(1);
+//!      output_low(CS);
+//!      SPI_write(0x00);
+//!      SPI_Write(0x20);
+//!      SPI_Write(0xFF);
+//!      SPI_write(0xFF);
+//!      output_high(CS);
 //!      while(i < 15000)
 //!      {
 //!                 output_low(CS);

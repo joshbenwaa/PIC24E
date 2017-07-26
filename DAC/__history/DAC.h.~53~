@@ -1,6 +1,6 @@
 #include <24EP256GP202.h>
 #device ICSP=1
-#use delay(internal=140000000)
+#use delay(internal=7100000)
 
 #FUSES HS, NOWDT                    //No Watch Dog Timer
 #FUSES NOJTAG                   //JTAG disabled
@@ -11,10 +11,9 @@
 #define SDO   PIN_B8
 #define SDI   PIN_B9
 #define CS    PIN_B6
-#define TOGGLE PIN_A0
 #pin_select U1TX=PIN_B11
 #pin_select U1RX=PIN_B12
-#use rs232(UART1, baud=115200, stream=UART_PORT1)
+#use rs232(UART1, baud=9600, stream=UART_PORT1)
 
 //#use spi(FORCE_HW, MASTER, SPI1, MODE=2, stream=SPI_PORT1)
 //IMPORTAnt: Changed to only on a 0 to 5v range

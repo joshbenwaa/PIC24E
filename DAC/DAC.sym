@@ -1,21 +1,19 @@
 W0      @SCRATCH
 W0L     _RETURN_
-W0 -W1  @SPI_XFERM_1.P1
-W0 -W1  @READ_ROM_MEMORY.P2
-W0      @delay_ms1.P3
-W0      @delay_us1.P4
-W0 -W1  @DIV3232B.P5
+W0 -W1  @READ_ROM_MEMORY.P1
+W0 -W1  @DIV3232B.P2
+W0      @delay_us1.P3
+W0      @delay_ms1.P4
 W1      @SCRATCH
 W1      @READ_PACKED_MEMORY.P1
 W1      @WRITE_PACKED_MEMORY.P2
 W2 -W3  @DIV3232B.P1
-W2      @WRITE_PACKED_MEMORY.P2
-W2      @READ_PACKED_MEMORY.P3
-W2      @READ_ROM_MEMORY.P4
-W2      @SPI_XFERM_1.P5
+W2      @READ_ROM_MEMORY.P2
+W2      @WRITE_PACKED_MEMORY.P3
+W2      @READ_PACKED_MEMORY.P4
 W3      @READ_ROM_MEMORY.P1
-W3      @WRITE_PACKED_MEMORY.P2
-W3      @READ_PACKED_MEMORY.P3
+W3      @READ_PACKED_MEMORY.P2
+W3      @WRITE_PACKED_MEMORY.P3
 A85.0   C1OUT
 A85.1   C1ENV
 A8D.0   C2OUT
@@ -24,35 +22,31 @@ A95.0   C3OUT
 A95.1   C3ENV
 A9D.0   C4OUT
 A9D.1   C4ENV
-1002.0  MAIN.flag
-1004-1005 MAIN.i
+105C-105D MAIN.i
 7F80-7FFF Stack
 
 ROM Allocation:
-000200  Table.call
-000222  Table.data
-001C2E  @const803.call
-001C4E  @const809.call
-001C74  @const810.call
-001CAA  @const811.call
-001CBE  dma0_isr
-001CDE  spi1_isr
-001D16  MAIN
-001D16  @cinit1
-001D70  @cinit2
+000200  @const799.call
+000220  @const804.call
+000246  @const805.call
+00027C  dma0_isr
+00029C  spi1_isr
+0002D4  MAIN
+0002D4  @cinit1
+00031E  @cinit2
 
 Project Directory:
     C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\
 
 Project Files:
-    DAC.c                                                   [24-Jul-17 13:53  CRC=39491DC5]
-    DAC.h                                                   [24-Jul-17 13:42  CRC=708CBBAA]
+    DAC.c                                                   [26-Jul-17 10:08  CRC=08D0B6E5]
+    DAC.h                                                   [26-Jul-17 11:09  CRC=3AEEC459]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
 
-Source signature=93C5E83B
+Source signature=2DAF8A0A
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=E919
+Hex file CRC=9509
 
 Units:
     DAC (main)
@@ -64,6 +58,7 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: SIGNED: 8,16,32
     Float,Double:   32,64
+    ICD Provisions: Yes
     Compile Mode:       CCS5
 
 Compiler operating in Evaluation Mode

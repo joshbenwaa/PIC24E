@@ -1,0 +1,44 @@
+[PROJECT]
+Target=Debug.hex
+Processor_Text=PIC24EP256GP202
+CCSVerions=5.071d
+Compiler=PCD
+CCSVersion=5.071d
+[Target Data]
+FileList=Debug.c
+[Directories]
+Include=
+[C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\Debug\Debug]
+Type=4
+[mru-list]
+1=Debug.c
+
+[ProjectLog]
+Days=1
+D1=26-07-2017
+D1_L=7
+D1_L1=[40829]Project Opened.
+D1_L2=[40841]Started Editing.
+D1_L3=[40924]Stopped Editing.
+D1_L4=[40924]Started Debugging.
+D1_L5=[40984]Project Closed.
+D1_L6=[41207]Project Opened.
+D1_L7=[41290]Started Debugging.
+
+[Opened Files]
+1=Debug.c
+t1=1
+2=Debug.h
+t2=1
+Count=2
+[Debug.c]
+Type=4
+
+[defines]
+buildcount=3
+[Units]
+Count=1
+1=Debug (main)
+
+[debugperif]
+selected=2 Phase PWM
