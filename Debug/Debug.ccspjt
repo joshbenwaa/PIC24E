@@ -16,7 +16,7 @@ Type=4
 [ProjectLog]
 Days=1
 D1=26-07-2017
-D1_L=7
+D1_L=17
 D1_L1=[40829]Project Opened.
 D1_L2=[40841]Started Editing.
 D1_L3=[40924]Stopped Editing.
@@ -24,21 +24,50 @@ D1_L4=[40924]Started Debugging.
 D1_L5=[40984]Project Closed.
 D1_L6=[41207]Project Opened.
 D1_L7=[41290]Started Debugging.
+D1_L8=[41922]Stopped Debugging.
+D1_L9=[42012]Started Editing.
+D1_L10=[42742]Stopped Editing.
+D1_L11=[42742]Started Debugging.
+D1_L12=[47088]Project Opened.
+D1_L13=[47206]Started Editing.
+D1_L14=[48516]Stopped Editing.
+TotalEdit=17
+TotalDebug=0
+D1_E=17
+D1_D=0
+D1_L15=[48573]Project Closed.
+D1_L16=[50744]Project Opened.
+D1_L17=[51455]Project Closed.
 
 [Opened Files]
 1=Debug.c
 t1=1
 2=Debug.h
 t2=1
-Count=2
+Count=3
+3=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+t3=1
 [Debug.c]
 Type=4
 
 [defines]
-buildcount=3
-[Units]
-Count=1
-1=Debug (main)
+buildcount=18
 
 [debugperif]
 selected=2 Phase PWM
+
+[debugbreak]
+count=1
+f1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\Debug\Debug.c
+l1=12
+a.1=536
+
+[debugwatch]
+count=0
+
+[debugexpr]
+expr=
+sideeffects=1
+[Units]
+Count=1
+1=Debug (main)

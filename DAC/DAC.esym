@@ -1,8 +1,8 @@
-C L "MAIN" 0 21 12 "FUNCTION"
+F N "MAIN" 0 15 ""
 D G "__PCD__" 0 57 ""5.071d""
 D G "__DEVICE__" 0 57 "10042"
 D G "__DATE__" 0 57 ""26-Jul-17""
-D G "__TIME__" 0 57 ""11:09:50""
+D G "__TIME__" 0 57 ""15:37:19""
 D G "_UNICODE" 0 57 ""?""
 D G "__EVAL" 0 57 ""?"" "Standard Header file for the PIC24EP256GP202 device ////////////////"
 c L "set_tris_a" 2 3 17 "FUNCTION"
@@ -766,7 +766,7 @@ v L "channel" 2 657 "int8" `352
 v L "mode" 2 657 "int16" `353 
 v L "addressa" 2 657 "int16" `354 
 v L "addressb" 2 657 "int16" `360 
-f G "dma_start" 2 657 "void(int8 channel,int16 mode,int16 addressa,int16 addressb,int16 count)" `356 
+f G "dma_start" 2 657 "void(int8 channel,int16 mode,int16 addressa,int16 addressb,int8 u)" `356 
 f N "dma_start" 2 658 ""
 v L "channel" 2 658 "int8" `357 
 v L "mode" 2 658 "int16" `358 
@@ -1251,18 +1251,18 @@ f B "spi_prewrite" 2 844 "void(int8 ,int32 data)" `667
 f N "spi_xfer_in" 2 845 ""
 f B "spi_xfer_in" 2 845 "int8()" `670 
 f N "spi_xfer_in" 2 846 ""
-f G "spi_xfer_in" 2 846 "int16(int8 bits)" `671 
+f G "spi_xfer_in" 2 846 "int16(int8 spi_xfer_in)" `671 
 f N "spi_xfer_in" 2 847 ""
-f G "spi_xfer_in" 2 847 "int32(int8 bits)" `671 
+f G "spi_xfer_in" 2 847 "int32(int8 spi_xfer_in)" `671 
 f N "spi_xfer_in" 2 848 ""
 v L "bits" 2 848 "int8" `672 
 f B "spi_xfer_in" 2 848 "int8(int8 bits)" `671 
 f N "spi_xfer_in" 2 849 ""
 v L "bits" 2 849 "int8" `674 
-f G "spi_xfer_in" 2 849 "int16(int8 bits,int8 bits)" `673 
+f G "spi_xfer_in" 2 849 "int16(int8 bits,int8 spi_xfer_in)" `673 
 f N "spi_xfer_in" 2 850 ""
 v L "bits" 2 850 "int8" `674 
-f G "spi_xfer_in" 2 850 "int32(int8 bits,int8 bits)" `673 
+f G "spi_xfer_in" 2 850 "int32(int8 bits,int8 spi_xfer_in)" `673 
 f N "spi_xfer_in" 2 851 ""
 v L "stream" 2 851 "int8" `674 
 v L "bits" 2 851 "int8" `675 
@@ -1526,8 +1526,9 @@ D G "SCK" 1 10 "PIN_B7"
 D G "SDO" 1 11 "PIN_B8"
 D G "SDI" 1 12 "PIN_B9"
 D G "CS" 1 13 "PIN_B6"
-C L "jump_to_isr" 1 18 2 "FUNCTION"
-V G "Table" 1 20 "[15000]" `795 
+D G "TOGGLE" 1 14 "PIN_A0"
+C L "jump_to_isr" 1 19 2 "FUNCTION"
+V G "Table" 1 21 "[15000]" `795 
 F N "dma0_isr" 0 4 ""
 F G "dma0_isr" 0 5 "void()" `797 
 F N "spi1_isr" 0 10 ""
@@ -1536,6 +1537,7 @@ F N "MAIN" 0 15 ""
 F G "MAIN" 0 16 "void()" `800 
 V L "i" 0 19 "int16" `803 
 C L "MAIN" 0 21 3 "FUNCTION"
+C L "MAIN" 0 21 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

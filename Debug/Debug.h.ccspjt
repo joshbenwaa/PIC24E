@@ -9,12 +9,14 @@ Processor_Text=PIC24EP256GP202
 t1=1
 2=Debug.h
 t2=1
-Count=2
+Count=3
+3=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+t3=1
 
 [ProjectLog]
 Days=1
 D1=26-07-2017
-D1_L=4
+D1_L=8
 D1_L1=[41100]Stopped Editing.
 TotalEdit=2
 TotalDebug=0
@@ -23,3 +25,7 @@ D1_D=0
 D1_L2=[41100]Project Closed.
 D1_L3=[41106]Project Opened.
 D1_L4=[41202]Project Closed.
+D1_L5=[42986]Project Opened.
+D1_L6=[47068]Project Closed.
+D1_L7=[47074]Project Opened.
+D1_L8=[47088]Project Closed.

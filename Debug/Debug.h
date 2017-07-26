@@ -8,5 +8,5 @@
 
 
 #define LED PIN_A0
-#define DELAY 0
-
+#use fast_IO(A)
+#define DELAY 30

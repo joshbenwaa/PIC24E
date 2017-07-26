@@ -1,5 +1,6 @@
 --- Info 300 "C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC.h" Line 3(1,1): More info:   Actual Clock is 139620556
+>>> Warning 202 "DAC.c" Line 0(0,0): Variable never used:   Table
 >>> Warning 202 "DAC.c" Line 19(20,21): Variable never used:   i
       Memory usage:   ROM=1%      RAM=0% - 0%
-      0 Errors,  1 Warnings.
+      0 Errors,  2 Warnings.
 Build Successful.

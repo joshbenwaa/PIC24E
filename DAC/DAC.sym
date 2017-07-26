@@ -22,7 +22,7 @@ A95.0   C3OUT
 A95.1   C3ENV
 A9D.0   C4OUT
 A9D.1   C4ENV
-105C-105D MAIN.i
+1002-1003 MAIN.i
 7F80-7FFF Stack
 
 ROM Allocation:
@@ -39,14 +39,14 @@ Project Directory:
     C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\
 
 Project Files:
-    DAC.c                                                   [26-Jul-17 10:08  CRC=08D0B6E5]
-    DAC.h                                                   [26-Jul-17 11:09  CRC=3AEEC459]
+    DAC.c                                                   [26-Jul-17 15:37  CRC=A1CFC175]
+    DAC.h                                                   [26-Jul-17 11:17  CRC=2022F51A]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
 
-Source signature=2DAF8A0A
+Source signature=ABE2C55B
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=9509
+Hex file CRC=1B60
 
 Units:
     DAC (main)
@@ -58,7 +58,6 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: SIGNED: 8,16,32
     Float,Double:   32,64
-    ICD Provisions: Yes
     Compile Mode:       CCS5
 
 Compiler operating in Evaluation Mode

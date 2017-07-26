@@ -1,10 +1,10 @@
-CCS PCD C Compiler, Version 5.071d, 1               26-Jul-17 11:09
+CCS PCD C Compiler, Version 5.071d, 1               26-Jul-17 15:37
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
                Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC.lst
 
-               ROM used:   1026 bytes (1%)
+               ROM used:   952 bytes (1%)
                            Largest free fragment is 65536
                RAM used:   131 (0%) at main() level
                            131 (0%) worst case
@@ -108,6 +108,7 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... #define SDO   PIN_B8 
 .................... #define SDI   PIN_B9 
 .................... #define CS    PIN_B6 
+.................... #define TOGGLE PIN_A0 
 .................... #pin_select U1TX=PIN_B11 
 .................... #pin_select U1RX=PIN_B12 
 .................... #use rs232(UART1, baud=115200, stream=UART_PORT1) 
@@ -5213,17 +5214,17 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 0031A:  CLR     E0E
 0031C:  CLR     E1E
 .................... { 
-....................    setup_spi(SPI_MASTER | SPI_XMIT_L_TO_H | SPI_SAMPLE_AT_MIDDLE | SPI_SCK_IDLE_LOW | SPI_MODE_8B | SPI_SS_DISABLED); 
+....................    setup_spi(SPI_MASTER | SPI_XMIT_L_TO_H | SPI_SAMPLE_AT_MIDDLE | SPI_SCK_IDLE_HIGH | SPI_MODE_8B | SPI_SS_DISABLED); 
 0031E:  BCLR.B  241.7
 00320:  BCLR.B  240.6
-00322:  MOV     #120,W4
+00322:  MOV     #60,W4
 00324:  MOV     W4,242
 00326:  BSET.B  241.7
-....................    output_high(CS); 
+....................    output_low(CS); 
 00328:  BCLR.B  E10.6
-0032A:  BSET.B  E14.6
+0032A:  BCLR.B  E14.6
 ....................     unsigned int16 i = 0; 
-0032C:  CLR     105C
+0032C:  CLR     1002
 ....................    printf("Started Started Started\n\r"); 
 0032E:  MOV     #0,W1
 00330:  MOV     W1,W0
@@ -5241,25 +5242,26 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... //!   enable_interrupts(INTR_GLOBAL); 
 ....................    while(TRUE) 
 ....................    { 
-....................       printf("press any key to initiate SPI transfer\n\r"); 
-00346:  MOV     #0,W1
-00348:  MOV     W1,W0
-0034A:  CLR.B   1
-0034C:  CALL    246
-00350:  INC     W1,W1
-00352:  BTSC.B  223.1
-00354:  BRA     352
-00356:  MOV     W0,224
-00358:  MOV     #27,W0
-0035A:  CPSGT   W1,W0
-0035C:  BRA     348
-....................       getc(); 
-0035E:  BTSS.B  222.0
-00360:  BRA     35E
-00362:  MOV     226,W0
 ....................       output_low(CS); 
-00364:  BCLR.B  E10.6
-00366:  BCLR.B  E14.6
+00346:  BCLR.B  E10.6
+00348:  BCLR.B  E14.6
+....................       printf("press any key to initiate SPI transfer\n\r"); 
+0034A:  MOV     #0,W1
+0034C:  MOV     W1,W0
+0034E:  CLR.B   1
+00350:  CALL    246
+00354:  INC     W1,W1
+00356:  BTSC.B  223.1
+00358:  BRA     356
+0035A:  MOV     W0,224
+0035C:  MOV     #27,W0
+0035E:  CPSGT   W1,W0
+00360:  BRA     34C
+....................       getc(); 
+00362:  BTSS.B  222.0
+00364:  BRA     362
+00366:  MOV     226,W0
+....................       //output_low(CS); 
 ....................       SPI_Write(0x00); 
 00368:  BCLR.B  240.6
 0036A:  BTSS.B  240.0
@@ -5279,74 +5281,37 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 00384:  MOV.B   W0L,248
 00386:  BTSS.B  240.0
 00388:  BRA     386
-....................       SPI_Write(0xFF); 
+....................       SPI_Write(0x00); 
 0038A:  BCLR.B  240.6
 0038C:  BTSS.B  240.0
 0038E:  BRA     394
 00390:  MOV.B   248,W0L
 00392:  BRA     38C
-00394:  SETM.B  248
+00394:  CLR.B   248
 00396:  BTSS.B  240.0
 00398:  BRA     396
-....................       SPI_write(0xFF); 
+....................       SPI_write(0x00); 
 0039A:  BCLR.B  240.6
 0039C:  BTSS.B  240.0
 0039E:  BRA     3A4
 003A0:  MOV.B   248,W0L
 003A2:  BRA     39C
-003A4:  SETM.B  248
+003A4:  CLR.B   248
 003A6:  BTSS.B  240.0
 003A8:  BRA     3A6
 ....................       output_high(CS); 
 003AA:  BCLR.B  E10.6
 003AC:  BSET.B  E14.6
-....................       delay_us(1); 
-003AE:  REPEAT  #44
+....................       delay_us(100); 
+003AE:  REPEAT  #1B56
 003B0:  NOP     
-....................       output_low(CS); 
-003B2:  BCLR.B  E10.6
-003B4:  BCLR.B  E14.6
-....................       SPI_write(0x00); 
-003B6:  BCLR.B  240.6
-003B8:  BTSS.B  240.0
-003BA:  BRA     3C0
-003BC:  MOV.B   248,W0L
-003BE:  BRA     3B8
-003C0:  CLR.B   248
-003C2:  BTSS.B  240.0
-003C4:  BRA     3C2
-....................       SPI_Write(0x20); 
-003C6:  BCLR.B  240.6
-003C8:  BTSS.B  240.0
-003CA:  BRA     3D0
-003CC:  MOV.B   248,W0L
-003CE:  BRA     3C8
-003D0:  MOV.B   #20,W0L
-003D2:  MOV.B   W0L,248
-003D4:  BTSS.B  240.0
-003D6:  BRA     3D4
-....................       SPI_Write(0xFF); 
-003D8:  BCLR.B  240.6
-003DA:  BTSS.B  240.0
-003DC:  BRA     3E2
-003DE:  MOV.B   248,W0L
-003E0:  BRA     3DA
-003E2:  SETM.B  248
-003E4:  BTSS.B  240.0
-003E6:  BRA     3E4
-....................       SPI_write(0xFF); 
-003E8:  BCLR.B  240.6
-003EA:  BTSS.B  240.0
-003EC:  BRA     3F2
-003EE:  MOV.B   248,W0L
-003F0:  BRA     3EA
-003F2:  SETM.B  248
-003F4:  BTSS.B  240.0
-003F6:  BRA     3F4
-....................       output_high(CS); 
-003F8:  BCLR.B  E10.6
-003FA:  BSET.B  E14.6
-003FC:  GOTO    346
+003B2:  GOTO    346
+.................... //!      output_low(CS); 
+.................... //!      SPI_write(0x00); 
+.................... //!      SPI_Write(0x20); 
+.................... //!      SPI_Write(0xFF); 
+.................... //!      SPI_write(0xFF); 
+.................... //!      output_high(CS); 
 .................... //!      while(i < 15000) 
 .................... //!      { 
 .................... //!                 output_low(CS); 
@@ -5363,10 +5328,10 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................  
 .................... } 
 *
-00400:  BRA     400
+003B6:  PWRSAV  #0
 
 Configuration Fuses:
-   Word  3L: FF4F   ICSP1 NOJTAG DEBUG
+   Word  3L: FFCF   ICSP1 NOJTAG NODEBUG
           H: 0000  
    Word  4L: FFFF   NOALTI2C1 NOALTI2C2 WDTWIN_25%
           H: 0000  
@@ -5382,5 +5347,3 @@ Configuration Fuses:
           H: 0000  
    Word 10L: FFFF  
           H: 0000  
-
-   Some fuses have been forced to be compatible with the ICD debugger.

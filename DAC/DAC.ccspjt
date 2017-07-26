@@ -31,7 +31,7 @@ D2_L7=[48530]Started Editing.
 D2_L8=[49148]Stopped Editing.
 D2_L9=[49283]Started Editing.
 D2_L10=[49587]Stopped Editing.
-TotalEdit=144
+TotalEdit=158
 TotalDebug=22
 D2_E=43
 D2_D=0
@@ -126,7 +126,7 @@ D5_L23=[57908]Stopped Editing.
 D5_L24=[58240]Started Editing.
 D5_L25=[58645]Stopped Editing.
 D6=26-07-2017
-D6_L=15
+D6_L=29
 D6_L1=[36410]Started Editing.
 D6_L2=[36813]Stopped Editing.
 D6_L3=[39369]Started Debugging.
@@ -139,11 +139,25 @@ D6_L9=[39917]Started Editing.
 D6_L10=[39990]Stopped Editing.
 D6_L11=[39990]Started Debugging.
 D6_L12=[40723]Stopped Debugging.
-D6_E=35
+D6_E=49
 D6_D=22
 D6_L13=[40723]Project Closed.
 D6_L14=[40737]Project Opened.
 D6_L15=[40829]Project Closed.
+D6_L16=[51666]Project Opened.
+D6_L17=[51682]Started Editing.
+D6_L18=[51999]Stopped Editing.
+D6_L19=[52832]Started Editing.
+D6_L20=[53563]Stopped Editing.
+D6_L21=[53580]Started Editing.
+D6_L22=[53986]Stopped Editing.
+D6_L23=[54000]Started Editing.
+D6_L24=[54304]Stopped Editing.
+D6_L25=[55757]Started Editing.
+D6_L26=[56057]Stopped Editing.
+D6_L27=[56143]Started Editing.
+D6_L28=[56421]Stopped Editing.
+D6_L29=[56421]Project Closed.
 
 [Documentation]
 1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC Notes.txt
@@ -154,17 +168,17 @@ Count=1
 
 [Opened Files]
 1=DAC.c
-t1=9
+t1=13
 2=DAC.h
 t2=1
 Count=3
 3=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
-t3=817
+t3=394
 [DAC.c]
 Type=4
 
 [defines]
-buildcount=83
+buildcount=91
 
 [debugperif]
 selected=2 Phase PWM

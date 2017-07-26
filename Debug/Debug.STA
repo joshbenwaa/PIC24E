@@ -1,46 +1,46 @@
 
-ROM used:   546/176108 (0%)
-            546/176108 (0%) including unused fragments
+ROM used:   566/176108 (0%)
+            566/176108 (0%) including unused fragments
 
             0.5 Average locations per line
-            182.0 Average locations per statement
+            62.9 Average locations per statement
 
-RAM used:   81/32678 (0%) at main() level
-            81/32678 (0%) worst case
+RAM used:   131/32768 (0%) at main() level
+            131/32768 (0%) worst case
 
 Stack used: 0 worst case (0 in main + 0 for interrupts)
-Stack size: 80
+Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   16     3 100  Debug.c
+   60     9 100  Debug.c
    13     0   0  Debug.h
  1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
 ----- -----
- 1052     3 Total
+ 1096     9 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0     34   3    1     32  1.2  main
+0     54   5    3    167  3.1  main
  Inline         0             @cinit1
 
 Program metrics:
     Functions               1
-    Statements              3
-    Comments                173
-    Volume (V)              33
-    Difficulty (D)          1.0
-    Effort to implement (E) 33
+    Statements              9
+    Comments                213
+    Volume (V)              169
+    Difficulty (D)          2.9
+    Effort to implement (E) 499
     Time to implement (T)   0 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    185
+    Maintainability (MI)    79
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0FFFE    34  64990  
+00200-0FFFE    54  64970  
 10000-1FFFE     0  65536  
 20000-2AFEA     0  45036  
 

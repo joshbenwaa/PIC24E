@@ -1,51 +1,51 @@
 
-ROM used:   1026/176108 (1%)
-            1026/176108 (1%) including unused fragments
+ROM used:   952/176108 (1%)
+            952/176108 (1%) including unused fragments
 
             0.2 Average locations per line
-            46.6 Average locations per statement
+            59.5 Average locations per statement
 
-RAM used:   131/32678 (0%) at main() level
-            131/32678 (0%) worst case
+RAM used:   131/32768 (0%) at main() level
+            131/32768 (0%) worst case
 
 Stack used: 42 worst case (2 in main + 40 for interrupts)
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   56    22 100  DAC.c
- 5023     0   0  DAC.h
+   57    16 100  DAC.c
+ 5024     0   0  DAC.h
  1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
 ----- -----
- 6102    22 Total
+ 6104    16 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     32   2    0      5  1.0  dma0_isr
 0     56   3    0     21  0.9  spi1_isr
-0     32   2    0     21  0.9  @const799
-0    302  15    3    535  2.8  MAIN
-0     38   2    0    776  6.2  @const804
+0     32   2    0             @const799
+0    228  12    3    372  2.8  MAIN
+0     38   2    0             @const804
 0     54   3    0             @const805
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               5
-    Statements              22
-    Comments                189
-    Volume (V)              1697
-    Difficulty (D)          12.2
-    Effort to implement (E) 20650
-    Time to implement (T)   19 minutes
+    Functions               3
+    Statements              16
+    Comments                196
+    Volume (V)              461
+    Difficulty (D)          4.4
+    Effort to implement (E) 2039
+    Time to implement (T)   2 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    112
+    Maintainability (MI)    115
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0FFFE   514  64510  
+00200-0FFFE   440  64584  
 10000-1FFFE     0  65536  
 20000-2AFEA     0  45036  
 
