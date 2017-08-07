@@ -25,7 +25,13 @@ printf("press any key to initiate SPI transfer\n\r");
       getc();
    while(TRUE)
    {
-      while(i < SAMPLES)
+      output_low(CS);
+      SPI_write(0x00);
+      SPI_Write(0x20);
+      SPI_Write(0xFF);
+      SPI_write(0xFF);
+      output_high(CS);
+      while(i < 15000)
       {
                  output_low(CS);
                   SPI_WRITE(Table[i]);

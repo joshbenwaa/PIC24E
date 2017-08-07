@@ -1,10 +1,9 @@
-F N "MAIN" 0 15 ""
-D G "__PCD__" 0 57 ""5.071d""
-D G "__DEVICE__" 0 57 "10042"
-D G "__DATE__" 0 57 ""26-Jul-17""
-D G "__TIME__" 0 57 ""15:37:19""
-D G "_UNICODE" 0 57 ""?""
-D G "__EVAL" 0 57 ""?"" "Standard Header file for the PIC24EP256GP202 device ////////////////"
+D G "__PCD__" 0 42 ""5.071d""
+D G "__DEVICE__" 0 42 "10042"
+D G "__DATE__" 0 42 ""07-Aug-17""
+D G "__TIME__" 0 42 ""16:33:55""
+D G "_UNICODE" 0 42 ""?""
+D G "__EVAL" 0 42 ""?"" "Standard Header file for the PIC24EP256GP202 device ////////////////"
 c L "set_tris_a" 2 3 17 "FUNCTION"
 f N "set_tris_a" 2 58 ""
 v L "value" 2 58 "int16" `54 
@@ -766,7 +765,7 @@ v L "channel" 2 657 "int8" `352
 v L "mode" 2 657 "int16" `353 
 v L "addressa" 2 657 "int16" `354 
 v L "addressb" 2 657 "int16" `360 
-f G "dma_start" 2 657 "void(int8 channel,int16 mode,int16 addressa,int16 addressb,int8 u)" `356 
+f G "dma_start" 2 657 "void(int8 channel,int16 mode,int16 addressa,int16 addressb,int16 count)" `356 
 f N "dma_start" 2 658 ""
 v L "channel" 2 658 "int8" `357 
 v L "mode" 2 658 "int16" `358 
@@ -1251,18 +1250,18 @@ f B "spi_prewrite" 2 844 "void(int8 ,int32 data)" `667
 f N "spi_xfer_in" 2 845 ""
 f B "spi_xfer_in" 2 845 "int8()" `670 
 f N "spi_xfer_in" 2 846 ""
-f G "spi_xfer_in" 2 846 "int16(int8 spi_xfer_in)" `671 
+f G "spi_xfer_in" 2 846 "int16(int8 bits)" `671 
 f N "spi_xfer_in" 2 847 ""
-f G "spi_xfer_in" 2 847 "int32(int8 spi_xfer_in)" `671 
+f G "spi_xfer_in" 2 847 "int32(int8 bits)" `671 
 f N "spi_xfer_in" 2 848 ""
 v L "bits" 2 848 "int8" `672 
 f B "spi_xfer_in" 2 848 "int8(int8 bits)" `671 
 f N "spi_xfer_in" 2 849 ""
 v L "bits" 2 849 "int8" `674 
-f G "spi_xfer_in" 2 849 "int16(int8 bits,int8 spi_xfer_in)" `673 
+f G "spi_xfer_in" 2 849 "int16(int8 bits,int8 bits)" `673 
 f N "spi_xfer_in" 2 850 ""
 v L "bits" 2 850 "int8" `674 
-f G "spi_xfer_in" 2 850 "int32(int8 bits,int8 spi_xfer_in)" `673 
+f G "spi_xfer_in" 2 850 "int32(int8 bits,int8 bits)" `673 
 f N "spi_xfer_in" 2 851 ""
 v L "stream" 2 851 "int8" `674 
 v L "bits" 2 851 "int8" `675 
@@ -1522,22 +1521,22 @@ d G "INT_PTG0" 2 1017 "222"
 d G "INT_PTG1" 2 1018 "223"
 d G "INT_PTG2" 2 1019 "224"
 d G "INT_PTG3" 2 1020 "225"
+D G "SAMPLES" 1 9 "30" "Multiplied by 3"
 D G "SCK" 1 10 "PIN_B7"
 D G "SDO" 1 11 "PIN_B8"
 D G "SDI" 1 12 "PIN_B9"
 D G "CS" 1 13 "PIN_B6"
 D G "TOGGLE" 1 14 "PIN_A0"
-C L "jump_to_isr" 1 19 2 "FUNCTION"
-V G "Table" 1 21 "[15000]" `795 
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+V G "Table" 1 21 "[30]" `799 
 F N "dma0_isr" 0 4 ""
-F G "dma0_isr" 0 5 "void()" `797 
+F G "dma0_isr" 0 5 "void()" `801 
 F N "spi1_isr" 0 10 ""
-F G "spi1_isr" 0 11 "void()" `798 
+F G "spi1_isr" 0 11 "void()" `802 
 F N "MAIN" 0 15 ""
-F G "MAIN" 0 16 "void()" `800 
-V L "i" 0 19 "int16" `803 
+F G "MAIN" 0 16 "void()" `804  "setup_spi(SPI_MASTER | SPI_XMIT_L_TO_H | SPI_SAMPLE_AT_MIDDLE | SPI_SCK_IDLE_HIGH | SPI_MODE_8B | SPI_SS_DISABLED);"
+V L "i" 0 19 "int16" `807 
 C L "MAIN" 0 21 3 "FUNCTION"
-C L "MAIN" 0 21 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
@@ -1702,3 +1701,6 @@ F B "gets" 1 3
 F B "kbhit" 0 1
 F B "set_uart_speed" 1 3
 F B "setup_uart" 1 3
+F B "spi_xfer" 0 3
+F B "spi_speed" 1 3
+F B "spi_init" 1 2

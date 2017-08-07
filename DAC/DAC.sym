@@ -2,18 +2,20 @@ W0      @SCRATCH
 W0L     _RETURN_
 W0 -W1  @READ_ROM_MEMORY.P1
 W0 -W1  @DIV3232B.P2
-W0      @delay_us1.P3
-W0      @delay_ms1.P4
+W0      @delay_ms1.P3
+W0 -W1  @SPI_XFERM_1.P4
+W0      @delay_us1.P5
 W1      @SCRATCH
 W1      @READ_PACKED_MEMORY.P1
 W1      @WRITE_PACKED_MEMORY.P2
-W2 -W3  @DIV3232B.P1
-W2      @READ_ROM_MEMORY.P2
+W2      @READ_ROM_MEMORY.P1
+W2 -W3  @DIV3232B.P2
 W2      @WRITE_PACKED_MEMORY.P3
 W2      @READ_PACKED_MEMORY.P4
-W3      @READ_ROM_MEMORY.P1
-W3      @READ_PACKED_MEMORY.P2
-W3      @WRITE_PACKED_MEMORY.P3
+W2      @SPI_XFERM_1.P5
+W3      @WRITE_PACKED_MEMORY.P1
+W3      @READ_ROM_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
 A85.0   C1OUT
 A85.1   C1ENV
 A8D.0   C2OUT
@@ -26,27 +28,29 @@ A9D.1   C4ENV
 7F80-7FFF Stack
 
 ROM Allocation:
-000200  @const799.call
-000220  @const804.call
-000246  @const805.call
-00027C  dma0_isr
-00029C  spi1_isr
-0002D4  MAIN
-0002D4  @cinit1
-00031E  @cinit2
+000200  Table.call
+00020C  Table.data
+00022A  @const803.call
+00024A  @const808.call
+000270  @const809.call
+0002A6  dma0_isr
+0002C6  spi1_isr
+0002FE  @cinit1
+0002FE  MAIN
+000358  @cinit2
 
 Project Directory:
     C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\
 
 Project Files:
-    DAC.c                                                   [26-Jul-17 15:37  CRC=A1CFC175]
-    DAC.h                                                   [26-Jul-17 11:17  CRC=2022F51A]
+    DAC.c                                                   [07-Aug-17 15:37  CRC=5D417AFE]
+    DAC.h                                                   [07-Aug-17 16:33  CRC=802ACBE7]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
 
-Source signature=ABE2C55B
+Source signature=C75C55B1
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=1B60
+Hex file CRC=9935
 
 Units:
     DAC (main)

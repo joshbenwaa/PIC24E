@@ -16,7 +16,7 @@
 #pin_select U1RX=PIN_B12
 #use rs232(UART1, baud=115200, stream=UART_PORT1)
 
-#use spi(FORCE_HW, MASTER, SPI1, MODE=1, stream=SPI_PORT1, BAUD = 12000000)
+#use spi(FORCE_HW, MASTER, SPI1, MODE=1, stream=SPI_PORT1, BAUD = 14000000)
 //IMPORTAnt: Changed to only on a 0 to 5v range
 const unsigned int8 Table[SAMPLES] =
 {0x80, 0x80, 0x00,
