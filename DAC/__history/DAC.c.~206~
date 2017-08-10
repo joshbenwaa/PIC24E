@@ -27,7 +27,6 @@ void FakeSpiWrite(int8 value)
 
 void main()
 {
-   set_tris_b(0);
    output_low(CS);
     unsigned int16 i = 0;
    printf("Started Started Started\n\r");

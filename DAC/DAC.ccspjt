@@ -31,7 +31,7 @@ D2_L7=[48530]Started Editing.
 D2_L8=[49148]Stopped Editing.
 D2_L9=[49283]Started Editing.
 D2_L10=[49587]Stopped Editing.
-TotalEdit=188
+TotalEdit=218
 TotalDebug=22
 D2_E=43
 D2_D=0
@@ -185,10 +185,20 @@ D8_E=16
 D8_D=0
 D8_L8=[61864]Project Closed.
 D9=10-08-2017
-D9_L=3
+D9_L=11
 D9_L1=[37869]Project Opened.
 D9_L2=[37993]Started Editing.
 D9_L3=[39296]Stopped Editing.
+D9_L4=[40455]Stopped Editing.
+D9_L5=[40945]Started Editing.
+D9_L6=[41400]Stopped Editing.
+D9_L7=[41558]Started Editing.
+D9_L8=[41874]Stopped Editing.
+D9_L9=[41963]Started Editing.
+D9_L10=[42563]Stopped Editing.
+D9_E=30
+D9_D=0
+D9_L11=[43312]Project Closed.
 
 [Documentation]
 1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC Notes.txt
@@ -199,7 +209,7 @@ Count=1
 
 [Opened Files]
 1=DAC.c
-t1=1
+t1=21
 2=DAC.h
 t2=1
 Count=3
@@ -209,7 +219,7 @@ t3=21
 Type=4
 
 [defines]
-buildcount=107
+buildcount=112
 
 [debugperif]
 selected=2 Phase PWM

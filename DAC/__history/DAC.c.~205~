@@ -18,7 +18,6 @@ void FakeSpiWrite(int8 value)
    {
       output_low(SCK);
       output_bit(SDO, bit_test(value, j));
-      delay_cycles(DELAY);
       output_high(SCK);
       delay_cycles(DELAY);
    }
@@ -27,7 +26,6 @@ void FakeSpiWrite(int8 value)
 
 void main()
 {
-   set_tris_b(0);
    output_low(CS);
     unsigned int16 i = 0;
    printf("Started Started Started\n\r");

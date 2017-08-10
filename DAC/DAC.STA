@@ -1,52 +1,53 @@
 
-ROM used:   1128/176108 (1%)
-            1128/176108 (1%) including unused fragments
+ROM used:   1222/176108 (1%)
+            1222/176108 (1%) including unused fragments
 
-            0.9 Average locations per line
-            66.4 Average locations per statement
+            1.0 Average locations per line
+            47.0 Average locations per statement
 
 RAM used:   131/32768 (0%) at main() level
-            131/32768 (0%) worst case
+            139/32768 (0%) worst case
 
 Stack used: 42 worst case (2 in main + 40 for interrupts)
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   41    17 100  DAC.c
-  190     0   0  DAC.h
+   51    26 100  DAC.c
+  124     0   0  DAC.h
  1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
 ----- -----
- 1254    17 Total
+ 1198    26 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0    128   6    0             @const799
+0    228   9    0             @const795
 0     32   1    0      5  1.0  dma0_isr
 0     56   2    0     21  0.9  spi1_isr
-0     32   1    0             @const803
-0    276  12    3    405  4.6  MAIN
-0     38   2    0             @const808
-0     54   2    0             @const809
+0     32   1    0             @const799
+0     44   2    5    242  3.7  FakeSpiWrite
+0    226   9    3    432  4.6  MAIN
+0     38   2    0             @const807
+0     54   2    0             @const808
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               3
-    Statements              17
-    Comments                293
-    Volume (V)              496
-    Difficulty (D)          5.9
-    Effort to implement (E) 2946
-    Time to implement (T)   3 minutes
+    Functions               4
+    Statements              26
+    Comments                173
+    Volume (V)              893
+    Difficulty (D)          9.7
+    Effort to implement (E) 8626
+    Time to implement (T)   8 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    136
+    Maintainability (MI)    78
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0FFFE   616  64408  
+00200-0FFFE   710  64314  
 10000-1FFFE     0  65536  
 20000-2AFEA     0  45036  
 

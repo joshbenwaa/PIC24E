@@ -12,22 +12,20 @@ void  spi1_isr(void)
       printf("TRANSFER COMPLETE\n\r");
 }
 
-void FakeSpiWrite(int8 value)
+void FakeSpiWrite(int8 value, int8 delay)
 {
    for(int j = 7; j >= 0; j--)
    {
       output_low(SCK);
       output_bit(SDO, bit_test(value, j));
-      delay_cycles(DELAY);
       output_high(SCK);
-      delay_cycles(DELAY);
+      delay_cycles(delay);
    }
    output_low(SCK);
 }
 
 void main()
 {
-   set_tris_b(0);
    output_low(CS);
     unsigned int16 i = 0;
    printf("Started Started Started\n\r");

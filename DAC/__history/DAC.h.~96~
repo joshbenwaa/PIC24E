@@ -5,8 +5,6 @@
 #FUSES HS, NOWDT                    //No Watch Dog Timer
 #FUSES NOJTAG                   //JTAG disabled
 #FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled
-
-#use FAST_IO(B)
 #define DELAY 1
 #define SAMPLES 100*3      //Multiplied by 3
 #define SCK   PIN_B7
