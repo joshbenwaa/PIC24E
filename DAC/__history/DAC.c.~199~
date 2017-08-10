@@ -26,6 +26,7 @@ void FakeSpiWrite(int8 value, int8 delay)
 
 void main()
 {
+   //setup_spi(SPI_MASTER | SPI_XMIT_L_TO_H | SPI_SAMPLE_AT_MIDDLE | SPI_SCK_IDLE_HIGH | SPI_MODE_8B | SPI_SS_DISABLED);
    output_low(CS);
     unsigned int16 i = 0;
    printf("Started Started Started\n\r");

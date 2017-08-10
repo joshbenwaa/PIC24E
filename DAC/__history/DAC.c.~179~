@@ -12,23 +12,19 @@ void  spi1_isr(void)
       printf("TRANSFER COMPLETE\n\r");
 }
 
-void FakeSpiWrite(int8 value, int8 delay)
+void FakeSpiWrite(int8 value)
 {
-   for(int j = 7; j >= 0; j--)
-   {
-      output_low(SCK);
-      output_bit(SDO, bit_test(value, j));
-      output_high(SCK);
-      delay_cycles(delay);
-   }
    output_low(SCK);
 }
-
 void main()
 {
+   //setup_spi(SPI_MASTER | SPI_XMIT_L_TO_H | SPI_SAMPLE_AT_MIDDLE | SPI_SCK_IDLE_HIGH | SPI_MODE_8B | SPI_SS_DISABLED);
    output_low(CS);
     unsigned int16 i = 0;
    printf("Started Started Started\n\r");
+//!   enable_interrupts(INT_DMA0);
+//!   enable_interrupts(INT_SPI1);
+//!   enable_interrupts(INTR_GLOBAL);
 printf("press any key to initiate SPI transfer\n\r");
       getc();
    while(TRUE)
@@ -36,9 +32,9 @@ printf("press any key to initiate SPI transfer\n\r");
       while(i < SAMPLES)
       {
                  output_low(CS);
-                  FakeSpiWrite(Table[i], 10);
-                  FakeSpiWrite(Table[i+1], 10);
-                  FakeSpiWrite(Table[i+2], 10);
+                  SPI_WRITE(Table[i]);
+                  SPI_WRITE(Table[i+1]);
+                   SPI_WRITE(Table[i+2]);
                    output_high(CS);
          i += 3;
       }

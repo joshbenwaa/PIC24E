@@ -14,7 +14,7 @@ Type=4
 1=DAC.c
 
 [ProjectLog]
-Days=7
+Days=9
 D1=19-07-2017
 D1_L=2
 D1_L1=[43965]Project Opened.
@@ -31,7 +31,7 @@ D2_L7=[48530]Started Editing.
 D2_L8=[49148]Stopped Editing.
 D2_L9=[49283]Started Editing.
 D2_L10=[49587]Stopped Editing.
-TotalEdit=172
+TotalEdit=188
 TotalDebug=22
 D2_E=43
 D2_D=0
@@ -172,6 +172,23 @@ D7_L9=[59931]Stopped Editing.
 D7_E=14
 D7_D=0
 D7_L10=[59931]Project Closed.
+D8=08-08-2017
+D8_L=8
+D8_L1=[58616]Project Opened.
+D8_L2=[58644]Started Editing.
+D8_L3=[59236]Stopped Editing.
+D8_L4=[59302]Started Editing.
+D8_L5=[59655]Stopped Editing.
+D8_L6=[59687]Started Editing.
+D8_L7=[60543]Stopped Editing.
+D8_E=16
+D8_D=0
+D8_L8=[61864]Project Closed.
+D9=10-08-2017
+D9_L=3
+D9_L1=[37869]Project Opened.
+D9_L2=[37993]Started Editing.
+D9_L3=[39296]Stopped Editing.
 
 [Documentation]
 1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC Notes.txt
@@ -182,9 +199,9 @@ Count=1
 
 [Opened Files]
 1=DAC.c
-t1=13
+t1=1
 2=DAC.h
-t2=13
+t2=1
 Count=3
 3=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
 t3=21
@@ -192,7 +209,7 @@ t3=21
 Type=4
 
 [defines]
-buildcount=97
+buildcount=107
 
 [debugperif]
 selected=2 Phase PWM
