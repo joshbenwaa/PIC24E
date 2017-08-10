@@ -31,7 +31,7 @@ D2_L7=[48530]Started Editing.
 D2_L8=[49148]Stopped Editing.
 D2_L9=[49283]Started Editing.
 D2_L10=[49587]Stopped Editing.
-TotalEdit=218
+TotalEdit=257
 TotalDebug=22
 D2_E=43
 D2_D=0
@@ -185,7 +185,7 @@ D8_E=16
 D8_D=0
 D8_L8=[61864]Project Closed.
 D9=10-08-2017
-D9_L=17
+D9_L=25
 D9_L1=[37869]Project Opened.
 D9_L2=[37993]Started Editing.
 D9_L3=[39296]Stopped Editing.
@@ -196,7 +196,7 @@ D9_L7=[41558]Started Editing.
 D9_L8=[41874]Stopped Editing.
 D9_L9=[41963]Started Editing.
 D9_L10=[42563]Stopped Editing.
-D9_E=30
+D9_E=69
 D9_D=0
 D9_L11=[43312]Project Closed.
 D9_L12=[46894]Project Opened.
@@ -205,6 +205,14 @@ D9_L14=[47677]Stopped Editing.
 D9_L15=[47743]Started Editing.
 D9_L16=[48745]Stopped Editing.
 D9_L17=[49482]Started Editing.
+D9_L18=[50528]Stopped Editing.
+D9_L19=[51484]Started Editing.
+D9_L20=[52442]Stopped Editing.
+D9_L21=[52572]Started Editing.
+D9_L22=[52881]Stopped Editing.
+D9_L23=[52981]Started Editing.
+D9_L24=[53281]Stopped Editing.
+D9_L25=[60053]Project Closed.
 
 [Documentation]
 1=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC Notes.txt
@@ -225,7 +233,7 @@ t3=21
 Type=4
 
 [defines]
-buildcount=120
+buildcount=125
 
 [debugperif]
 selected=2 Phase PWM

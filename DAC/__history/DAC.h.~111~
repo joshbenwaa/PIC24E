@@ -8,7 +8,7 @@
 
 #use FAST_IO(B)
 #define DELAY 0
-#define SAMPLES 38      //Multiplied by 3 if split
+#define SAMPLES 25      //Multiplied by 3 if split
 #define SCK   PIN_B7
 #define SDO   PIN_B8
 #define SDI   PIN_B9
@@ -20,7 +20,7 @@
 
 //#use spi(FORCE_HW, MASTER, SPI1, MODE=1, stream=SPI_PORT1, BAUD = 14000000)
 const unsigned int32 Table[SAMPLES] =
-{0xC08000,
+{0x808000,
 0x209511,
 0x20a98f,
 0x20bceb,

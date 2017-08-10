@@ -158,23 +158,19 @@ printf("press any key to initiate SPI transfer\n\r");
       getc();
    while(TRUE)
    {
-      while(i < SAMPLES)
-      {
-                   output_low(CS);
-                   FakeSpiWrite24(Table[i]);
+      //while(i < SAMPLES)
+     // {
+                 output_low(CS);
+                  FakeSpiWrite24(Table[i]);
                    output_high(CS);
                    
-//!                   if(i < SAMPLES)
-//!                   {
-//!                     i++;
-//!                   }
-//!                   else
-//!                   {
-//!                     i = 0;
-//!                   }
-         i++;
-      }
-      i = 0;
+                   if(i < SAMPLES)
+                   {
+                     i++;
+                   }
+        // i++;
+     // }
+     // i = 0;
    }
 
 }

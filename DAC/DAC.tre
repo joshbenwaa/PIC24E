@@ -1,11 +1,8 @@
 ÀÄOneDrive - St
-   ÃÄMAIN  0/194  Ram=2
-   ³  ÃÄ@cinit1  (Inline)  Ram=1
-   ³  ÃÄ@const806  0/38  Ram=1
-   ³  ÃÄ@const807  0/54  Ram=1
-   ³  ÃÄ@const795  0/168  Ram=1
-   ³  ÃÄ@const795  0/168  Ram=1
-   ³  ÀÄFakeSpiWrite24  0/338  Ram=5
-   ÃÄdma0_isr  0/32  Ram=0
-   ÀÄspi1_isr  0/56  Ram=0
-      ÀÄ@const799  0/32  Ram=0
+   ÀÄMAIN  0/194  Ram=2
+      ÃÄ@cinit1  (Inline)  Ram=1
+      ÃÄ@const803  0/38  Ram=1
+      ÃÄ@const804  0/54  Ram=1
+      ÃÄ@const795  0/136  Ram=1
+      ÃÄ@const795  0/136  Ram=1
+      ÀÄFakeSpiWrite24  0/338  Ram=5
