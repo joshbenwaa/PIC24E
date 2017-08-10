@@ -1,18 +1,18 @@
-CCS PCD C Compiler, Version 5.071d, 1               06-Jul-17 15:01
+CCS PCD C Compiler, Version 5.071d, 1               18-Jul-17 13:24
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
                Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\test\test.lst
 
-               ROM used:   620 bytes (0%)
+               ROM used:   568 bytes (0%)
                            Largest free fragment is 65536
-               RAM used:   97 (0%) at main() level
-                           97 (0%) worst case
-               Stack used: 2 locations
-               Stack size: 96
+               RAM used:   81 (0%) at main() level
+                           81 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 80
 
 *
-00000:  GOTO    220
+00000:  GOTO    200
 .................... #include <test.h> 
 .................... #include <24EP256GP202.h> 
 .................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
@@ -29,31 +29,14 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................  
 .................... #list 
 ....................  
-.................... #device ICSP=1 
-.................... #use delay(clock=140MHz,crystal=10MHz) 
-*
-00200:  CP0     W0
-00202:  BTSC.B  42.1
-00204:  BRA     21E
-00206:  REPEAT  #116B
-00208:  NOP     
-0020A:  REPEAT  #3FFE
-0020C:  NOP     
-0020E:  REPEAT  #3FFE
-00210:  NOP     
-00212:  REPEAT  #3FFE
-00214:  NOP     
-00216:  REPEAT  #3FFE
-00218:  NOP     
-0021A:  DEC     W0,W0
-0021C:  BRA     NZ,206
-0021E:  RETURN  
-....................  
-.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #device icd = true 
+.................... #device icsp = 1 
+.................... #FUSES NOWDT, FRC                   //No Watch Dog Timer 
+.................... #USE DELAY(rc = 8000000) 
 .................... #FUSES NOJTAG                   //JTAG disabled 
 .................... #FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled 
 ....................  
-....................  
+.................... #PIN_SELECT REFCLK = PIN_B6 
 .................... #define LED PIN_A0 
 .................... #define DELAY 1 
 ....................  
@@ -61,31 +44,30 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................  
 ....................  
 .................... void main() 
-00220:  MOV     #7FA0,W15
-00222:  MOV     #7FFF,W0
-00224:  MOV     W0,20
-00226:  NOP     
-00228:  BSET.B  8C1.7
-0022A:  CLR     744
-0022C:  MOV     #36,W4
-0022E:  MOV     W4,746
-00230:  DISI    #E
-00232:  MOV     #103,W0
-00234:  MOV     #743,W1
-00236:  MOV     #78,W2
-00238:  MOV     #9A,W3
-0023A:  MOV.B   W2L,[W1]
-0023C:  MOV.B   W3L,[W1]
-0023E:  MOV.B   W0L,743
-00240:  LSR     W0,#8,W0
-00242:  MOV     #742,W1
-00244:  MOV     #46,W2
-00246:  MOV     #57,W3
-00248:  MOV.B   W2L,[W1]
-0024A:  MOV.B   W3L,[W1]
-0024C:  MOV.B   W0L,[W1]
-0024E:  CLR     E0E
-00250:  CLR     E1E
+*
+00200:  MOV     #7FB0,W15
+00202:  MOV     #7FFF,W0
+00204:  MOV     W0,20
+00206:  NOP     
+00208:  BSET.B  8C1.7
+0020A:  DISI    #6
+0020C:  MOV     #742,W1
+0020E:  MOV     #46,W2
+00210:  MOV     #57,W3
+00212:  MOV.B   W2L,[W1]
+00214:  MOV.B   W3L,[W1]
+00216:  BCLR.B  742.6
+00218:  MOV     #31,W0
+0021A:  MOV     W0,684
+0021C:  DISI    #6
+0021E:  MOV     #742,W1
+00220:  MOV     #46,W2
+00222:  MOV     #57,W3
+00224:  MOV.B   W2L,[W1]
+00226:  MOV.B   W3L,[W1]
+00228:  BSET.B  742.6
+0022A:  CLR     E0E
+0022C:  CLR     E1E
 .................... { 
 ....................  
 ....................  
@@ -93,24 +75,15 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................    //Example blinking LED program 
 ....................    while(true) 
 ....................    { 
-....................       output_low(LED); 
-00252:  BCLR.B  E00.0
-00254:  BCLR.B  E04.0
-....................       delay_ms(DELAY); 
-00256:  MOV     #1,W0
-00258:  CALL    200
-....................       output_high(LED); 
-0025C:  BCLR.B  E00.0
-0025E:  BSET.B  E04.0
-....................       delay_ms(DELAY); 
-00260:  MOV     #1,W0
-00262:  CALL    200
-00266:  GOTO    252
+....................       output_toggle(LED); 
+0022E:  BCLR.B  E00.0
+00230:  BTG.B   E04.0
+00232:  GOTO    22E
 ....................    } 
 ....................  
 .................... } 
 *
-0026A:  BRA     26A
+00236:  BRA     236
 
 Configuration Fuses:
    Word  3L: FF4F   ICSP1 NOJTAG DEBUG
@@ -119,9 +92,9 @@ Configuration Fuses:
           H: 0000  
    Word  5L: FF7F   WPOSTS16 WPRES128 PLLWAIT WINDIS NOWDT
           H: 0000  
-   Word  6L: FF3A   HS OSCIO IOL1WAY CKSFSM
+   Word  6L: FF3B   NOPR OSCIO IOL1WAY CKSFSM
           H: 0000  
-   Word  7L: FFF8   FRC IESO
+   Word  7L: FFFA   PR IESO
           H: 0000  
    Word  8L: FFFF   NOWRT NOPROTECT
           H: 0000  

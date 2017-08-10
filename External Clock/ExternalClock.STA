@@ -1,0 +1,51 @@
+
+ROM used:   728/176108 (0%)
+            728/176108 (0%) including unused fragments
+
+            0.7 Average locations per line
+            121.3 Average locations per statement
+
+RAM used:   129/32768 (0%) at main() level
+            129/32768 (0%) worst case
+
+Stack used: 42 worst case (2 in main + 40 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   22     6 100  ExternalClock.c
+   17     0   0  ExternalClock.h
+ 1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+----- -----
+ 1062     6 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     56   4    1     21  0.9  oscfail_isr
+0     26   2    0             @const795
+0    100   7    1     69  1.4  MAIN
+0     34   2    0             @const799
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              6
+    Comments                173
+    Volume (V)              116
+    Difficulty (D)          1.9
+    Effort to implement (E) 226
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    180
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0FFFE   216  64808  
+10000-1FFFE     0  65536  
+20000-2AFEA     0  45036  
+
+
+

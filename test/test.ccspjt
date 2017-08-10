@@ -4,17 +4,26 @@ Processor_Text=PIC24EP256GP202
 CCSVerions=5.071d
 Compiler=PCD
 CCSVersion=5.071d
+Development_Mode=
+ToolSuite=CCS
 [Target Data]
 FileList=test.c
+BuildTool=C-COMPILER
+OptionString=+FD
+AdditionalOptionString=
+BuildRequired=1
 [Directories]
-Include=
+Include=<default>
+Library=
+LinkerScript=
+output=
 [C:\Users\joshb\OneDrive\Documents\test]
 Type=4
 [mru-list]
 1=test.c
 
 [ProjectLog]
-Days=1
+Days=2
 D1=06-07-2017
 D1_L=9
 D1_L1=[37748]Project Opened.
@@ -25,11 +34,37 @@ D1_L5=[48329]Stopped Editing.
 D1_L6=[53291]Project Opened.
 D1_L7=[54062]Started Debugging.
 D1_L8=[54672]Stopped Debugging.
-TotalEdit=0
+TotalEdit=48
 TotalDebug=1
 D1_E=0
 D1_D=1
 D1_L9=[55385]Project Closed.
+D2=18-07-2017
+D2_L=22
+D2_L1=[38756]Project Opened.
+D2_L2=[38784]Started Editing.
+D2_L3=[39847]Stopped Editing.
+D2_E=48
+D2_D=0
+D2_L4=[41083]Project Closed.
+D2_L5=[41472]Project Opened.
+D2_L6=[41486]Started Editing.
+D2_L7=[41526]Stopped Editing.
+D2_L8=[41526]Project Closed.
+D2_L9=[41531]Project Opened.
+D2_L10=[41577]Project Closed.
+D2_L11=[41650]Project Opened.
+D2_L12=[41715]Started Editing.
+D2_L13=[42016]Stopped Editing.
+D2_L14=[42311]Started Editing.
+D2_L15=[43093]Stopped Editing.
+D2_L16=[43290]Started Editing.
+D2_L17=[43419]Stopped Editing.
+D2_L18=[43419]Project Closed.
+D2_L19=[47136]Project Opened.
+D2_L20=[47154]Started Editing.
+D2_L21=[48524]Stopped Editing.
+D2_L22=[48524]Project Closed.
 
 [Documentation]
 1=C:\Users\joshb\OneDrive\Documents\test Notes.txt
@@ -43,12 +78,44 @@ Count=1
 t1=1
 2=test.h
 t2=1
-Count=2
+Count=3
+3=..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+t3=29
 [test.c]
 Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
 
 [defines]
-buildcount=4
+buildcount=24
+enabled=0
+chip=1
+D1=
+V1=
+
+[fileformats]
+forcecoff=1
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+[CompilerVersion]
+Fixed=
 [Units]
 Count=1
 1=test (main)

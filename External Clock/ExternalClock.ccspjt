@@ -1,0 +1,72 @@
+[PROJECT]
+Target=ExternalClock.hex
+Processor_Text=PIC24EP256GP202
+CCSVerions=5.071d
+Compiler=PCD
+CCSVersion=5.071d
+[Target Data]
+FileList=ExternalClock.c
+[Directories]
+Include=
+[C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\External Clock\ExternalClock]
+Type=4
+[mru-list]
+1=ExternalClock.c
+
+[ProjectLog]
+Days=2
+D1=17-07-2017
+D1_L=20
+D1_L1=[43220]Project Opened.
+D1_L2=[50222]Started Editing.
+D1_L3=[50657]Stopped Editing.
+D1_L4=[50685]Started Editing.
+D1_L5=[51019]Stopped Editing.
+D1_L6=[52280]Started Editing.
+D1_L7=[52580]Stopped Editing.
+TotalEdit=82
+TotalDebug=0
+D1_E=68
+D1_D=0
+D1_L8=[53229]Project Closed.
+D1_L9=[53229]Project Opened.
+D1_L10=[53243]Started Editing.
+D1_L11=[54162]Stopped Editing.
+D1_L12=[54530]Started Editing.
+D1_L13=[56077]Stopped Editing.
+D1_L14=[56228]Started Editing.
+D1_L15=[57026]Stopped Editing.
+D1_L16=[57860]Started Editing.
+D1_L17=[58163]Stopped Editing.
+D1_L18=[58938]Started Editing.
+D1_L19=[60459]Stopped Editing.
+D1_L20=[60459]Project Closed.
+D2=18-07-2017
+D2_L=8
+D2_L1=[35791]Project Opened.
+D2_L2=[35808]Started Editing.
+D2_L3=[36113]Stopped Editing.
+D2_L4=[36948]Started Editing.
+D2_L5=[37388]Stopped Editing.
+D2_L6=[38115]Started Editing.
+D2_L7=[38756]Stopped Editing.
+D2_E=14
+D2_D=0
+D2_L8=[38756]Project Closed.
+
+[Opened Files]
+1=ExternalClock.c
+t1=1
+2=ExternalClock.h
+t2=1
+Count=2
+3=24EP256GP202_registers.h
+t3=1
+[ExternalClock.c]
+Type=4
+
+[defines]
+buildcount=33
+[Units]
+Count=1
+1=ExternalClock (main)

@@ -1,0 +1,65 @@
+#include <DAC.h>
+
+#INT_DMA0
+void  dma0_isr(void) 
+{
+
+}
+
+#INT_SPI1
+void  spi1_isr(void) 
+{
+      printf("TRANSFER COMPLETE\n\r");
+}
+
+void StartingValue(int i)
+{
+   output_low(CS);
+   SPI_WRITE(0x80);
+   SPI_WRITE(Table[i] >> 8);
+   SPI_WRITE(Table[i] & 0x0F);
+   output_high(CS);
+}
+
+void InputValue(int i)
+{
+   Output_low(CS);
+   SPI_WRITE(0x80);
+   SPI_WRITE(Table[i] >> 8);
+   SPI_WRITE(Table[i] & 0x0F);
+   output_high(CS);
+}
+
+void main()
+{
+   set_pulldown(true);
+   output_high(CS);
+    unsigned int16 i = 0;
+   int1 flag = 1;
+   printf("Started Started Started\n\r");
+   //enable_interrupts(INT_DMA0);
+   //enable_interrupts(INT_SPI1);
+   enable_interrupts(INTR_GLOBAL);
+   while(TRUE)
+   {
+      printf("press any key to initiate SPI transfer\n\r");
+      getc();
+      while(i <=5000)
+      {
+         if(flag)
+         {
+              StartingValue(i);
+              flag = 0;
+          }
+         else
+         {
+             InputValue(i);
+         }
+         i++;
+      }
+      printf("DONE\n\r");
+      flag = 1;
+      i = 0;
+   }
+
+}

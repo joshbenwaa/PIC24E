@@ -1,0 +1,185 @@
+CCS PCD C Compiler, Version 5.071d, 1               18-Jul-17 15:39
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\FRC\FRC.lst
+
+               ROM used:   670 bytes (0%)
+                           Largest free fragment is 65536
+               RAM used:   129 (0%) at main() level
+                           129 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 128
+
+*
+00000:  GOTO    200
+.................... #include <FRC.h> 
+.................... #include <24EP256GP202.h> 
+.................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24EP256GP202 
+....................  
+.................... #list 
+....................  
+.................... //#device ICSP=1 
+.................... #use delay(internal=7MHz) 
+.................... #FUSES FRC 
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOJTAG                   //JTAG disabled 
+.................... #FUSES NOALTI2C1                //I2C1 mapped to SDA1/SCL1 pins 
+.................... #FUSES NOALTI2C2                //I2C2 mapped to SDA2/SCL2 pins 
+.................... #FUSES WDTWIN_25%               //Watchdog Window is 25% of WDT period 
+.................... #FUSES PLLWAIT                  //Clock switch to PLL will wait until the PLL lock signal is valid 
+.................... #FUSES WINDIS                   //Watch Dog Timer in non-Window mode 
+.................... #FUSES NOOSCIO                  //OSC2 is clock output 
+.................... #FUSES IOL1WAY                  //Allows only one reconfiguration of peripheral pins 
+.................... #FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled 
+.................... #FUSES IESO                     //Internal External Switch Over mode enabled 
+.................... #FUSES NOWRT                    //Program memory not write protected 
+.................... #FUSES NOPROTECT                //Code not protected from reading 
+....................  
+.................... #define LED PIN_A0 
+.................... #define DELAY 0 
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+*
+00200:  MOV     #7F80,W15
+00202:  MOV     #7FFF,W0
+00204:  MOV     W0,20
+00206:  NOP     
+00208:  BSET.B  8C1.7
+0020A:  CLR     744
+0020C:  MOV     #20,W4
+0020E:  MOV     W4,748
+00210:  CLR     E0E
+00212:  CLR     E1E
+.................... { 
+....................  
+....................      setup_oscillator(OSC_INTERNAL, 60000000); 
+00214:  MOV     #47,W4
+00216:  MOV     W4,744
+00218:  MOV     #123,W4
+0021A:  MOV     W4,746
+0021C:  DISI    #E
+0021E:  MOV     #101,W0
+00220:  MOV     #743,W1
+00222:  MOV     #78,W2
+00224:  MOV     #9A,W3
+00226:  MOV.B   W2L,[W1]
+00228:  MOV.B   W3L,[W1]
+0022A:  MOV.B   W0L,743
+0022C:  LSR     W0,#8,W0
+0022E:  MOV     #742,W1
+00230:  MOV     #46,W2
+00232:  MOV     #57,W3
+00234:  MOV.B   W2L,[W1]
+00236:  MOV.B   W3L,[W1]
+00238:  MOV.B   W0L,[W1]
+0023A:  CLR     748
+....................  
+....................      output_toggle(LED); 
+0023C:  BCLR.B  E00.0
+0023E:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00240:  BCLR.B  E00.0
+00242:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00244:  BCLR.B  E00.0
+00246:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00248:  BCLR.B  E00.0
+0024A:  BTG.B   E04.0
+....................      output_toggle(LED); 
+0024C:  BCLR.B  E00.0
+0024E:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00250:  BCLR.B  E00.0
+00252:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00254:  BCLR.B  E00.0
+00256:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00258:  BCLR.B  E00.0
+0025A:  BTG.B   E04.0
+....................      output_toggle(LED); 
+0025C:  BCLR.B  E00.0
+0025E:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00260:  BCLR.B  E00.0
+00262:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00264:  BCLR.B  E00.0
+00266:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00268:  BCLR.B  E00.0
+0026A:  BTG.B   E04.0
+....................      output_toggle(LED); 
+0026C:  BCLR.B  E00.0
+0026E:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00270:  BCLR.B  E00.0
+00272:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00274:  BCLR.B  E00.0
+00276:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00278:  BCLR.B  E00.0
+0027A:  BTG.B   E04.0
+....................      output_toggle(LED); 
+0027C:  BCLR.B  E00.0
+0027E:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00280:  BCLR.B  E00.0
+00282:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00284:  BCLR.B  E00.0
+00286:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00288:  BCLR.B  E00.0
+0028A:  BTG.B   E04.0
+....................      output_toggle(LED); 
+0028C:  BCLR.B  E00.0
+0028E:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00290:  BCLR.B  E00.0
+00292:  BTG.B   E04.0
+....................      output_toggle(LED); 
+00294:  BCLR.B  E00.0
+00296:  BTG.B   E04.0
+....................       while(true) 
+....................    { 
+00298:  GOTO    298
+....................    } 
+....................  
+.................... } 
+*
+0029C:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  3L: FFCF   ICSP1 NOJTAG NODEBUG
+          H: 0000  
+   Word  4L: FFFF   NOALTI2C1 NOALTI2C2 WDTWIN_25%
+          H: 0000  
+   Word  5L: FF7F   WPOSTS16 WPRES128 PLLWAIT WINDIS NOWDT
+          H: 0000  
+   Word  6L: FF3F   NOPR NOOSCIO IOL1WAY CKSFSM
+          H: 0000  
+   Word  7L: FFF8   FRC IESO
+          H: 0000  
+   Word  8L: FFFF   NOWRT NOPROTECT
+          H: 0000  
+   Word  9L: FFFF  
+          H: 0000  
+   Word 10L: FFFF  
+          H: 0000  

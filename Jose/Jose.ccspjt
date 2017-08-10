@@ -1,0 +1,22 @@
+[PROJECT]
+Target=C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DMA_Part2\Jose.hex
+Processor_Text=PIC24EP256GP202
+CCSVerions=5.071d
+Compiler=PCD
+[Target Data]
+FileList=Jose.c
+[Directories]
+Include=
+[C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DMA_Part2\Jose]
+Type=4
+[mru-list]
+1=Jose.c
+[Units]
+Count=1
+1=Jose (main)
+
+[ProjectLog]
+Days=1
+D1=12-07-2017
+D1_L=1
+D1_L1=[50226]Project Opened.

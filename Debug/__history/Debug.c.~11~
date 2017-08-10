@@ -1,0 +1,58 @@
+#include <Debug.h>
+
+
+void main()
+{
+      set_tris_A(0);
+
+
+   //Example blinking LED program
+   while(true)
+   {
+         output_toggle(LED);
+         delay_us(DELAY);
+      output_high(LED);
+      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+//!      output_high(LED);
+//!      output_low(LED);
+   }
+
+}

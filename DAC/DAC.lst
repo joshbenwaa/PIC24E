@@ -1,0 +1,383 @@
+CCS PCD C Compiler, Version 5.071d, 1               07-Aug-17 16:33
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\DAC\DAC.lst
+
+               ROM used:   1040 bytes (1%)
+                           Largest free fragment is 65536
+               RAM used:   131 (0%) at main() level
+                           131 (0%) worst case
+               Stack used: 42 locations (2 in main + 40 for interrupts)
+               Stack size: 128
+
+*
+00000:  GOTO    2FE
+*
+0001C:  DATA    A6,02,00
+*
+00028:  DATA    C6,02,00
+.................... #include <DAC.h> 
+.................... #include <24EP256GP202.h> 
+.................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24EP256GP202 
+*
+00200:  CLR     54
+00202:  MOV     #20C,W3
+00204:  ADD     W3,W0,W0
+00206:  TBLRDL.B[W0],W0L
+00208:  CLR.B   1
+0020A:  RETURN  
+0020C:  DATA    80,80,00
+0020E:  DATA    00,20,00
+00210:  DATA    CB,3C,00
+00212:  DATA    20,F9,00
+00214:  DATA    BB,20,00
+00216:  DATA    F9,BB,00
+00218:  DATA    20,CB,00
+0021A:  DATA    3C,20,00
+0021C:  DATA    80,00,00
+0021E:  DATA    20,34,00
+00220:  DATA    C3,20,00
+00222:  DATA    06,44,00
+00224:  DATA    20,06,00
+00226:  DATA    44,20,00
+00228:  DATA    34,C3,00
+0022A:  CLR     54
+0022C:  MOV     #236,W3
+0022E:  ADD     W3,W0,W0
+00230:  TBLRDL.B[W0],W0L
+00232:  CLR.B   1
+00234:  RETURN  
+00236:  DATA    54,52,00
+00238:  DATA    41,4E,00
+0023A:  DATA    53,46,00
+0023C:  DATA    45,52,00
+0023E:  DATA    20,43,00
+00240:  DATA    4F,4D,00
+00242:  DATA    50,4C,00
+00244:  DATA    45,54,00
+00246:  DATA    45,0A,00
+00248:  DATA    0D,00,00
+0024A:  CLR     54
+0024C:  MOV     #256,W3
+0024E:  ADD     W3,W0,W0
+00250:  TBLRDL.B[W0],W0L
+00252:  CLR.B   1
+00254:  RETURN  
+00256:  DATA    53,74,00
+00258:  DATA    61,72,00
+0025A:  DATA    74,65,00
+0025C:  DATA    64,20,00
+0025E:  DATA    53,74,00
+00260:  DATA    61,72,00
+00262:  DATA    74,65,00
+00264:  DATA    64,20,00
+00266:  DATA    53,74,00
+00268:  DATA    61,72,00
+0026A:  DATA    74,65,00
+0026C:  DATA    64,0A,00
+0026E:  DATA    0D,00,00
+00270:  CLR     54
+00272:  MOV     #27C,W3
+00274:  ADD     W3,W0,W0
+00276:  TBLRDL.B[W0],W0L
+00278:  CLR.B   1
+0027A:  RETURN  
+0027C:  DATA    70,72,00
+0027E:  DATA    65,73,00
+00280:  DATA    73,20,00
+00282:  DATA    61,6E,00
+00284:  DATA    79,20,00
+00286:  DATA    6B,65,00
+00288:  DATA    79,20,00
+0028A:  DATA    74,6F,00
+0028C:  DATA    20,69,00
+0028E:  DATA    6E,69,00
+00290:  DATA    74,69,00
+00292:  DATA    61,74,00
+00294:  DATA    65,20,00
+00296:  DATA    53,50,00
+00298:  DATA    49,20,00
+0029A:  DATA    74,72,00
+0029C:  DATA    61,6E,00
+0029E:  DATA    73,66,00
+002A0:  DATA    65,72,00
+002A2:  DATA    0A,0D,00
+002A4:  DATA    00,00,00
+....................  
+.................... #list 
+....................  
+.................... #device ICSP=1 
+.................... #use delay(internal=140000000) 
+....................  
+.................... #FUSES HS, NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOJTAG                   //JTAG disabled 
+.................... #FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled 
+....................  
+.................... #define SAMPLES 30      //Multiplied by 3 
+.................... #define SCK   PIN_B7 
+.................... #define SDO   PIN_B8 
+.................... #define SDI   PIN_B9 
+.................... #define CS    PIN_B6 
+.................... #define TOGGLE PIN_A0 
+.................... #pin_select U1TX=PIN_B11 
+.................... #pin_select U1RX=PIN_B12 
+.................... #use rs232(UART1, baud=115200, stream=UART_PORT1) 
+....................  
+.................... #use spi(FORCE_HW, MASTER, SPI1, MODE=1, stream=SPI_PORT1, BAUD = 12000000) 
+.................... //IMPORTAnt: Changed to only on a 0 to 5v range 
+.................... const unsigned int8 Table[SAMPLES] = 
+.................... {0x80, 0x80, 0x00, 
+.................... 0x20, 0xcb, 0x3c, 
+.................... 0x20, 0xf9, 0xbb, 
+.................... 0x20, 0xf9, 0xbb, 
+.................... 0x20, 0xcb, 0x3c, 
+.................... 0x20, 0x80, 0x00, 
+.................... 0x20, 0x34, 0xc3, 
+.................... 0x20, 0x06, 0x44, 
+.................... 0x20, 0x06, 0x44, 
+.................... 0x20, 0x34, 0xc3 
+.................... }; 
+....................  
+....................  
+....................  
+.................... #INT_DMA0 
+.................... void  dma0_isr(void)  
+002A6:  PUSH    42
+002A8:  PUSH    36
+002AA:  PUSH    54
+002AC:  MOV     W0,[W15++]
+002AE:  MOV     #2,W0
+002B0:  REPEAT  #C
+002B2:  MOV     [W0++],[W15++]
+.................... { 
+....................  
+.................... } 
+....................  
+002B4:  BCLR.B  800.4
+002B6:  MOV     #1A,W0
+002B8:  REPEAT  #C
+002BA:  MOV     [--W15],[W0--]
+002BC:  MOV     [--W15],W0
+002BE:  POP     54
+002C0:  POP     36
+002C2:  POP     42
+002C4:  RETFIE  
+.................... #INT_SPI1 
+.................... void  spi1_isr(void)  
+002C6:  PUSH    42
+002C8:  PUSH    36
+002CA:  PUSH    54
+002CC:  MOV     W0,[W15++]
+002CE:  MOV     #2,W0
+002D0:  REPEAT  #C
+002D2:  MOV     [W0++],[W15++]
+.................... { 
+....................       printf("TRANSFER COMPLETE\n\r"); 
+002D4:  MOV     #0,W1
+002D6:  MOV     W1,W0
+002D8:  CLR.B   1
+002DA:  CALL    22A
+002DE:  INC     W1,W1
+002E0:  BTSC.B  223.1
+002E2:  BRA     2E0
+002E4:  MOV     W0,224
+002E6:  MOV     #12,W0
+002E8:  CPSGT   W1,W0
+002EA:  BRA     2D6
+002EC:  BCLR.B  801.2
+002EE:  MOV     #1A,W0
+002F0:  REPEAT  #C
+002F2:  MOV     [--W15],[W0--]
+002F4:  MOV     [--W15],W0
+002F6:  POP     54
+002F8:  POP     36
+002FA:  POP     42
+002FC:  RETFIE  
+.................... } 
+....................  
+.................... void main() 
+002FE:  MOV     #7F80,W15
+00300:  MOV     #7FFF,W0
+00302:  MOV     W0,20
+00304:  NOP     
+00306:  BSET.B  8C1.7
+00308:  DISI    #6
+0030A:  MOV     #742,W1
+0030C:  MOV     #46,W2
+0030E:  MOV     #57,W3
+00310:  MOV.B   W2L,[W1]
+00312:  MOV.B   W3L,[W1]
+00314:  BCLR.B  742.6
+00316:  MOV     #2C,W0
+00318:  MOV     W0,6C4
+0031A:  MOV     #100,W0
+0031C:  MOV     W0,688
+0031E:  DISI    #6
+00320:  MOV     #742,W1
+00322:  MOV     #46,W2
+00324:  MOV     #57,W3
+00326:  MOV.B   W2L,[W1]
+00328:  MOV.B   W3L,[W1]
+0032A:  BSET.B  742.6
+0032C:  MOV     #7,W4
+0032E:  MOV     W4,744
+00330:  MOV     #153,W4
+00332:  MOV     W4,746
+00334:  CLR     748
+00336:  MOV     #8000,W4
+00338:  MOV     W4,220
+0033A:  MOV     #400,W4
+0033C:  MOV     W4,222
+0033E:  BCLR.B  220.3
+00340:  MOV     #25,W4
+00342:  MOV     W4,228
+00344:  BCLR.B  241.7
+00346:  BCLR.B  E11.0
+00348:  BSET.B  E11.1
+0034A:  BCLR.B  E10.7
+0034C:  BCLR.B  240.6
+0034E:  MOV     #2B,W4
+00350:  MOV     W4,242
+00352:  BSET.B  241.7
+00354:  CLR     E0E
+00356:  CLR     E1E
+.................... { 
+....................    //setup_spi(SPI_MASTER | SPI_XMIT_L_TO_H | SPI_SAMPLE_AT_MIDDLE | SPI_SCK_IDLE_HIGH | SPI_MODE_8B | SPI_SS_DISABLED); 
+....................    output_low(CS); 
+00358:  BCLR.B  E10.6
+0035A:  BCLR.B  E14.6
+....................     unsigned int16 i = 0; 
+0035C:  CLR     1002
+....................    printf("Started Started Started\n\r"); 
+0035E:  MOV     #0,W1
+00360:  MOV     W1,W0
+00362:  CLR.B   1
+00364:  CALL    24A
+00368:  INC     W1,W1
+0036A:  BTSC.B  223.1
+0036C:  BRA     36A
+0036E:  MOV     W0,224
+00370:  MOV     #18,W0
+00372:  CPSGT   W1,W0
+00374:  BRA     360
+.................... //!   enable_interrupts(INT_DMA0); 
+.................... //!   enable_interrupts(INT_SPI1); 
+.................... //!   enable_interrupts(INTR_GLOBAL); 
+.................... printf("press any key to initiate SPI transfer\n\r"); 
+00376:  MOV     #0,W1
+00378:  MOV     W1,W0
+0037A:  CLR.B   1
+0037C:  CALL    270
+00380:  INC     W1,W1
+00382:  BTSC.B  223.1
+00384:  BRA     382
+00386:  MOV     W0,224
+00388:  MOV     #27,W0
+0038A:  CPSGT   W1,W0
+0038C:  BRA     378
+....................       getc(); 
+0038E:  BTSS.B  222.0
+00390:  BRA     38E
+00392:  MOV     226,W0
+....................    while(TRUE) 
+....................    { 
+....................       while(i < SAMPLES) 
+00394:  MOV     1002,W4
+00396:  CP      W4,#1E
+00398:  BRA     C,408
+....................       { 
+....................                  output_low(CS); 
+0039A:  BCLR.B  E10.6
+0039C:  BCLR.B  E14.6
+....................                   SPI_WRITE(Table[i]); 
+0039E:  MOV     1002,W0
+003A0:  CALL    200
+003A4:  MOV.B   W0L,W5L
+003A6:  BCLR.B  240.6
+003A8:  BTSS.B  240.0
+003AA:  BRA     3B0
+003AC:  MOV.B   248,W0L
+003AE:  BRA     3A8
+003B0:  PUSH    248
+003B2:  MOV.B   W5L,[W15-#2]
+003B4:  POP     248
+003B6:  BTSS.B  240.0
+003B8:  BRA     3B6
+....................                   SPI_WRITE(Table[i+1]); 
+003BA:  MOV     1002,W4
+003BC:  ADD     W4,#1,W5
+003BE:  MOV     W5,W0
+003C0:  CALL    200
+003C4:  MOV.B   W0L,W6L
+003C6:  BCLR.B  240.6
+003C8:  BTSS.B  240.0
+003CA:  BRA     3D0
+003CC:  MOV.B   248,W0L
+003CE:  BRA     3C8
+003D0:  PUSH    248
+003D2:  MOV.B   W6L,[W15-#2]
+003D4:  POP     248
+003D6:  BTSS.B  240.0
+003D8:  BRA     3D6
+....................                    SPI_WRITE(Table[i+2]); 
+003DA:  MOV     1002,W4
+003DC:  ADD     W4,#2,W5
+003DE:  MOV     W5,W0
+003E0:  CALL    200
+003E4:  MOV.B   W0L,W6L
+003E6:  BCLR.B  240.6
+003E8:  BTSS.B  240.0
+003EA:  BRA     3F0
+003EC:  MOV.B   248,W0L
+003EE:  BRA     3E8
+003F0:  PUSH    248
+003F2:  MOV.B   W6L,[W15-#2]
+003F4:  POP     248
+003F6:  BTSS.B  240.0
+003F8:  BRA     3F6
+....................                    output_high(CS); 
+003FA:  BCLR.B  E10.6
+003FC:  BSET.B  E14.6
+....................          i += 3; 
+003FE:  MOV     1002,W4
+00400:  ADD     W4,#3,W0
+00402:  MOV     W0,1002
+00404:  GOTO    394
+....................       } 
+....................       i = 0; 
+00408:  CLR     1002
+0040A:  GOTO    394
+....................    } 
+....................  
+.................... } 
+*
+0040E:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  3L: FFCF   ICSP1 NOJTAG NODEBUG
+          H: 0000  
+   Word  4L: FFFF   NOALTI2C1 NOALTI2C2 WDTWIN_25%
+          H: 0000  
+   Word  5L: FF7F   WPOSTS16 WPRES128 PLLWAIT WINDIS NOWDT
+          H: 0000  
+   Word  6L: FF3A   HS OSCIO IOL1WAY CKSFSM
+          H: 0000  
+   Word  7L: FFF9   FRC_PLL IESO
+          H: 0000  
+   Word  8L: FFFF   NOWRT NOPROTECT
+          H: 0000  
+   Word  9L: FFFF  
+          H: 0000  
+   Word 10L: FFFF  
+          H: 0000  

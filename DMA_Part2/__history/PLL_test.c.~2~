@@ -1,0 +1,18 @@
+#include <PLL_test.h>
+
+
+void main()
+{
+
+
+
+   //Example blinking LED program
+   while(true)
+   {
+      output_low(LED);
+      delay_cycles(DELAY);
+      output_high(LED);
+      delay_cycles(DELAY);
+   }
+
+}

@@ -1,0 +1,48 @@
+
+ROM used:   548/176108 (0%)
+            548/176108 (0%) including unused fragments
+
+            0.5 Average locations per line
+            182.7 Average locations per statement
+
+RAM used:   129/32768 (0%) at main() level
+            129/32768 (0%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   15     3 100  PLL_TEST.c
+   15     0   0  PLL_TEST.h
+ 1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+----- -----
+ 1053     3 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     36   3    1     32  1.2  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              3
+    Comments                173
+    Volume (V)              33
+    Difficulty (D)          1.0
+    Effort to implement (E) 33
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    185
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0FFFE    36  64988  
+10000-1FFFE     0  65536  
+20000-2AFEA     0  45036  
+
+
+

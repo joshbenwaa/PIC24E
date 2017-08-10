@@ -1,0 +1,27 @@
+#include <ExternalClock.h>
+#include <24ep256gp202_registers.h>
+#INT_OSCFAIL
+void  oscfail_isr(void) 
+{
+   printf("OSC FAILED \n\r");
+}
+
+
+
+void main()
+{
+   delay_ms(500);
+   printf("BEGIN BEGIN BEGIN \n\r");
+   enable_interrupts(INTR_GLOBAL);
+   MCU_PLLPRE0 = 0;
+   MCU_PLLPRE1 = 0;
+   MCU_PLLPRE2 = 0;
+   MCU_PLLPRE3 = 0;
+   MCU_PLLPRE4 = 0;
+   MCU_PLLPOST0 = 0;
+   while(TRUE)
+   {
+      Output_toggle(PIN_A0);
+   }
+
+}

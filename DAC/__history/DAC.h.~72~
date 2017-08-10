@@ -1,0 +1,33 @@
+#include <24EP256GP202.h>
+#device ICSP=1
+#use delay(internal=140000000)
+
+#FUSES HS, NOWDT                    //No Watch Dog Timer
+#FUSES NOJTAG                   //JTAG disabled
+#FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled
+
+#define SAMPLES 768      //Multiplied by 3
+#define SCK   PIN_B7
+#define SDO   PIN_B8
+#define SDI   PIN_B9
+#define CS    PIN_B6
+#define TOGGLE PIN_A0
+#pin_select U1TX=PIN_B11
+#pin_select U1RX=PIN_B12
+#use rs232(UART1, baud=115200, stream=UART_PORT1)
+
+#use spi(FORCE_HW, MASTER, SPI1, MODE=1, stream=SPI_PORT1, BAUD = 14000000)
+//IMPORTAnt: Changed to only on a 0 to 5v range
+const unsigned int8 Table[SAMPLES] =
+{0x80, 0x80, 0x00,
+0x20, 0xcb, 0x3c,
+0x20, 0xf9, 0xbb,
+0x20, 0xf9, 0xbb,
+0x20, 0xcb, 0x3c,
+0x20, 0x80, 0x00,
+0x20, 0x34, 0xc3,
+0x20, 0x06, 0x44,
+0x20, 0x06, 0x44,
+0x20, 0x34, 0xc3
+};
+

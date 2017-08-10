@@ -1,0 +1,147 @@
+CCS PCD C Compiler, Version 5.071d, 1               26-Jul-17 13:23
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\Debug\Debug.lst
+
+               ROM used:   566 bytes (0%)
+                           Largest free fragment is 65536
+               RAM used:   131 (0%) at main() level
+                           131 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 128
+
+*
+00000:  GOTO    200
+.................... #include <Debug.h> 
+.................... #include <24EP256GP202.h> 
+.................... //////////// Standard Header file for the PIC24EP256GP202 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24EP256GP202 
+....................  
+.................... #list 
+....................  
+.................... #device ICSP=1 
+.................... #use delay(internal=140000000) 
+....................  
+.................... #FUSES HS, NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOJTAG                   //JTAG disabled 
+.................... #FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled 
+....................  
+....................  
+.................... #define LED PIN_A0 
+.................... #use fast_IO(A) 
+.................... #define DELAY 30 
+....................  
+....................  
+....................  
+.................... void main() 
+*
+00200:  MOV     #7F80,W15
+00202:  MOV     #7FFF,W0
+00204:  MOV     W0,20
+00206:  NOP     
+00208:  BSET.B  8C1.7
+0020A:  MOV     #7,W4
+0020C:  MOV     W4,744
+0020E:  MOV     #153,W4
+00210:  MOV     W4,746
+00212:  CLR     748
+00214:  CLR     E0E
+00216:  CLR     E1E
+.................... { 
+....................       set_tris_A(0); 
+00218:  CLR     E00
+....................       int i = 0; 
+0021A:  CLR     1002
+....................    //Example blinking LED program 
+....................   while (i < 24) 
+0021C:  MOV     1002,W4
+0021E:  CP      W4,#18
+00220:  BRA     GE,234
+....................    { 
+....................           
+....................       output_high(LED); 
+00222:  BSET.B  E04.0
+....................        delay_cycles(DELAY); 
+00224:  REPEAT  #1C
+00226:  NOP     
+....................       output_low(LED); 
+00228:  BCLR.B  E04.0
+....................        delay_cycles(DELAY); 
+0022A:  REPEAT  #1C
+0022C:  NOP     
+....................        i++; 
+0022E:  INC     1002
+00230:  GOTO    21C
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+.................... //!      output_high(LED); 
+.................... //!      output_low(LED); 
+....................    } 
+....................  
+.................... } 
+*
+00234:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  3L: FFCF   ICSP1 NOJTAG NODEBUG
+          H: 0000  
+   Word  4L: FFFF   NOALTI2C1 NOALTI2C2 WDTWIN_25%
+          H: 0000  
+   Word  5L: FF7F   WPOSTS16 WPRES128 PLLWAIT WINDIS NOWDT
+          H: 0000  
+   Word  6L: FF3A   HS OSCIO IOL1WAY CKSFSM
+          H: 0000  
+   Word  7L: FFF9   FRC_PLL IESO
+          H: 0000  
+   Word  8L: FFFF   NOWRT NOPROTECT
+          H: 0000  
+   Word  9L: FFFF  
+          H: 0000  
+   Word 10L: FFFF  
+          H: 0000  

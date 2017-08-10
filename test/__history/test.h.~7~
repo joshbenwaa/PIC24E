@@ -1,0 +1,17 @@
+#include <24EP256GP202.h>
+#device ICSP=1
+//!#use delay(clock=140MHz,crystal=10MHz)
+//!
+//!#FUSES NOWDT, HS, PR                   //No Watch Dog Timer
+
+#fuses  PR, FRC_PLL8, NOWDT
+
+#use delay(clock=58960000)
+
+#FUSES NOJTAG                   //JTAG disabled
+#FUSES CKSFSM                   //Clock Switching is enabled, fail Safe clock monitor is enabled
+
+
+#define LED PIN_A0
+#define DELAY 1
+

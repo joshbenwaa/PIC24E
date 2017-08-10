@@ -1,0 +1,36 @@
+#include <FRC.h>
+
+
+void main()
+{
+
+     setup_oscillator(OSC_INTERNAL, 100000000);
+
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+     output_toggle(LED);
+      while(true)
+   {
+   }
+
+}

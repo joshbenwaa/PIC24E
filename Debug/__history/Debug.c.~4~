@@ -1,0 +1,16 @@
+#include <Debug.h>
+
+
+void main()
+{
+
+
+
+   //Example blinking LED program
+   while(true)
+   {
+      output_high(LED);
+      output_low(LED);
+   }
+
+}

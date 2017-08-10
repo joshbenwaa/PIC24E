@@ -1,0 +1,21 @@
+#include <ExternalClock.h>
+
+#INT_OSCFAIL
+void  oscfail_isr(void) 
+{
+   printf("OSC FAILED");
+}
+
+
+
+void main()
+{
+   setup_oscillator(OSC_CLOCK,140000000,11059200);
+
+   
+   while(TRUE)
+   {
+      Output_toggle(PIN_A0);
+   }
+
+}

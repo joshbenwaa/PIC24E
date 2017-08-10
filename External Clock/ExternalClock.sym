@@ -1,0 +1,73 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @DIV3232B.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0      @delay_ms1.P3
+W0      @delay_us1.P4
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2      @READ_PACKED_MEMORY.P1
+W2      @WRITE_PACKED_MEMORY.P2
+W2 -W3  @DIV3232B.P3
+W2      @READ_ROM_MEMORY.P4
+W3      @WRITE_PACKED_MEMORY.P1
+W3      @READ_ROM_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
+A85.0   C1OUT
+A85.1   C1ENV
+A8D.0   C2OUT
+A8D.1   C2ENV
+A95.0   C3OUT
+A95.1   C3ENV
+A9D.0   C4OUT
+A9D.1   C4ENV
+7F80-7FFF Stack
+
+ROM Allocation:
+000200  @const795.call
+00021A  @const799.call
+00023C  oscfail_isr
+000274  MAIN
+000274  @cinit1
+0002B4  @cinit2
+
+Project Directory:
+    C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\External Clock\
+
+Project Files:
+    ExternalClock.c                                         [18-Jul-17 10:45  CRC=D8102B21]
+    ExternalClock.h                                         [18-Jul-17 10:43  CRC=D872A938]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
+
+Source signature=9A72E325
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=B857
+
+Units:
+    ExternalClock (main)
+
+Compiler Settings:
+    Processor:      PIC24EP256GP202
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   ExternalClock.xsym
+    Errors:      ExternalClock.err
+    Ext Symbols: ExternalClock.esym
+    INHX8:       ExternalClock.hex
+    Symbols:     ExternalClock.sym
+    List:        ExternalClock.lst
+    Debug/COFF:  ExternalClock.cof
+    Project:     ExternalClock.ccspjt
+    Call Tree:   ExternalClock.tre
+    Statistics:  ExternalClock.STA

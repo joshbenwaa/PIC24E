@@ -1,0 +1,54 @@
+
+ROM used:   1040/176108 (1%)
+            1040/176108 (1%) including unused fragments
+
+            0.9 Average locations per line
+            61.2 Average locations per statement
+
+RAM used:   131/32768 (0%) at main() level
+            131/32768 (0%) worst case
+
+Stack used: 42 worst case (2 in main + 40 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   41    17 100  DAC.c
+   34     0   0  DAC.h
+ 1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
+----- -----
+ 1098    17 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     42   2    0             @const799
+0     32   2    0      5  1.0  dma0_isr
+0     56   3    0     21  0.9  spi1_isr
+0     32   2    0             @const803
+0    274  13    3    390  4.1  MAIN
+0     38   2    0             @const808
+0     54   3    0             @const809
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              17
+    Comments                177
+    Volume (V)              480
+    Difficulty (D)          5.5
+    Effort to implement (E) 2647
+    Time to implement (T)   2 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    86
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0FFFE   528  64496  
+10000-1FFFE     0  65536  
+20000-2AFEA     0  45036  
+
+
+

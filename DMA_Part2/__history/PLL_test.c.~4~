@@ -1,0 +1,19 @@
+#include <PLL_test.h>
+
+
+void main()
+{
+
+   while(true)
+   {
+   //Example blinking LED program
+   while(pll_locked())
+   {
+      output_low(LED);
+      delay_cycles(DELAY);
+      output_high(LED);
+      delay_cycles(DELAY);
+   }
+   }
+
+}

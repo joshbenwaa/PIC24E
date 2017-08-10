@@ -1,0 +1,15 @@
+#include <24EP256GP202.h>
+#device ICSP=1
+#fuses  PR, FRC_PLL8, NOWDT
+
+#use delay(clock=58960000)  // Internal FRC clock of 7.37 * 8 =  58.96 Mhz is used
+
+
+
+
+
+#pin_select U1TX=PIN_B11
+#pin_select U1RX=PIN_B12
+#use rs232(UART1, baud=9600, stream=UART_PORT1)
+
+

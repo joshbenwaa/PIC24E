@@ -1,0 +1,14 @@
+#include <PLL_TEST.h>
+
+
+void main()
+{
+setup_oscillator(
+
+
+   while(TRUE)
+   {
+      output_toggle(OUT);
+   }
+
+}

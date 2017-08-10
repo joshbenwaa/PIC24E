@@ -1,0 +1,71 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @DIV3232B.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0      @delay_ms1.P3
+W0      @delay_us1.P4
+W1      @SCRATCH
+W1      @READ_PACKED_MEMORY.P1
+W1      @WRITE_PACKED_MEMORY.P2
+W2      @WRITE_PACKED_MEMORY.P1
+W2      @READ_ROM_MEMORY.P2
+W2 -W3  @DIV3232B.P3
+W2      @READ_PACKED_MEMORY.P4
+W3      @READ_ROM_MEMORY.P1
+W3      @WRITE_PACKED_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
+A85.0   C1OUT
+A85.1   C1ENV
+A8D.0   C2OUT
+A8D.1   C2ENV
+A95.0   C3OUT
+A95.1   C3ENV
+A9D.0   C4OUT
+A9D.1   C4ENV
+1002-1003 main.i
+7F80-7FFF Stack
+
+ROM Allocation:
+000200  main
+000200  @cinit1
+000218  @cinit2
+
+Project Directory:
+    C:\Users\joshb\OneDrive - St. Cloud State University\PIC24E\Debug\
+
+Project Files:
+    Debug.c                                                 [26-Jul-17 13:23  CRC=F4E6997D]
+    Debug.h                                                 [26-Jul-17 13:14  CRC=7E99A45F]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h [01-Mar-17 12:48  CRC=74F80766]
+
+Source signature=5D704CA8
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=AF95
+
+Units:
+    Debug (main)
+
+Compiler Settings:
+    Processor:      PIC24EP256GP202
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   Debug.xsym
+    Errors:      Debug.err
+    Ext Symbols: Debug.esym
+    INHX8:       Debug.hex
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof
+    Project:     Debug.ccspjt
+    Call Tree:   Debug.tre
+    Statistics:  Debug.STA
