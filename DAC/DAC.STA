@@ -1,53 +1,53 @@
 
-ROM used:   1222/176108 (1%)
-            1222/176108 (1%) including unused fragments
+ROM used:   1424/176108 (1%)
+            1424/176108 (1%) including unused fragments
 
-            1.0 Average locations per line
-            47.0 Average locations per statement
+            1.1 Average locations per line
+            16.2 Average locations per statement
 
-RAM used:   131/32768 (0%) at main() level
-            139/32768 (0%) worst case
+RAM used:   130/32768 (0%) at main() level
+            143/32768 (0%) worst case
 
 Stack used: 42 worst case (2 in main + 40 for interrupts)
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   51    26 100  DAC.c
-  124     0   0  DAC.h
+  184    88 100  DAC.c
+   74     0   0  DAC.h
  1023     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\24EP256GP202.h
 ----- -----
- 1198    26 Total
+ 1281    88 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0    228   9    0             @const795
+0    168   6    1             @const795
 0     32   1    0      5  1.0  dma0_isr
 0     56   2    0     21  0.9  spi1_isr
 0     32   1    0             @const799
-0     44   2    5    242  3.7  FakeSpiWrite
-0    226   9    3    432  4.6  MAIN
-0     38   2    0             @const807
-0     54   2    0             @const808
- Inline         0             @cinit1
+0    338  12    5   3404  2.0  FakeSpiWrite24
+0    194   7    2    302  3.6  MAIN
+0     38   1    1             @const806
+0     54   2    1             @const807
+ Inline         1             @cinit1
 
 Program metrics:
     Functions               4
-    Statements              26
-    Comments                173
-    Volume (V)              893
-    Difficulty (D)          9.7
-    Effort to implement (E) 8626
-    Time to implement (T)   8 minutes
+    Statements              88
+    Comments                221
+    Volume (V)              4089
+    Difficulty (D)          8.1
+    Effort to implement (E) 33155
+    Time to implement (T)   31 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    78
+    Maintainability (MI)    41
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0FFFE   710  64314  
+00200-0FFFE   912  64112  
 10000-1FFFE     0  65536  
 20000-2AFEA     0  45036  
 

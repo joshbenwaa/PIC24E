@@ -1,0 +1,86 @@
+#include <DAC.h> 
+
+#INT_DMA0
+void  dma0_isr(void) 
+{
+
+}
+
+#INT_SPI1
+void  spi1_isr(void) 
+{
+      printf("TRANSFER COMPLETE\n\r");
+}
+
+void FakeSpiWrite24(int32 value)
+{
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 7));
+      //delay_cycles(DELAY);
+      output_high(SCK);
+     // delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 6));
+    //  delay_cycles(DELAY);
+      output_high(SCK);
+    //  delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 5));
+    //  delay_cycles(DELAY);
+      output_high(SCK);
+     // delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 4));
+   //   delay_cycles(DELAY);
+      output_high(SCK);
+    //  delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 3));
+  //    delay_cycles(DELAY);
+      output_high(SCK);
+  //    delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 2));
+   //   delay_cycles(DELAY);
+      output_high(SCK);
+   //   delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 1));
+    //  delay_cycles(DELAY);
+      output_high(SCK);
+   //   delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 0));
+   //   delay_cycles(DELAY);
+      output_high(SCK);
+  //    delay_cycles(DELAY);
+}
+
+void main()
+{
+   set_tris_b(0);
+   output_low(CS);
+    unsigned int8 i = 0;
+   printf("Started Started Started\n\r");
+printf("press any key to initiate SPI transfer\n\r");
+      getc();
+   while(TRUE)
+   {
+      while(i < SAMPLES)
+      {
+                 output_low(CS);
+                  FakeSpiWrite24(Table[i]);
+                   output_high(CS);
+         i++;
+      }
+      i = 0;
+   }
+
+}

@@ -1,5 +1,17 @@
 #include <DAC.h> 
 
+#INT_DMA0
+void  dma0_isr(void) 
+{
+
+}
+
+#INT_SPI1
+void  spi1_isr(void) 
+{
+      printf("TRANSFER COMPLETE\n\r");
+}
+
 void FakeSpiWrite24(int32 value)
 {
       output_low(SCK);

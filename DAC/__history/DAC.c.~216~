@@ -1,105 +1,123 @@
 #include <DAC.h> 
 
+#INT_DMA0
+void  dma0_isr(void) 
+{
+
+}
+
+#INT_SPI1
+void  spi1_isr(void) 
+{
+      printf("TRANSFER COMPLETE\n\r");
+}
+
 void FakeSpiWrite24(int32 value)
 {
       output_low(SCK);
-      output_bit(SDO, bit_test(value, 23));
+      output_bit(SDO, bit_test(value, 7));
+      //delay_cycles(DELAY);
+      output_high(SCK);
+     // delay_cycles(DELAY);
+      
+      output_low(SCK);
+      output_bit(SDO, bit_test(value, 6));
     //  delay_cycles(DELAY);
       output_high(SCK);
     //  delay_cycles(DELAY);
       
       output_low(SCK);
-      output_bit(SDO, bit_test(value, 22));
+      output_bit(SDO, bit_test(value, 5));
     //  delay_cycles(DELAY);
       output_high(SCK);
      // delay_cycles(DELAY);
       
       output_low(SCK);
-      output_bit(SDO, bit_test(value, 21));
+      output_bit(SDO, bit_test(value, 4));
    //   delay_cycles(DELAY);
       output_high(SCK);
     //  delay_cycles(DELAY);
       
       output_low(SCK);
-      output_bit(SDO, bit_test(value, 20));
+      output_bit(SDO, bit_test(value, 3));
   //    delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
       
       output_low(SCK);
-      output_bit(SDO, bit_test(value, 19));
+      output_bit(SDO, bit_test(value, 2));
    //   delay_cycles(DELAY);
       output_high(SCK);
    //   delay_cycles(DELAY);
       
       output_low(SCK);
-      output_bit(SDO, bit_test(value, 18));
+      output_bit(SDO, bit_test(value, 1));
     //  delay_cycles(DELAY);
       output_high(SCK);
    //   delay_cycles(DELAY);
       
       output_low(SCK);
-      output_bit(SDO, bit_test(value, 17));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 16));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 15));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 14));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 13));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 12));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 11));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 10));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 9));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 8));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
   
         output_low(SCK);
-      output_bit(SDO, bit_test(value, 7));
+      output_bit(SDO, bit_test(value, 0));
    //   delay_cycles(DELAY);
       output_high(SCK);
   //    delay_cycles(DELAY);
